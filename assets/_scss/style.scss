@@ -1,6 +1,15 @@
+$black: #222;
+
 html{
-	font: 400 12px/18px 'Helvetica Neue', Sans-Serif;
+	font: 400 14px/18px 'Helvetica', Sans-Serif;
 	letter-spacing: 1px;
+	color: $black;
+}
+
+a{
+	text-decoration: none;
+	color: $black;
+	border-bottom: 1px solid $black;
 }
 
 #intro{
