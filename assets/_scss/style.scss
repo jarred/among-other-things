@@ -1,3 +1,41 @@
 html{
 	font: 400 12px/18px 'Helvetica Neue', Sans-Serif;
+	letter-spacing: 1px;
+}
+
+#intro{
+	position: absolute;
+	z-index: 10;
+	left: 50px;
+	top: 50px;
+	width: 180px;
+}
+
+.project{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	&.visible{
+		display: block;
+	}
+	p{
+		position: absolute;
+		left: 50px;
+		bottom: 50px;
+		z-index: 10;
+		margin: 0px;
+		padding: 0px;
+	}
+	.image{
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		text-align: center;
+		z-index: 1;
+	}
 }

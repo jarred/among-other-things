@@ -1,4 +1,47 @@
 /* line 1, ../_scss/style.scss */
 html {
   font: 400 12px/18px "Helvetica Neue", Sans-Serif;
+  letter-spacing: 1px;
+}
+
+/* line 6, ../_scss/style.scss */
+#intro {
+  position: absolute;
+  z-index: 10;
+  left: 50px;
+  top: 50px;
+  width: 180px;
+}
+
+/* line 14, ../_scss/style.scss */
+.project {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: none;
+}
+/* line 21, ../_scss/style.scss */
+.project.visible {
+  display: block;
+}
+/* line 24, ../_scss/style.scss */
+.project p {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  z-index: 10;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 32, ../_scss/style.scss */
+.project .image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+  z-index: 1;
 }

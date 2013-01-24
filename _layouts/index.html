@@ -10,8 +10,19 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        
+        <div id="intro">
+            <p>Portfolio for Jarred Bishop &mdash; a designer, among other things.</p>
+            <p><a href="/bio">Bio</a></p>
+        </div>
+        <div id="projects">
+            {% for post in site.posts %}
+                <div class="project{% if forloop.index0 == 0%} visible{% endif %}">
+                    {{ post.content }}
+                </div>
+            {% endfor %}
+        </div>
     </body>
 </html>
