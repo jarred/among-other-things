@@ -43,8 +43,9 @@ a {
   margin: 0px;
   padding: 0px;
 }
-/* line 41, ../_scss/style.scss */
-.project .image {
+/* line 42, ../_scss/style.scss */
+.project .image,
+.project .photo {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -52,4 +53,20 @@ a {
   bottom: 0px;
   text-align: center;
   z-index: 1;
+  background-position: center center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  display: none;
+}
+/* line 54, ../_scss/style.scss */
+.project .image img,
+.project .photo img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+/* line 59, ../_scss/style.scss */
+.project .image.visible,
+.project .photo.visible {
+  display: block;
 }

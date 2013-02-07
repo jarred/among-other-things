@@ -19,10 +19,11 @@
         </div>
         <div id="projects">
             {% for post in site.posts %}
-                <div class="project{% if forloop.index0 == 0%} visible{% endif %}">
+                <div class="project extend-view" data-view="project">
                     {{ post.content }}
                 </div>
             {% endfor %}
         </div>
+        <script data-main="/assets/js/main" src="/assets/js/libs/require.min.2.1.4.js"></script>
     </body>
 </html>

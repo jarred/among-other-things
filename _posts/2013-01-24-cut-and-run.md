@@ -5,4 +5,10 @@ permalink: /cut-and-run/index.html
 
 Branding and product design for [Cut&Run](http://www.cutandrun.co.nz).
 
-<div class="image" data-background="#c53232" data-image="/assets/img/projects/cut-and-run/accessories-to-adventure.png"></div>
+<div class="image slide">
+	<img src="/assets/img/cut-and-run/diamond-pattern.png" />
+</div>
+
+<div class="image slide">
+	<img src="/assets/img/projects/cut-and-run/accessories-to-adventure.png" />
+</div>
