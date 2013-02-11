@@ -4,7 +4,7 @@
   define(["libs/backbone", "libs/underscore"], function() {
     var ProjectView;
     return ProjectView = Backbone.View.extend({
-      currentImage: 0,
+      currentImage: -1,
       initialize: function(options) {
         var features;
         this.options = options;
@@ -26,9 +26,6 @@
           if (index === 0) {
             img.onload = _this.firstImageLoaded;
           }
-          if (index === _this.model.get('features').length - 1) {
-            img.onload = _this.lastImageLoaded;
-          }
           img.src = obj.src;
           $img = $(img);
           $img.css({
@@ -39,7 +36,6 @@
         });
       },
       firstImageLoaded: function() {
-        this.showImage(0);
         this.options.appModel.bind('tick', this.next);
       },
       lastImageLoaded: function() {

@@ -2,7 +2,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 	ProjectView = Backbone.View.extend
 		
-		currentImage: 0
+		currentImage: -1
 
 		initialize: (@options) ->
 			_.bindAll @
@@ -19,7 +19,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 			_.each @model.get('features'), (obj, index) =>
 				img = new Image()
 				img.onload = @firstImageLoaded if index == 0
-				img.onload = @lastImageLoaded if index == @model.get('features').length - 1
+				# img.onload = @lastImageLoaded if index == @model.get('features').length - 1
 				img.src = obj.src
 				$img = $(img)
 				$img.css
@@ -30,7 +30,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 			return
 
 		firstImageLoaded: ->
-			@showImage 0
+			# @showImage 0
 			@options.appModel.bind 'tick', @next
 			return
 
