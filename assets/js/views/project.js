@@ -4,36 +4,19 @@
   define(["libs/backbone", "libs/underscore"], function() {
     var ProjectView;
     ProjectView = Backbone.View.extend({
-      currentSlide: 0,
-      events: {
-        'ready': 'ready'
-      },
       initialize: function() {
         _.bindAll(this);
         this.$el = $(this.el);
-        this.totalSlides = this.$('.slide').length;
-        this.showSlide(0);
+        this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
+        this.render();
       },
-      ready: function() {
-        this.$el.addClass('visible');
-        this.int = setInterval(this.tick, 600);
+      render: function() {
+        var _this = this;
+        _.each(this.model.get('images'), function(obj) {
+          _this.$el.append(_this.template(obj));
+        });
       },
-      showSlide: function(n) {
-        var $el, el;
-        this.$('.slide.visible').removeClass('visible');
-        el = this.$('.slide')[n];
-        $el = $(el);
-        $el.addClass('visible');
-        this.currentSlide = n;
-      },
-      tick: function() {
-        this.currentSlide++;
-        this.showSlide(this.currentSlide);
-        if (this.currentSlide === this.totalSlides) {
-          clearInterval(this.tick);
-          this.$el.trigger('completed');
-        }
-      }
+      template: _.template("<div class=\"image\" style=\"width: <%= width %>px; height: <%= height %>px\">\n	<img src=\"<%= src %>\" style=\"width: <%= width %>px; height: <%= height %>px\" />\n</div>")
     });
     return ProjectView;
   });

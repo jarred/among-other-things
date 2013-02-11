@@ -6,7 +6,12 @@ height: 287
 excerpt: Black Estate <em>Photography</em>
 ---
 
-a;skdj f;alsdkfj a;sdlfk jasdflkjhas dlfkjahsdf lakjsdhf alskdjfh alsdkfjha sldfkjhasldfkjhas dflkjahsdf
+> Hey Jarred,  
+> Tim and I were wondering if you're interested in a photography assignment in Waipara. They're up for doing good work, it's a beautiful location and they're just putting the finishing touches on a RTA designed 'barn'. It'll be hard to mess up.  
+> Cheers,  
+> Matt
+
+Dream. Job.
 
 <script type="application/json" class="data">
 {

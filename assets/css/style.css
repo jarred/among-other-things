@@ -21,51 +21,73 @@ html {
   margin-left: 20px;
   margin-top: 20px;
 }
-/* line 26, ../_scss/style.scss */
+/* line 23, ../_scss/style.scss */
 .grid-item .preloader {
   background-color: #EEE;
 }
-/* line 29, ../_scss/style.scss */
+/* line 26, ../_scss/style.scss */
 .grid-item .images {
   position: relative;
   overflow: hidden;
 }
-/* line 31, ../_scss/style.scss */
+/* line 28, ../_scss/style.scss */
 .grid-item .images .internal {
   position: absolute;
 }
-/* line 35, ../_scss/style.scss */
+/* line 32, ../_scss/style.scss */
 .grid-item .images img {
   display: block;
 }
-/* line 39, ../_scss/style.scss */
+/* line 36, ../_scss/style.scss */
 .grid-item .content {
   display: none;
 }
-/* line 42, ../_scss/style.scss */
+/* line 39, ../_scss/style.scss */
 .grid-item .excerpt {
   margin-top: 10px;
   width: auto;
 }
-/* line 46, ../_scss/style.scss */
+/* line 43, ../_scss/style.scss */
 .grid-item .excerpt a {
   text-decoration: none;
   color: #222222;
 }
-/* line 49, ../_scss/style.scss */
+/* line 46, ../_scss/style.scss */
 .grid-item .excerpt a em {
   font-style: normal;
   color: #AAA;
 }
-/* line 57, ../_scss/style.scss */
+/* line 54, ../_scss/style.scss */
 .grid-item:hover .images {
   background-color: #eeeeee;
 }
-/* line 59, ../_scss/style.scss */
+/* line 56, ../_scss/style.scss */
 .grid-item:hover .images .internal {
   display: none;
 }
-/* line 64, ../_scss/style.scss */
+/* line 61, ../_scss/style.scss */
 .grid-item:hover .excerpt a, .grid-item:hover .excerpt em {
   color: #eeeeee;
+}
+
+/* line 69, ../_scss/style.scss */
+#project .content {
+  width: 280px;
+  margin-left: 20px;
+  margin-top: 20px;
+  float: left;
+}
+/* line 74, ../_scss/style.scss */
+#project .content blockquote {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+/* line 81, ../_scss/style.scss */
+#project .image {
+  float: left;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 20px;
 }

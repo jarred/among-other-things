@@ -20,9 +20,6 @@ html{
 	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
-//	margin-bottom: 20px;
-//	border-bottom: 1px solid #EEE;
-//	padding-bottom: 10px;
 	.preloader{
 		background-color: #EEE;
 	}
@@ -65,5 +62,26 @@ html{
 				color: $highlight;
 			}
 		}
+	}
+}
+
+#project{
+	.content{
+		width: 280px;
+		margin-left: 20px;
+		margin-top: 20px;
+		float: left;
+		blockquote{
+			margin: 0px;
+			padding: 0px;
+			margin-bottom: 10px;
+			font-style: italic;
+		}
+	}
+	.image{
+		float: left;
+		position: relative;
+		margin-left: 20px;
+		margin-top: 20px;
 	}
 }
