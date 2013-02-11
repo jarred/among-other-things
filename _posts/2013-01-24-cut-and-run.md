@@ -1,14 +1,38 @@
 ---
-layout: index
+layout: project
 permalink: /cut-and-run/index.html
+excerpt: Cut&Run <em>Branding and Product Design</em>
+width: 280
+height: 420
 ---
 
-Branding and product design for [Cut&Run](http://www.cutandrun.co.nz).
-
-<div class="image slide">
-	<img src="/assets/img/cut-and-run/diamond-pattern.png" />
-</div>
-
-<div class="image slide">
-	<img src="/assets/img/projects/cut-and-run/accessories-to-adventure.png" />
-</div>
+<script type="application/json" class="data">
+{
+	"height": 420,
+	"images": [{
+		"src": "/assets/img/cut-and-run/belt-packaging.jpg",
+		"width": 280,
+		"height": 420,
+		"orientation": "portrait",
+		"feature": true
+	},{
+		"src": "/assets/img/cut-and-run/diamond-tile.jpg",
+		"width": 280,
+		"height": 420,
+		"orientation": "portrait",
+		"feature": true
+	},{
+		"src": "/assets/img/cut-and-run/journal.jpg",
+		"width": 280,
+		"height": 420,
+		"orientation": "portrait",
+		"feature": true
+	},{
+		"src": "/assets/img/cut-and-run/belt-foil.jpg",
+		"width": 280,
+		"height": 420,
+		"orientation": "portrait",
+		"feature": true
+	}]
+}
+</script>

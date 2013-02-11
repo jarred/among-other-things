@@ -18,9 +18,19 @@
             <p><a href="/bio">Bio</a></p>
         </div>
         <div id="projects">
-            {% for post in site.posts %}
-                <div class="project extend-view" data-view="project">
-                    {{ post.content }}
+            {% for post in site.posts %}            
+                <div class="grid-item extend-view" data-view="grid-item" style="width: {{ post.width }}px;" data-index="{{ forloop.index0 }}">
+                    <a href="{{ post.permalink }}">
+                        <div class="images" style="width: {{ post.width }}px; height: {{ post.height }}px;">
+                            <div class="internal">
+                                <div class="preloader" style="width: {{ post.width }}px; height: {{ post.height }}px;"></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="content">{{ post.content }}</div>
+                    <div class="excerpt">
+                        <a href="{{ post.permalink }}">{{ post.excerpt }}</a>
+                    </div>
                 </div>
             {% endfor %}
         </div>

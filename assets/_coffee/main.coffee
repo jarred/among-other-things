@@ -5,49 +5,35 @@ Main =
 	currentProject: 0
 
 	init: ->
+		Main.appModel = new Backbone.Model()
 		Main.extendViews()
-
-		$first = $($('.project')[0])
-		Main.totalProjects = $('.project').length
-		console.log @
-		Main.showProject 0
+		Main.tick = setInterval () =>
+			Main.onTick()
+			return
+		, 3000
 		return
 
 	extendViews: ->
 		_.each $('.extend-view'), (el) ->
 			$el = $(el)
-			viewName = $el.data 'view'
-			view = require("views/project")
+			viewName = "views/#{$el.data('view')}"
+			view = require(viewName)
 			new view
 				el: el
+				appModel: Main.appModel
 			$el.removeClass 'extend-view'
 			return
 		return
 
-	nextProject: ->
-		Main.currentProject++
-		if Main.currentProject < Main.totalProjects
-			Main.showProject Main.currentProject
-		else
-			Main.showProject 0
-		return
-
-	showProject: (n) ->
-		console.log 'showProject', n
-		$('.project.visible').removeClass 'visible'
-		$el = $($('.project')[n])
-		$el.bind 'completed', () =>
-			Main.nextProject()
-			return
-		$el.trigger 'ready'
-		Main.currentProject = n
+	onTick: ->
+		@appModel.trigger 'tick'
 		return
 
 # load libs...
 require ["libs/jquery", "libs/underscore"], () ->
 	# more libs...
-	require ["libs/backbone"], () ->
+	require ["libs/backbone", "libs/jstween-1.1.min"], () ->
 		# views
-		require ["views/project"], Main.init
+		require ["views/project", "views/grid-item"], Main.init
 		return
 	return

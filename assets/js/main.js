@@ -9,50 +9,34 @@
   Main = {
     currentProject: 0,
     init: function() {
-      var $first;
+      var _this = this;
+      Main.appModel = new Backbone.Model();
       Main.extendViews();
-      $first = $($('.project')[0]);
-      Main.totalProjects = $('.project').length;
-      console.log(this);
-      Main.showProject(0);
+      Main.tick = setInterval(function() {
+        Main.onTick();
+      }, 3000);
     },
     extendViews: function() {
       _.each($('.extend-view'), function(el) {
         var $el, view, viewName;
         $el = $(el);
-        viewName = $el.data('view');
-        view = require("views/project");
+        viewName = "views/" + ($el.data('view'));
+        view = require(viewName);
         new view({
-          el: el
+          el: el,
+          appModel: Main.appModel
         });
         $el.removeClass('extend-view');
       });
     },
-    nextProject: function() {
-      Main.currentProject++;
-      if (Main.currentProject < Main.totalProjects) {
-        Main.showProject(Main.currentProject);
-      } else {
-        Main.showProject(0);
-      }
-    },
-    showProject: function(n) {
-      var $el,
-        _this = this;
-      console.log('showProject', n);
-      $('.project.visible').removeClass('visible');
-      $el = $($('.project')[n]);
-      $el.bind('completed', function() {
-        Main.nextProject();
-      });
-      $el.trigger('ready');
-      Main.currentProject = n;
+    onTick: function() {
+      this.appModel.trigger('tick');
     }
   };
 
   require(["libs/jquery", "libs/underscore"], function() {
-    require(["libs/backbone"], function() {
-      require(["views/project"], Main.init);
+    require(["libs/backbone", "libs/jstween-1.1.min"], function() {
+      require(["views/project", "views/grid-item"], Main.init);
     });
   });
 

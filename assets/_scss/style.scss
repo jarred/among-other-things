@@ -1,15 +1,9 @@
 $black: #222;
+$highlight: #EEE;
 
 html{
-	font: 400 14px/18px 'Helvetica', Sans-Serif;
-	letter-spacing: 1px;
+	font: 400 13px/16px 'Helvetica', Sans-Serif;
 	color: $black;
-}
-
-a{
-	text-decoration: none;
-	color: $black;
-	border-bottom: 1px solid $black;
 }
 
 #intro{
@@ -18,46 +12,58 @@ a{
 	left: 50px;
 	top: 50px;
 	width: 180px;
+	display: none;
 }
 
-.project{
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-	display: none;
-	&.visible{
-		display: block;
+.grid-item{
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	margin-top: 20px;
+//	margin-bottom: 20px;
+//	border-bottom: 1px solid #EEE;
+//	padding-bottom: 10px;
+	.preloader{
+		background-color: #EEE;
 	}
-	p{
-		position: absolute;
-		left: 50px;
-		bottom: 50px;
-		z-index: 10;
-		margin: 0px;
-		padding: 0px;
-	}
-	.image,
-	.photo{
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		text-align: center;
-		z-index: 1;
-		background-position: center center;
-		background-size: 50%;
-		background-repeat: no-repeat;
-		display: none;
-		img{
+	.images{
+		position: relative;
+		.internal{
 			position: absolute;
-			left: 50%;
-			top: 50%;
 		}
-		&.visible{
+		overflow: hidden;
+		img{
 			display: block;
+		}
+	}
+	.content{
+		display: none;
+	}
+	.excerpt{
+		margin-top: 10px;
+		width: auto;
+//		text-align: center;
+		a{
+			text-decoration: none;
+			color: $black;
+			em{
+				font-style: normal;
+				color: #AAA;
+//				display: block;
+			}
+		}
+	}
+	&:hover{
+		.images{
+			background-color: $highlight;
+			.internal{
+				display: none;
+			}
+		}
+		.excerpt{
+			a, em{
+				color: $highlight;
+			}
 		}
 	}
 }
