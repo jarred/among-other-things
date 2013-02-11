@@ -13,7 +13,6 @@ define ["libs/backbone", "libs/underscore"], () ->
 				return !img.feature
 			@model.set 'features', _.shuffle(features)
 			@render()
-			@options.appModel.bind 'tick', @next
 			return
 
 		render: ->
@@ -32,6 +31,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 		firstImageLoaded: ->
 			@showImage 0
+			@options.appModel.bind 'tick', @next
 			return
 
 		lastImageLoaded: ->

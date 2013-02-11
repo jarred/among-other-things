@@ -17,7 +17,6 @@
         });
         this.model.set('features', _.shuffle(features));
         this.render();
-        this.options.appModel.bind('tick', this.next);
       },
       render: function() {
         var _this = this;
@@ -41,6 +40,7 @@
       },
       firstImageLoaded: function() {
         this.showImage(0);
+        this.options.appModel.bind('tick', this.next);
       },
       lastImageLoaded: function() {
         var $el, $img, img;
