@@ -34,8 +34,8 @@
     }
   };
 
-  require(["libs/jquery", "libs/underscore"], function() {
-    require(["libs/backbone", "libs/jstween-1.1.min"], function() {
+  require(["libs/jquery", "libs/underscore", "/assets/js/libs/greensock/TweenMax.min.js"], function() {
+    require(["libs/backbone", "/assets/js/libs/greensock/jquery.gsap.min.js"], function() {
       require(["views/project", "views/grid-item"], Main.init);
     });
   });

@@ -30,9 +30,9 @@ Main =
 		return
 
 # load libs...
-require ["libs/jquery", "libs/underscore"], () ->
+require ["libs/jquery", "libs/underscore", "/assets/js/libs/greensock/TweenMax.min.js"], () ->
 	# more libs...
-	require ["libs/backbone", "libs/jstween-1.1.min"], () ->
+	require ["libs/backbone", "/assets/js/libs/greensock/jquery.gsap.min.js"], () ->
 		# views
 		require ["views/project", "views/grid-item"], Main.init
 		return

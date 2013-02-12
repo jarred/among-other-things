@@ -48,17 +48,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 		showImage: (num) ->
 			@currentImage = num			
 			y = 0 - (@model.get('height') * (num + 1))
-			# @$('.images .internal').css
-			# 	top: "#{y + 10}px"
-
-			@$('.images .internal').tween
-				top:
-					start: y + 10
-					stop: y
-					duration: 0.2
-					time: @index * 0.2
-					transition: 'easeInCirc'
-			$.play()
+			TweenMax.to(@$('.images .internal'), 0.4, {top:y, delay: @index * 0.2, ease:Expo.easeOut})
 			return
 
 		next: ->

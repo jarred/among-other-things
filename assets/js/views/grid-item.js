@@ -54,16 +54,11 @@
         var y;
         this.currentImage = num;
         y = 0 - (this.model.get('height') * (num + 1));
-        this.$('.images .internal').tween({
-          top: {
-            start: y + 10,
-            stop: y,
-            duration: 0.2,
-            time: this.index * 0.2,
-            transition: 'easeInCirc'
-          }
+        TweenMax.to(this.$('.images .internal'), 0.4, {
+          top: y,
+          delay: this.index * 0.2,
+          ease: Expo.easeOut
         });
-        $.play();
       },
       next: function() {
         if (this.currentImage + 1 < this.model.get('features').length) {
