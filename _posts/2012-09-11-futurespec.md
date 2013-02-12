@@ -1,9 +1,10 @@
 ---
 layout: project
 permalink: /futurespec/index.html
-excerpt: FutureSpec <em>Soon</em>
+excerpt: FutureSpec
 width: 130
 height: 130
+published: true
 ---
 
 <script type="application/json" class="data">

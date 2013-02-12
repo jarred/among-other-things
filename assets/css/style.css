@@ -6,84 +6,106 @@ html {
 
 /* line 9, ../_scss/style.scss */
 #intro {
-  position: absolute;
-  z-index: 10;
-  left: 50px;
-  top: 50px;
-  width: 180px;
-  display: none;
-}
-
-/* line 18, ../_scss/style.scss */
-.grid-item {
   position: relative;
   margin-left: 20px;
   margin-top: 20px;
+  width: 280px;
+  display: none;
+  float: left;
 }
-/* line 23, ../_scss/style.scss */
+/* line 16, ../_scss/style.scss */
+.isotope #intro {
+  float: none;
+  clear: both;
+}
+/* line 20, ../_scss/style.scss */
+#intro p {
+  margin: 0px;
+}
+
+/* line 25, ../_scss/style.scss */
+.grid-item {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+/* line 30, ../_scss/style.scss */
+.isotope .grid-item {
+  float: none;
+  clear: both;
+}
+/* line 34, ../_scss/style.scss */
 .grid-item .preloader {
   background-color: #EEE;
 }
-/* line 26, ../_scss/style.scss */
+/* line 37, ../_scss/style.scss */
 .grid-item .images {
   position: relative;
   overflow: hidden;
 }
-/* line 28, ../_scss/style.scss */
+/* line 39, ../_scss/style.scss */
 .grid-item .images .internal {
   position: absolute;
 }
-/* line 32, ../_scss/style.scss */
+/* line 43, ../_scss/style.scss */
 .grid-item .images img {
   display: block;
 }
-/* line 36, ../_scss/style.scss */
+/* line 47, ../_scss/style.scss */
 .grid-item .content {
   display: none;
 }
-/* line 39, ../_scss/style.scss */
+/* line 50, ../_scss/style.scss */
 .grid-item .excerpt {
   margin-top: 10px;
   width: auto;
 }
-/* line 43, ../_scss/style.scss */
+/* line 54, ../_scss/style.scss */
 .grid-item .excerpt a {
+  display: inline-block;
+  padding: 3px 0px;
   text-decoration: none;
   color: #222222;
 }
-/* line 46, ../_scss/style.scss */
+/* line 59, ../_scss/style.scss */
 .grid-item .excerpt a em {
   font-style: normal;
   color: #AAA;
 }
-/* line 54, ../_scss/style.scss */
+/* line 67, ../_scss/style.scss */
 .grid-item:hover .images {
-  background-color: #eeeeee;
+  background-color: #222222;
 }
-/* line 56, ../_scss/style.scss */
+/* line 69, ../_scss/style.scss */
 .grid-item:hover .images .internal {
   display: none;
 }
-/* line 61, ../_scss/style.scss */
-.grid-item:hover .excerpt a, .grid-item:hover .excerpt em {
-  color: #eeeeee;
+/* line 74, ../_scss/style.scss */
+.grid-item:hover .excerpt a {
+  background-color: #222222;
+  color: #222222;
+}
+/* line 77, ../_scss/style.scss */
+.grid-item:hover .excerpt a em {
+  color: #222222;
 }
 
-/* line 69, ../_scss/style.scss */
+/* line 86, ../_scss/style.scss */
 #project .content {
   width: 280px;
   margin-left: 20px;
   margin-top: 20px;
   float: left;
 }
-/* line 74, ../_scss/style.scss */
+/* line 91, ../_scss/style.scss */
 #project .content blockquote {
   margin: 0px;
   padding: 0px;
   margin-bottom: 10px;
   font-style: italic;
 }
-/* line 81, ../_scss/style.scss */
+/* line 98, ../_scss/style.scss */
 #project .image {
   float: left;
   position: relative;

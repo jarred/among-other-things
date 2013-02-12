@@ -13,10 +13,6 @@
         <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
-        <div id="intro">
-            <p>Portfolio for Jarred Bishop &mdash; a designer, among other things.</p>
-            <p><a href="/bio">Bio</a></p>
-        </div>
         <div id="projects" class="grid-container">
             {% for post in site.posts %}            
                 <div class="grid-item extend-view" data-view="grid-item" style="width: {{ post.width }}px;" data-index="{{ forloop.index0 }}">
@@ -32,6 +28,12 @@
                         <a href="{{ post.permalink }}">{{ post.excerpt }}</a>
                     </div>
                 </div>
+                {% if forloop.index0 == 92 %}
+                <div id="intro">
+                    <p>Portfolio for Jarred Bishop &mdash; a designer, among other things.</p>
+                    <p><a href="/bio">Bio</a></p>
+                </div>
+                {% endif %}
             {% endfor %}
         </div>
         <script data-main="/assets/js/main" src="/assets/js/libs/require.min.2.1.4.js"></script>

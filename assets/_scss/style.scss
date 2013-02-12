@@ -1,5 +1,5 @@
 $black: #222;
-$highlight: #EEE;
+$highlight: #FFF;
 
 html{
 	font: 400 13px/16px 'Helvetica', Sans-Serif;
@@ -7,19 +7,30 @@ html{
 }
 
 #intro{
-	position: absolute;
-	z-index: 10;
-	left: 50px;
-	top: 50px;
-	width: 180px;
+	position: relative;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 280px;
 	display: none;
+	float: left;
+	.isotope &{
+		float: none;
+		clear: both;
+	}
+	p{
+		margin: 0px;
+	}
 }
 
 .grid-item{
 	position: relative;
-//	float: left;
+	float: left;
 	margin-left: 20px;
 	margin-top: 20px;
+	.isotope &{
+		float: none;
+		clear: both;
+	}
 	.preloader{
 		background-color: #EEE;
 	}
@@ -41,6 +52,8 @@ html{
 		width: auto;
 //		text-align: center;
 		a{
+			display: inline-block;
+			padding: 3px 0px;
 			text-decoration: none;
 			color: $black;
 			em{
@@ -52,14 +65,18 @@ html{
 	}
 	&:hover{
 		.images{
-			background-color: $highlight;
+			background-color: $black;
 			.internal{
 				display: none;
 			}
 		}
 		.excerpt{
-			a, em{
-				color: $highlight;
+			a{
+				background-color: $black;
+				color: $black;
+				em{
+					color: $black;
+				}
 			}
 		}
 	}

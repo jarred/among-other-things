@@ -17,7 +17,7 @@ Dream. Job.
 {
 	"height": 287,
 	"images": [{
-		"src": "/assets/img/black-estate/IMG_8775.jpg",
+		"src": "/assets/img/black-estate/IMG_8930.jpg",
 		"width": 430,
 		"height": 287,
 		"orientation": "landscape",
@@ -35,7 +35,7 @@ Dream. Job.
 		"orientation": "landscape",
 		"feature": true
 	},{
-		"src": "/assets/img/black-estate/IMG_8964.jpg",
+		"src": "/assets/img/black-estate/IMG_8979.jpg",
 		"width": 430,
 		"height": 287,
 		"orientation": "landscape",
@@ -65,7 +65,7 @@ Dream. Job.
 		"orientation": "landscape",
 		"feature": true
 	},{
-		"src": "/assets/img/black-estate/IMG_9394.jpg",
+		"src": "/assets/img/black-estate/IMG_9318.jpg",
 		"width": 430,
 		"height": 287,
 		"orientation": "landscape",
@@ -77,7 +77,7 @@ Dream. Job.
 		"orientation": "landscape",
 		"feature": true
 	},{
-		"src": "/assets/img/black-estate/IMG_9661.jpg",
+		"src": "/assets/img/black-estate/IMG_9562.jpg",
 		"width": 430,
 		"height": 287,
 		"orientation": "landscape",
