@@ -11,6 +11,10 @@ Main =
 			Main.onTick()
 			return
 		, 3000
+
+		$('.grid-container').isotope
+			masonry:
+				columnWidth: 150
 		return
 
 	extendViews: ->
@@ -30,9 +34,9 @@ Main =
 		return
 
 # load libs...
-require ["libs/jquery", "libs/underscore", "/assets/js/libs/greensock/TweenMax.min.js"], () ->
+require ["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min"], () ->
 	# more libs...
-	require ["libs/backbone", "/assets/js/libs/greensock/jquery.gsap.min.js"], () ->
+	require ["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min"], () ->
 		# views
 		require ["views/project", "views/grid-item"], Main.init
 		return

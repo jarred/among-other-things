@@ -17,7 +17,7 @@
             <p>Portfolio for Jarred Bishop &mdash; a designer, among other things.</p>
             <p><a href="/bio">Bio</a></p>
         </div>
-        <div id="projects">
+        <div id="projects" class="grid-container">
             {% for post in site.posts %}            
                 <div class="grid-item extend-view" data-view="grid-item" style="width: {{ post.width }}px;" data-index="{{ forloop.index0 }}">
                     <a href="{{ post.permalink }}">

@@ -15,6 +15,11 @@
       Main.tick = setInterval(function() {
         Main.onTick();
       }, 3000);
+      $('.grid-container').isotope({
+        masonry: {
+          columnWidth: 150
+        }
+      });
     },
     extendViews: function() {
       _.each($('.extend-view'), function(el) {
@@ -34,8 +39,8 @@
     }
   };
 
-  require(["libs/jquery", "libs/underscore", "/assets/js/libs/greensock/TweenMax.min.js"], function() {
-    require(["libs/backbone", "/assets/js/libs/greensock/jquery.gsap.min.js"], function() {
+  require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min"], function() {
+    require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min"], function() {
       require(["views/project", "views/grid-item"], Main.init);
     });
   });

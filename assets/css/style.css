@@ -17,7 +17,6 @@ html {
 /* line 18, ../_scss/style.scss */
 .grid-item {
   position: relative;
-  float: left;
   margin-left: 20px;
   margin-top: 20px;
 }
