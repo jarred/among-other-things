@@ -112,3 +112,44 @@ html {
   margin-left: 20px;
   margin-top: 20px;
 }
+
+/* line 106, ../_scss/style.scss */
+p.intro {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  font: 500 35px/40px "Calibre";
+  letter-spacing: -1px;
+}
+
+/* line 115, ../_scss/style.scss */
+#grid {
+  margin: 20px 0px;
+}
+/* line 117, ../_scss/style.scss */
+#grid .cell {
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+/* line 121, ../_scss/style.scss */
+#grid .cell .image {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+/* line 130, ../_scss/style.scss */
+#grid .cell .image img {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+}
+/* line 137, ../_scss/style.scss */
+.isotope #grid .cell {
+  float: none;
+}

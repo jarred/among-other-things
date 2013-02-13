@@ -38,6 +38,6 @@ require ["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min"], () ->
 	# more libs...
 	require ["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min"], () ->
 		# views
-		require ["views/project", "views/grid-item"], Main.init
+		require ["views/project", "views/grid-item", "views/layout-experiment"], Main.init
 		return
 	return
