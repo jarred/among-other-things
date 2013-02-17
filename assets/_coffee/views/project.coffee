@@ -6,6 +6,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 			_.bindAll @
 			@$el = $(@el)
 			@model = new Backbone.Model JSON.parse @$('.data').html()
+			@model.set 'images', _.shuffle @model.get('images')
 			@render()
 			return
 
@@ -16,8 +17,8 @@ define ["libs/backbone", "libs/underscore"], () ->
 			return
 
 		template: _.template """
-		<div class="image" style="width: <%= width %>px; height: <%= height %>px">
-			<img src="<%= src %>" style="width: <%= width %>px; height: <%= height %>px" />
+		<div class="cell <%= size %>">
+			<div class="images"><img src="<%= src %>" class="<%= size %>" /></div>
 		</div>
 		"""
 

@@ -15,7 +15,7 @@
       Main.tick = setInterval(function() {
         Main.onTick();
       }, 3000);
-      $('.grid-container').isotope({
+      $('#grid').isotope({
         masonry: {
           columnWidth: 150
         }

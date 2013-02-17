@@ -8,6 +8,7 @@
         _.bindAll(this);
         this.$el = $(this.el);
         this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
+        this.model.set('images', _.shuffle(this.model.get('images')));
         this.render();
       },
       render: function() {
@@ -16,7 +17,7 @@
           _this.$el.append(_this.template(obj));
         });
       },
-      template: _.template("<div class=\"image\" style=\"width: <%= width %>px; height: <%= height %>px\">\n	<img src=\"<%= src %>\" style=\"width: <%= width %>px; height: <%= height %>px\" />\n</div>")
+      template: _.template("<div class=\"cell <%= size %>\">\n	<div class=\"images\"><img src=\"<%= src %>\" class=\"<%= size %>\" /></div>\n</div>")
     });
     return ProjectView;
   });

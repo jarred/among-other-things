@@ -1,9 +1,8 @@
 ---
 layout: project
 permalink: /black-estate-photography/index.html
-width: 430
-height: 287
 excerpt: Black Estate <em>Photography</em>
+size: portrait-2col
 ---
 
 > Hey Jarred,  
@@ -15,85 +14,70 @@ Dream. Job.
 
 <script type="application/json" class="data">
 {
-	"height": 287,
+	"size": "portrait-2col",
 	"images": [{
-		"src": "/assets/img/black-estate/IMG_8930.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_8775.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_8824.jpg",
-		"width": 280,
-		"height": 420,
-		"orientation": "portrait",
-		"feature": false
+		"src": "/assets/img/black-estate/landscape-3col.IMG_8930.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_8953.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_8953.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_8979.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9019.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_8982.jpg",
-		"width": 280,
-		"height": 420,
-		"orientation": "portrait",
-		"feature": false
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9177.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9155.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9241.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9242.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9309.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9385.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9385.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9318.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-3col.IMG_9550.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9533.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-4col.IMG_8813.jpg",
+		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9562.jpg",
-		"width": 430,
-		"height": 287,
-		"orientation": "landscape",
-		"feature": true
+		"src": "/assets/img/black-estate/landscape-4col.IMG_9155.jpg",
+		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9742.jpg",
-		"width": 280,
-		"height": 420,
-		"orientation": "portrait",
-		"feature": false
+		"src": "/assets/img/black-estate/landscape-4col.IMG_9533.jpg",
+		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/black-estate/IMG_9766.jpg",
-		"width": 280,
-		"height": 420,
-		"orientation": "portrait",
-		"feature": false
+		"src": "/assets/img/black-estate/lanscape-3col.IMG_8735.jpg",
+		"size": "landscape-3col"
+	},{
+		"src": "/assets/img/black-estate/lanscape-4col.IMG_8734.jpg",
+		"size": "landscape-4col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_8824.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_8982.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_9344.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_9604.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_9737.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_9762.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/black-estate/portrait-2col.IMG_9766.jpg",
+		"size": "portrait-2col"
 	}]
 }
 </script>

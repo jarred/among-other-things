@@ -4,7 +4,7 @@ permalink: /futurespec/index.html
 excerpt: FutureSpec
 width: 130
 height: 130
-published: true
+published: false
 ---
 
 <script type="application/json" class="data">

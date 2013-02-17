@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Among Other Things</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="/assets/css/normalize.css">
@@ -14,19 +14,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-        <div id="projects" class="grid-container">
+        <div id="grid" class="grid-container">
             {% for post in site.posts %}            
-                <div class="grid-item extend-view" data-view="grid-item" style="width: {{ post.width }}px;" data-index="{{ forloop.index0 }}">
+                <div class="cell {{ post.size }} extend-view" data-view="grid-item" data-index="{{ forloop.index0 }}">
                     <a href="{{ post.permalink }}">
-                        <div class="images" style="width: {{ post.width }}px; height: {{ post.height }}px;">
+                        <div class="images">
                             <div class="internal">
-                                <div class="preloader" style="width: {{ post.width }}px; height: {{ post.height }}px;"></div>
+                                <div class="preloader"></div>
                             </div>
                         </div>
                     </a>
                     <div class="content">{{ post.content }}</div>
                     <div class="excerpt">
-                        <a href="{{ post.permalink }}">{{ post.excerpt }}</a>
+                        <p><a href="{{ post.permalink }}">{{ post.excerpt }}</a></p>
                     </div>
                 </div>
                 {% if forloop.index0 == 92 %}

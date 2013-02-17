@@ -6,16 +6,24 @@
     return ProjectView = Backbone.View.extend({
       currentImage: -1,
       initialize: function(options) {
-        var features;
+        var features,
+          _this = this;
         this.options = options;
         _.bindAll(this);
         this.$el = $(this.el);
         this.index = Number(this.$el.attr('data-index'));
         this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
+        console.log(this.model.toJSON());
         features = _.reject(this.model.get('images'), function(img) {
-          return !img.feature;
+          console.log(img.size, _this.model.get('size'));
+          if (img.size === _this.model.get('size')) {
+            return false;
+          } else {
+            return true;
+          }
         });
         this.model.set('features', _.shuffle(features));
+        console.log(this.model.toJSON());
         this.render();
       },
       render: function() {
@@ -28,10 +36,7 @@
           }
           img.src = obj.src;
           $img = $(img);
-          $img.css({
-            width: "" + obj.width + "px",
-            height: "" + obj.height + "px"
-          });
+          $img.addClass(obj.size);
           _this.$('.images .internal').append($img);
         });
       },
@@ -53,10 +58,10 @@
       showImage: function(num) {
         var y;
         this.currentImage = num;
-        y = 0 - (this.model.get('height') * (num + 1));
+        y = 0 - (this.$('.images').height() * (num + 1));
         TweenMax.to(this.$('.images .internal'), 0.4, {
           top: y,
-          delay: this.index * 0.2,
+          delay: this.index * 0.16,
           ease: Expo.easeOut
         });
       },

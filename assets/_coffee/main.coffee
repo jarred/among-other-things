@@ -12,7 +12,7 @@ Main =
 			return
 		, 3000
 
-		$('.grid-container').isotope
+		$('#grid').isotope
 			masonry:
 				columnWidth: 150
 		return

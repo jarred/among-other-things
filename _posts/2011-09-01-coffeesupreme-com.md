@@ -3,6 +3,7 @@ layout: project
 permalink: /coffee-supreme/web/index.html
 excerpt: Coffee Supreme <em>Website</em>
 width: 280
+published: false
 height: 280
 ---
 

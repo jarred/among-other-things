@@ -9,9 +9,15 @@ define ["libs/backbone", "libs/underscore"], () ->
 			@$el = $(@el)
 			@index = Number @$el.attr('data-index')
 			@model = new Backbone.Model JSON.parse @$('.data').html()
-			features = _.reject @model.get('images'), (img) ->
-				return !img.feature
+			console.log @model.toJSON()
+			features = _.reject @model.get('images'), (img) =>
+				console.log img.size, @model.get('size')
+				if img.size == @model.get('size')
+					return false
+				else
+					return true
 			@model.set 'features', _.shuffle(features)
+			console.log @model.toJSON()
 			@render()
 			return
 
@@ -22,9 +28,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 				# img.onload = @lastImageLoaded if index == @model.get('features').length - 1
 				img.src = obj.src
 				$img = $(img)
-				$img.css
-					width: "#{obj.width}px"
-					height: "#{obj.height}px"
+				$img.addClass obj.size
 				@$('.images .internal').append $img
 				return 
 			return
@@ -47,8 +51,8 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 		showImage: (num) ->
 			@currentImage = num			
-			y = 0 - (@model.get('height') * (num + 1))
-			TweenMax.to(@$('.images .internal'), 0.4, {top:y, delay: @index * 0.2, ease:Expo.easeOut})
+			y = 0 - (@$('.images').height() * (num + 1))
+			TweenMax.to(@$('.images .internal'), 0.4, {top:y, delay: @index * 0.16, ease:Expo.easeOut})
 			return
 
 		next: ->
