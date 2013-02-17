@@ -13,9 +13,7 @@
         this.$el = $(this.el);
         this.index = Number(this.$el.attr('data-index'));
         this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
-        console.log(this.model.toJSON());
         features = _.reject(this.model.get('images'), function(img) {
-          console.log(img.size, _this.model.get('size'));
           if (img.size === _this.model.get('size')) {
             return false;
           } else {
@@ -23,7 +21,6 @@
           }
         });
         this.model.set('features', _.shuffle(features));
-        console.log(this.model.toJSON());
         this.render();
       },
       render: function() {

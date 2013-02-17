@@ -9,15 +9,12 @@ define ["libs/backbone", "libs/underscore"], () ->
 			@$el = $(@el)
 			@index = Number @$el.attr('data-index')
 			@model = new Backbone.Model JSON.parse @$('.data').html()
-			console.log @model.toJSON()
 			features = _.reject @model.get('images'), (img) =>
-				console.log img.size, @model.get('size')
 				if img.size == @model.get('size')
 					return false
 				else
 					return true
 			@model.set 'features', _.shuffle(features)
-			console.log @model.toJSON()
 			@render()
 			return
 
