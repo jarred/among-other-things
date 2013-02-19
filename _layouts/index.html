@@ -17,7 +17,7 @@
         <div id="grid" class="grid-container">
             {% for post in site.posts %}            
                 <div class="cell {{ post.size }} extend-view" data-view="grid-item" data-index="{{ forloop.index0 }}">
-                    <a href="{{ post.permalink }}">
+                    <a href="{{ post.url }}">
                         <div class="images">
                             <div class="internal">
                                 <div class="preloader"></div>

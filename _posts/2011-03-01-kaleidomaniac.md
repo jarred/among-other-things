@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: /kaleidomaniac/index.html
+title: kaleidomaniac
 excerpt: Kaleidomaniac.com
 published: true
 size: landscape-3col
@@ -32,7 +32,7 @@ size: landscape-3col
 		"size": "square-3col"
 	},{
 		"src": "/assets/img/kaleidomaniac.com/square-3col.3.jpg",
-		"size": "square-3col.3.jpg"
+		"size": "square-3col"
 	}]
 }
 </script>

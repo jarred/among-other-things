@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: /coffee-supreme/shop/index.html
+title: Coffee Supreme Online Store
 excerpt: Coffee Supreme <em>Online Store</em>
 published: true
 size: square-2col

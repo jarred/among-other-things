@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: /cut-and-run/index.html
+title: Cut&Run
 excerpt: Cut&Run <em>Branding and Product Design</em>
 size: landscape-3col
 ---

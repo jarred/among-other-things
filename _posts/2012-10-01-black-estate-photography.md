@@ -1,6 +1,6 @@
 ---
 layout: project
-permalink: /black-estate-photography/index.html
+title: Black Estate Photography
 excerpt: Black Estate <em>Photography</em>
 size: portrait-2col
 ---
