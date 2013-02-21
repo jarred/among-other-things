@@ -77,7 +77,7 @@
         e.preventDefault();
         History.pushState({
           model: this.model.toJSON()
-        }, this.model.get('url'));
+        }, this.model.get('title'), this.model.get('url'));
       }
     });
   });

@@ -67,5 +67,5 @@ define ["libs/backbone", "libs/underscore"], () ->
 			e.preventDefault()
 			History.pushState
 				model: @model.toJSON()
-			, @model.get('url')
+			, @model.get('title'), @model.get('url')
 			return
