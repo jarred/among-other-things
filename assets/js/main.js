@@ -27,18 +27,51 @@
       this.tick = setInterval(function() {
         _this.onTick();
       }, 3000);
-      if (History.enabled) {
-        History.Adapter.bind(window, 'statechange', this.onStateChange);
+      if (History.enabled && window.location.pathname === '/') {
+        History.Adapter.bind(window, 'statechange', function() {
+          _this.onStateChange();
+        });
       }
-      $('#grid').isotope({
-        masonry: {
-          columnWidth: 150
-        }
-      });
       this.animateGridItemsIn();
     },
+    loadProject: function() {
+      console.log('loadProject', arguments);
+    },
     animateGridItemsIn: function() {
+      var _this = this;
       console.log('animateGridItemsIn');
+      _.each($('#grid .cell'), function(el, index) {
+        var $el;
+        $el = $(el);
+        $el.css({
+          top: '40px'
+        });
+        TweenMax.to($el, 0.23, {
+          top: 0,
+          delay: index * 0.07,
+          ease: Expo.easeOut,
+          opacity: 1
+        });
+      });
+    },
+    animateGridItemsOut: function() {
+      var _this = this;
+      _.each($('#grid .cell'), function(el, index, items) {
+        var $el;
+        $el = $(el);
+        TweenMax.to($el, 0.23, {
+          top: -40,
+          opacity: 0,
+          ease: Expo.easeOut,
+          delay: (items.length - index) * 0.07,
+          onComplete: function() {
+            $el.trigger('remove');
+            if (index === 0) {
+              _this.appModel.trigger('transition-out-complete');
+            }
+          }
+        });
+      });
     },
     extendViews: function() {
       var _this = this;
@@ -53,6 +86,38 @@
         });
         $el.removeClass('extend-view');
       });
+    },
+    onStateChange: function() {
+      var _this = this;
+      this.state = History.getState();
+      console.log('@state', this.state);
+      switch (this.state.data.type) {
+        case 'project':
+          this.project = new Backbone.Model(this.state.data.model);
+          this.appModel.bind('transition-out-complete', function() {
+            _this.loadNext();
+          });
+          this.animateGridItemsOut();
+          break;
+        default:
+          console.log('what-now?');
+          this.appModel.bind('transition-out-complete', function() {
+            _this.showIndex();
+          });
+          this.animateGridItemsOut();
+      }
+    },
+    loadNext: function() {
+      var view;
+      view = require("views/project");
+      new view({
+        model: this.project,
+        el: $('#grid')
+      });
+      this.animateGridItemsIn();
+    },
+    showIndex: function() {
+      $('#grid').load("/ #grid");
     },
     onTick: function() {
       this.appModel.trigger('tick');

@@ -24,30 +24,31 @@ html {
   margin-left: 20px;
   margin-bottom: 20px;
   float: left;
+  opacity: 0;
 }
-/* line 23, ../_scss/grid.scss */
+/* line 24, ../_scss/grid.scss */
 .grid-container .cell .images {
   background-color: #000;
   overflow: hidden;
   position: relative;
 }
-/* line 27, ../_scss/grid.scss */
+/* line 28, ../_scss/grid.scss */
 .grid-container .cell .images .internal {
   position: absolute;
 }
-/* line 30, ../_scss/grid.scss */
+/* line 31, ../_scss/grid.scss */
 .grid-container .cell .images img {
   display: block;
 }
-/* line 34, ../_scss/grid.scss */
+/* line 35, ../_scss/grid.scss */
 .grid-container .cell .content {
   display: none;
 }
-/* line 37, ../_scss/grid.scss */
+/* line 38, ../_scss/grid.scss */
 .grid-container .cell .preloader {
   background-color: #EEE;
 }
-/* line 40, ../_scss/grid.scss */
+/* line 41, ../_scss/grid.scss */
 .grid-container .cell .excerpt {
   margin-top: 0px;
   width: auto;
@@ -59,132 +60,132 @@ html {
   right: 0px;
   display: none;
 }
-/* line 50, ../_scss/grid.scss */
+/* line 51, ../_scss/grid.scss */
 .grid-container .cell .excerpt p {
   padding: 20px 20px;
   margin: 0px;
   color: #FFF;
 }
-/* line 55, ../_scss/grid.scss */
+/* line 56, ../_scss/grid.scss */
 .grid-container .cell .excerpt a {
   display: inline-block;
   padding: 3px 0px;
   text-decoration: none;
   color: #FFF;
 }
-/* line 60, ../_scss/grid.scss */
+/* line 61, ../_scss/grid.scss */
 .grid-container .cell .excerpt a em {
   font-style: normal;
   color: #AAA;
   display: block;
 }
-/* line 68, ../_scss/grid.scss */
+/* line 69, ../_scss/grid.scss */
 .grid-container .cell:hover .excerpt {
   display: block;
 }
-/* line 72, ../_scss/grid.scss */
+/* line 73, ../_scss/grid.scss */
 .grid-container .cell.square-1col {
   width: 130px;
 }
-/* line 76, ../_scss/grid.scss */
+/* line 77, ../_scss/grid.scss */
 .grid-container .cell.square-1col .images,
 .grid-container .cell.square-1col .preloader,
 .grid-container .cell.square-1col img {
   width: 130px;
   height: 130px;
 }
-/* line 81, ../_scss/grid.scss */
+/* line 82, ../_scss/grid.scss */
 .grid-container .cell.square-2col {
   width: 280px;
 }
-/* line 85, ../_scss/grid.scss */
+/* line 86, ../_scss/grid.scss */
 .grid-container .cell.square-2col .images,
 .grid-container .cell.square-2col .preloader,
 .grid-container .cell.square-2col img {
   width: 280px;
   height: 280px;
 }
-/* line 90, ../_scss/grid.scss */
+/* line 91, ../_scss/grid.scss */
 .grid-container .cell.square-3col {
   width: 430px;
 }
-/* line 94, ../_scss/grid.scss */
+/* line 95, ../_scss/grid.scss */
 .grid-container .cell.square-3col .images,
 .grid-container .cell.square-3col .preloader,
 .grid-container .cell.square-3col img {
   width: 430px;
   height: 430px;
 }
-/* line 99, ../_scss/grid.scss */
+/* line 100, ../_scss/grid.scss */
 .grid-container .cell.portrait-2col {
   width: 280px;
 }
-/* line 103, ../_scss/grid.scss */
+/* line 104, ../_scss/grid.scss */
 .grid-container .cell.portrait-2col .images,
 .grid-container .cell.portrait-2col .preloader,
 .grid-container .cell.portrait-2col img {
   width: 280px;
   height: 430px;
 }
-/* line 108, ../_scss/grid.scss */
+/* line 109, ../_scss/grid.scss */
 .grid-container .cell.portrait-3col {
   width: 430px;
 }
-/* line 112, ../_scss/grid.scss */
+/* line 113, ../_scss/grid.scss */
 .grid-container .cell.portrait-3col .images,
 .grid-container .cell.portrait-3col .preloader,
 .grid-container .cell.portrait-3col img {
   width: 430px;
   height: 580px;
 }
-/* line 117, ../_scss/grid.scss */
+/* line 118, ../_scss/grid.scss */
 .grid-container .cell.landscape-3col {
   width: 430px;
 }
-/* line 121, ../_scss/grid.scss */
+/* line 122, ../_scss/grid.scss */
 .grid-container .cell.landscape-3col .images,
 .grid-container .cell.landscape-3col .preloader,
 .grid-container .cell.landscape-3col img {
   width: 430px;
   height: 280px;
 }
-/* line 126, ../_scss/grid.scss */
+/* line 127, ../_scss/grid.scss */
 .grid-container .cell.landscape-4col {
   width: 580px;
 }
-/* line 129, ../_scss/grid.scss */
+/* line 130, ../_scss/grid.scss */
 .grid-container .cell.landscape-4col .images,
 .grid-container .cell.landscape-4col img {
   width: 580px;
   height: 430px;
 }
-/* line 134, ../_scss/grid.scss */
+/* line 135, ../_scss/grid.scss */
 .grid-container .cell.landscape-5col {
   width: 730px;
 }
-/* line 137, ../_scss/grid.scss */
+/* line 138, ../_scss/grid.scss */
 .grid-container .cell.landscape-5col .images,
 .grid-container .cell.landscape-5col img {
   width: 730px;
   height: 580px;
 }
-/* line 142, ../_scss/grid.scss */
+/* line 143, ../_scss/grid.scss */
 .grid-container .cell.landscape-6col {
   width: 880px;
 }
-/* line 145, ../_scss/grid.scss */
+/* line 146, ../_scss/grid.scss */
 .grid-container .cell.landscape-6col .images,
 .grid-container .cell.landscape-6col img {
   width: 880px;
   height: 580px;
 }
-/* line 150, ../_scss/grid.scss */
+/* line 151, ../_scss/grid.scss */
 .isotope .grid-container .cell {
   float: none;
 }
 
 @media screen and (max-width: 1025px) {
-  /* line 159, ../_scss/grid.scss */
+  /* line 160, ../_scss/grid.scss */
   #grid .cell .excerpt {
     display: block;
     position: relative;
@@ -194,11 +195,11 @@ html {
   }
 }
 @media screen and (max-width: 620px) {
-  /* line 173, ../_scss/grid.scss */
+  /* line 174, ../_scss/grid.scss */
   #grid .cell.landscape-4col {
     width: 430px;
   }
-  /* line 177, ../_scss/grid.scss */
+  /* line 178, ../_scss/grid.scss */
   #grid .cell.landscape-4col .images,
   #grid .cell.landscape-4col .preloader,
   #grid .cell.landscape-4col img {
@@ -207,11 +208,11 @@ html {
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 190, ../_scss/grid.scss */
+  /* line 191, ../_scss/grid.scss */
   #grid .cell.landscape-4col, #grid .cell.landscape-3col {
     width: 280px;
   }
-  /* line 194, ../_scss/grid.scss */
+  /* line 195, ../_scss/grid.scss */
   #grid .cell.landscape-4col .images,
   #grid .cell.landscape-4col .preloader,
   #grid .cell.landscape-4col img, #grid .cell.landscape-3col .images,
@@ -220,22 +221,22 @@ html {
     width: 280px;
     height: 190px;
   }
-  /* line 199, ../_scss/grid.scss */
+  /* line 200, ../_scss/grid.scss */
   #grid .cell.portrait-3col {
     width: 280px;
   }
-  /* line 203, ../_scss/grid.scss */
+  /* line 204, ../_scss/grid.scss */
   #grid .cell.portrait-3col .images,
   #grid .cell.portrait-3col .preloader,
   #grid .cell.portrait-3col img {
     width: 280px;
     height: 370px;
   }
-  /* line 208, ../_scss/grid.scss */
+  /* line 209, ../_scss/grid.scss */
   #grid .cell.square-3col {
     width: 280px;
   }
-  /* line 212, ../_scss/grid.scss */
+  /* line 213, ../_scss/grid.scss */
   #grid .cell.square-3col .images,
   #grid .cell.square-3col .preloader,
   #grid .cell.square-3col img {
@@ -273,4 +274,9 @@ html {
   margin: 0px;
   margin-bottom: 1em;
   font-style: italic;
+}
+
+/* line 45, ../_scss/style.scss */
+.isotope {
+  overflow: visible !important;
 }

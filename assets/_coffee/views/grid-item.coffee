@@ -53,7 +53,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 		showImage: (num) ->
 			@currentImage = num			
 			y = 0 - (@$('.images').height() * (num + 1))
-			TweenMax.to(@$('.images .internal'), 0.4, {top:y, delay: @index * 0.16, ease:Expo.easeOut})
+			TweenMax.to(@$('.images .internal'), 0.23, {top:y, delay: @index * 0.07, ease:Expo.easeOut})
 			return
 
 		next: ->
@@ -65,7 +65,8 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 		go: (e) ->
 			e.preventDefault()
-			History.pushState
+			History.pushState 
+				type: 'project'
 				model: @model.toJSON()
 			, @model.get('title'), @model.get('url')
 			return

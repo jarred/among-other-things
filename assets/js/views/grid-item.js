@@ -60,9 +60,9 @@
         var y;
         this.currentImage = num;
         y = 0 - (this.$('.images').height() * (num + 1));
-        TweenMax.to(this.$('.images .internal'), 0.4, {
+        TweenMax.to(this.$('.images .internal'), 0.23, {
           top: y,
-          delay: this.index * 0.16,
+          delay: this.index * 0.07,
           ease: Expo.easeOut
         });
       },
@@ -76,6 +76,7 @@
       go: function(e) {
         e.preventDefault();
         History.pushState({
+          type: 'project',
           model: this.model.toJSON()
         }, this.model.get('title'), this.model.get('url'));
       }
