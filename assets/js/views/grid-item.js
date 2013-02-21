@@ -5,6 +5,9 @@
     var ProjectView;
     return ProjectView = Backbone.View.extend({
       currentImage: -1,
+      events: {
+        'click': 'go'
+      },
       initialize: function(options) {
         var features,
           _this = this;
@@ -13,6 +16,7 @@
         this.$el = $(this.el);
         this.index = Number(this.$el.attr('data-index'));
         this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
+        this.model.set(this.$el.data());
         features = _.reject(this.model.get('images'), function(img) {
           if (img.size === _this.model.get('size')) {
             return false;
@@ -68,6 +72,12 @@
         } else {
           this.showImage(0);
         }
+      },
+      go: function(e) {
+        e.preventDefault();
+        History.pushState({
+          model: this.model.toJSON()
+        }, this.model.get('url'));
       }
     });
   });

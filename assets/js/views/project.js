@@ -9,12 +9,13 @@
         this.$el = $(this.el);
         this.model = new Backbone.Model(JSON.parse(this.$('.data').html()));
         this.model.set('images', _.shuffle(this.model.get('images')));
+        this.$grid = $('#grid');
         this.render();
       },
       render: function() {
         var _this = this;
         _.each(this.model.get('images'), function(obj) {
-          _this.$el.append(_this.template(obj));
+          _this.$grid.append(_this.template(obj));
         });
       },
       template: _.template("<div class=\"cell <%= size %>\">\n	<div class=\"images\"><img src=\"<%= src %>\" class=\"<%= size %>\" /></div>\n</div>")

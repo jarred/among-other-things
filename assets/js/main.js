@@ -7,29 +7,49 @@
   });
 
   Main = {
-    currentProject: 0,
+    go: function() {
+      this.loadLibs();
+    },
+    loadLibs: function() {
+      var _this = this;
+      require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min", "libs/history"], function() {
+        return require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min", "libs/history.adapter.jquery"], function() {
+          return require(["views/project", "views/grid-item", "views/layout-experiment"], function() {
+            _this.init();
+          });
+        });
+      });
+    },
     init: function() {
       var _this = this;
-      Main.appModel = new Backbone.Model();
-      Main.extendViews();
-      Main.tick = setInterval(function() {
-        Main.onTick();
+      this.appModel = new Backbone.Model();
+      this.extendViews();
+      this.tick = setInterval(function() {
+        _this.onTick();
       }, 3000);
+      if (History.enabled) {
+        History.Adapter.bind(window, 'statechange', this.onStateChange);
+      }
       $('#grid').isotope({
         masonry: {
           columnWidth: 150
         }
       });
+      this.animateGridItemsIn();
+    },
+    animateGridItemsIn: function() {
+      console.log('animateGridItemsIn');
     },
     extendViews: function() {
-      _.each($('.extend-view'), function(el) {
+      var _this = this;
+      return _.each($('.extend-view'), function(el) {
         var $el, view, viewName;
         $el = $(el);
         viewName = "views/" + ($el.data('view'));
         view = require(viewName);
         new view({
           el: el,
-          appModel: Main.appModel
+          appModel: _this.appModel
         });
         $el.removeClass('extend-view');
       });
@@ -39,10 +59,6 @@
     }
   };
 
-  require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min"], function() {
-    require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min"], function() {
-      require(["views/project", "views/grid-item", "views/layout-experiment"], Main.init);
-    });
-  });
+  Main.go();
 
 }).call(this);

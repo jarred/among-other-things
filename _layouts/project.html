@@ -14,8 +14,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
-        <div id="grid" data-view="project" class="extend-view">
-            <div class="content">{{ content }}</div>
+        <div id="project" class="extend-view" data-view="project">
+            <div id="top">
+                <div class="content grid-container">
+                    <div class="cell">
+                        {{ content }}
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div id="grid" class="grid-container"></div>
         </div>
         <script data-main="/assets/js/main" src="/assets/js/libs/require.min.2.1.4.js"></script>
     </body>

@@ -7,12 +7,13 @@ define ["libs/backbone", "libs/underscore"], () ->
 			@$el = $(@el)
 			@model = new Backbone.Model JSON.parse @$('.data').html()
 			@model.set 'images', _.shuffle @model.get('images')
+			@$grid = $('#grid')
 			@render()
 			return
 
 		render: ->
 			_.each @model.get('images'), (obj) =>
-				@$el.append @template obj
+				@$grid.append @template obj
 				return
 			return
 

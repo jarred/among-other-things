@@ -9,14 +9,22 @@
         <title>Among Other Things</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/assets/css/normalize.css">
+        <link rel="stylesheet" href="/assets/css/cssreset-min.css">
         <link rel="stylesheet" href="/assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body>
+        <div id="top">
+            <div class="content grid-container">
+                <div class="cell">
+                    <p>The portfolio of Jarred Bishop,<br />
+                        a designer among other things.</p>
+                </div>
+            </div>
+        </div>
         <div id="grid" class="grid-container">
             {% for post in site.posts %}            
-                <div class="cell {{ post.size }} extend-view" data-view="grid-item" data-index="{{ forloop.index0 }}">
+                <div class="cell {{ post.size }} extend-view" data-view="grid-item" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
                     <a href="{{ post.url }}">
                         <div class="images">
                             <div class="internal">

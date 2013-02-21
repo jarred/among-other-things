@@ -4,11 +4,15 @@ define ["libs/backbone", "libs/underscore"], () ->
 		
 		currentImage: -1
 
+		events:
+			'click': 'go'
+
 		initialize: (@options) ->
 			_.bindAll @
 			@$el = $(@el)
 			@index = Number @$el.attr('data-index')
 			@model = new Backbone.Model JSON.parse @$('.data').html()
+			@model.set @$el.data()
 			features = _.reject @model.get('images'), (img) =>
 				if img.size == @model.get('size')
 					return false
@@ -57,4 +61,11 @@ define ["libs/backbone", "libs/underscore"], () ->
 				@showImage @currentImage + 1
 			else
 				@showImage 0
+			return
+
+		go: (e) ->
+			e.preventDefault()
+			History.pushState
+				model: @model.toJSON()
+			, @model.get('url')
 			return
