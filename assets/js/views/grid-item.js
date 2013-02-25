@@ -5,6 +5,7 @@
     var ProjectView;
     return ProjectView = Backbone.View.extend({
       currentImage: -1,
+      count: 0,
       events: {
         'click': 'go'
       },
@@ -72,6 +73,10 @@
         } else {
           this.showImage(0);
         }
+        if (this.count === 0) {
+          this.$('.preloader').trigger('transition-out');
+        }
+        this.count++;
       },
       go: function(e) {
         e.preventDefault();

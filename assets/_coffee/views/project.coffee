@@ -13,7 +13,6 @@ define ["libs/backbone", "libs/underscore"], () ->
 			return
 
 		render: ->
-			console.log 'render'
 			_.each @model.get('images'), (obj) =>
 				@$grid.append @template obj
 				return

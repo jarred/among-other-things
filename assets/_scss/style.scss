@@ -10,7 +10,8 @@ html{
 	color: $black;
 }
 
-@import "grid.scss";
+@import "_grid";
+@import "_preloader";
 
 #top{
 	background-color: $black;
@@ -25,6 +26,10 @@ html{
 	padding: 0px;
 	#project &{
 		position: relative;
+		height: auto;
+	}
+	&.site-preloading{
+		bottom: 0px;
 		height: auto;
 	}
 }

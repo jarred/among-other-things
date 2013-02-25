@@ -14,7 +14,7 @@
       var _this = this;
       require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min", "libs/history"], function() {
         return require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min", "libs/history.adapter.jquery"], function() {
-          return require(["views/project", "views/grid-item", "views/layout-experiment"], function() {
+          return require(["views/project", "views/grid-item", "views/layout-experiment", "views/preloader"], function() {
             _this.init();
           });
         });
@@ -32,14 +32,22 @@
           _this.onStateChange();
         });
       }
-      this.animateGridItemsIn();
+      this.animatePreloaderOut();
     },
-    loadProject: function() {
-      console.log('loadProject', arguments);
+    animatePreloaderOut: function() {
+      var h;
+      this.$pre = $('#top .preloader');
+      this.$pre.trigger('transition-out');
+      h = $(window).height() - 130;
+      TweenMax.to($('#top'), .6, {
+        bottom: h,
+        ease: Quint.easeOut,
+        delay: .7
+      });
+      _.delay(this.animateGridItemsIn, 900);
     },
     animateGridItemsIn: function() {
       var _this = this;
-      console.log('animateGridItemsIn');
       _.each($('#grid .cell'), function(el, index) {
         var $el;
         $el = $(el);
@@ -88,9 +96,9 @@
       });
     },
     onStateChange: function() {
-      var _this = this;
+      var preloaderView, view,
+        _this = this;
       this.state = History.getState();
-      console.log('@state', this.state);
       switch (this.state.data.type) {
         case 'project':
           this.project = new Backbone.Model(this.state.data.model);
@@ -98,9 +106,11 @@
             _this.loadNext();
           });
           this.animateGridItemsOut();
+          preloaderView = require('views/preloader');
+          view = new preloaderView();
+          $('#top').append(view.el);
           break;
         default:
-          console.log('what-now?');
           this.appModel.bind('transition-out-complete', function() {
             _this.showIndex();
           });
@@ -115,6 +125,7 @@
         el: $('#grid')
       });
       this.animateGridItemsIn();
+      $('#top .preloader').trigger('transition-out');
     },
     showIndex: function() {
       $('#grid').load("/ #grid");

@@ -1,0 +1,17 @@
+.preloader{
+	position: absolute;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+//	background-color: #FF3300;
+	.internal{
+		position: absolute;
+		left: -300px;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		background: url('/assets/img/preloader-bg.png') repeat top left;
+	}
+}

@@ -23,6 +23,7 @@ Main =
 							"views/project"
 							"views/grid-item"
 							"views/layout-experiment"
+							"views/preloader"
 							], =>
 								@init()
 								return
@@ -45,15 +46,20 @@ Main =
 		# 	masonry:
 		# 		columnWidth: 150
 
-		@animateGridItemsIn()
+		# @animateGridItemsIn()
+
+		@animatePreloaderOut()
 		return
 
-	loadProject: ->
-		console.log 'loadProject', arguments
+	animatePreloaderOut: ->
+		@$pre = $('#top .preloader')
+		@$pre.trigger 'transition-out'
+		h = $(window).height() - 130
+		TweenMax.to $('#top'), .6, {bottom: h, ease: Quint.easeOut, delay: .7}
+		_.delay @animateGridItemsIn, 900
 		return
 
 	animateGridItemsIn: ->
-		console.log 'animateGridItemsIn'
 		_.each $('#grid .cell'), (el, index) =>
 			$el = $(el)
 			$el.css
@@ -65,7 +71,6 @@ Main =
 	animateGridItemsOut: ->
 		_.each $('#grid .cell'), (el, index, items) =>
 			$el = $(el)
-			# console.log items
 			TweenMax.to $el, 0.23, 
 				top: -40
 				opacity: 0
@@ -93,9 +98,7 @@ Main =
 			return
 
 	onStateChange: ->
-		@state = History.getState()
-		console.log '@state', @state
-		
+		@state = History.getState()		
 		switch @state.data.type
 			when 'project'
 				# project = new Backbone.Model state.data.model
@@ -104,9 +107,12 @@ Main =
 					@loadNext()
 					return
 				@animateGridItemsOut()
+
+				preloaderView = require('views/preloader')
+				view = new preloaderView()
+				$('#top').append view.el
 			else
 				# back to the index?
-				console.log 'what-now?'
 				@appModel.bind 'transition-out-complete', () =>
 					@showIndex()
 					return
@@ -120,6 +126,7 @@ Main =
 			el: $('#grid')
 
 		@animateGridItemsIn()
+		$('#top .preloader').trigger 'transition-out'
 		return
 
 	showIndex: ->

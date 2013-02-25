@@ -3,6 +3,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 	ProjectView = Backbone.View.extend
 		
 		currentImage: -1
+		count: 0
 
 		events:
 			'click': 'go'
@@ -57,10 +58,14 @@ define ["libs/backbone", "libs/underscore"], () ->
 			return
 
 		next: ->
+			# return
 			if @currentImage + 1 < @model.get('features').length
 				@showImage @currentImage + 1
 			else
 				@showImage 0
+			if @count == 0
+				@$('.preloader').trigger 'transition-out'
+			@count++
 			return
 
 		go: (e) ->

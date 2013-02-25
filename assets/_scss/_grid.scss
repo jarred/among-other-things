@@ -11,6 +11,9 @@
 	#project &{
 		margin-top: 0px;
 	}
+	.cell{
+		opacity: 0;
+	}
 }
 
 .grid-container{
@@ -20,7 +23,6 @@
 		margin-left: $margin;
 		margin-bottom: $margin;
 		float: left;
-		opacity: 0;
 		.images{
 			background-color: #000;
 			overflow: hidden;
@@ -35,8 +37,11 @@
 		.content{
 			display: none;
 		}
+		.block{
+			position: relative;
+		}
 		.preloader{
-			background-color: #EEE;
+			background-color: $black;
 		}
 		.excerpt{
 			margin-top: 0px;
@@ -73,7 +78,7 @@
 		&.square-1col{
 			@include size_column_width(1);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(1);
 				@include size_column_height(1);
@@ -82,7 +87,7 @@
 		&.square-2col{
 			@include size_column_width(2);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(2);
 				@include size_column_height(2);
@@ -91,7 +96,7 @@
 		&.square-3col{
 			@include size_column_width(3);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(3);
 				@include size_column_height(3);
@@ -100,7 +105,7 @@
 		&.portrait-2col{
 			@include size_column_width(2);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(2);
 				@include size_column_height(3);
@@ -109,7 +114,7 @@
 		&.portrait-3col{
 			@include size_column_width(3);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(3);
 				@include size_column_height(4);
@@ -118,7 +123,7 @@
 		&.landscape-3col{
 			@include size_column_width(3);
 			.images,
-			.preloader,
+			.block,
 			img{
 				@include size_column_width(3);
 				@include size_column_height(2);
@@ -127,6 +132,7 @@
 		&.landscape-4col{
 			@include size_column_width(4);
 			.images,
+			.block,
 			img{
 				@include size_column_width(4);
 				@include size_column_height(3);
@@ -135,6 +141,7 @@
 		&.landscape-5col{
 			@include size_column_width(5);
 			.images,
+			.block,
 			img{
 				@include size_column_width(5);
 				@include size_column_height(4);
@@ -143,6 +150,7 @@
 		&.landscape-6col{
 			@include size_column_width(6);
 			.images,
+			.block,
 			img{
 				@include size_column_width(6);
 				@include size_column_height(4);
@@ -174,7 +182,7 @@
 			&.landscape-4col{
 				@include size_column_width(3);
 				.images,
-				.preloader,
+				.block,
 				img{
 					@include size_column_width(3);
 					@include size_column_height(2);
@@ -191,7 +199,7 @@
 			&.landscape-3col{
 				@include size_column_width(2);
 				.images,
-				.preloader,
+				.block,
 				img{
 					@include size_column_width(2);
 					@include size_column_height(1.4);
@@ -200,7 +208,7 @@
 			&.portrait-3col{
 				@include size_column_width(2);
 				.images,
-				.preloader,
+				.block,
 				img{
 					@include size_column_width(2);
 					@include size_column_height(2.6);
@@ -209,7 +217,7 @@
 			&.square-3col{
 				@include size_column_width(2);
 				.images,
-				.preloader,
+				.block,
 				img{
 					@include size_column_width(2);
 					@include size_column_height(2);

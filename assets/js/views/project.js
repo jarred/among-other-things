@@ -17,7 +17,6 @@
       },
       render: function() {
         var _this = this;
-        console.log('render');
         _.each(this.model.get('images'), function(obj) {
           _this.$grid.append(_this.template(obj));
         });
