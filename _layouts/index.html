@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="/assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
-    <body>
+    <body class="extend-view" data-view="index">
+        <!--
         <div id="top" class="site-preloading">
             <div class="preloader animating extend-view" data-view="preloader"><div class="lines"></div></div>
             <div class="content grid-container">
@@ -23,25 +24,16 @@
                 </div>
             </div>
         </div>
+        -->
+        <div id="data">
+            <div class="post {{ post.size }} extends-view" data-view="grid-item" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
+                <div class="content hide">{{ post.content }}</div>
+            </div>
+        </div>
         <div id="grid" class="grid-container">
+            <div class="box size12 blank"></div>
+            <div class="box size11 blank"></div>
             {% for post in site.posts %}            
-                <div class="cell {{ post.size }} extend-view" data-view="grid-item" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
-                    <a href="{{ post.url }}">
-                        <div class="images">
-                            <div class="internal">
-                                <div class="block">
-                                    <div class="preloader animating extend-view" data-view="preloader">
-                                        <div class="lines"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="content">{{ post.content }}</div>
-                    <div class="excerpt">
-                        <p><a href="{{ post.permalink }}">{{ post.excerpt }}</a></p>
-                    </div>
-                </div>
             {% endfor %}
         </div>
         <script data-main="/assets/js/main" src="/assets/js/libs/require.min.2.1.4.js"></script>

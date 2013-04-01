@@ -7,21 +7,32 @@
 }
 
 #grid{
-	margin-top: 140px;
 	#project &{
 		margin-top: 0px;
-	}
-	.cell{
-		opacity: 0;
 	}
 }
 
 .grid-container{
-	padding: $margin 0px;
+	.box{
+		background-color: #000;
+		&.blank{
+			background-color: #EEE;
+		}
+		&.logo{
+			background-color: #FF3300;
+		}
+		&.bio{
+			background-color: #AAA;
+		}
+	}
 	.cell{
 		position: relative;
 		margin-left: $margin;
 		margin-bottom: $margin;
+		background-color: #000;
+		&.blank{
+			background-color: transparent;
+		}
 //		float: left;
 		.images{
 			background-color: #000;

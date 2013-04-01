@@ -16,14 +16,16 @@ Main =
 				require [
 					"libs/backbone", 
 					"libs/greensock/jquery.gsap.min"
-					"libs/jquery.isotope.min"
-					"libs/history.adapter.jquery"
+					# "libs/jquery.isotope.min"
+					"libs/jquery.nested.1.0.1"
+					# "libs/history.adapter.jquery"
 					], () =>
 						require [
 							"views/project"
 							"views/project-image"
 							"views/grid-item"
 							"views/layout-experiment"
+							"views/index"
 							"views/preloader"
 							], =>
 								@init()
@@ -38,15 +40,6 @@ Main =
 			return
 		, 3000
 
-		if History.enabled and window.location.pathname is '/'
-			History.Adapter.bind window, 'statechange', () =>
-				@onStateChange()
-				return
-
-		$('#grid').isotope
-			masonry:
-				columnWidth: 150
-
 		@animatePreloaderOut()
 		return
 
@@ -57,40 +50,13 @@ Main =
 		TweenMax.to $('#top'), .6, {bottom: h, ease: Quint.easeOut, delay: .7, onComplete: () =>
 			@hidePreloader()
 			return}
-		_.delay @animateGridItemsIn, 900
+		# _.delay @animateGridItemsIn, 900
 		return
 
 	hidePreloader: ->
 		console.log 'hidePreloader'
 		@$pre.removeClass 'animating'
 		@$pre.addClass 'hide'
-		return
-
-	animateGridItemsIn: ->
-		_.each $('#grid .cell'), (el, index) =>
-			$el = $(el)
-			$el.css
-				top: '40px'
-			TweenMax.to $el, 0.23, {top:0, delay: index * 0.07, ease:Expo.easeOut, opacity: 1}
-			return
-		return
-
-	animateGridItemsOut: ->
-		_.each $('#grid .cell'), (el, index, items) =>
-			$el = $(el)
-			TweenMax.to $el, 0.23, 
-				top: -40
-				opacity: 0
-				ease: Expo.easeOut
-				# delay: index * 0.07
-				delay: (items.length - index) * 0.07
-				onComplete: () =>
-					$el.trigger 'remove'
-					# if index >= (items.length - 1)
-					# 	@appModel.trigger 'transition-out-complete'
-					@appModel.trigger 'transition-out-complete' if index is 0
-					return
-			return
 		return
 
 	extendViews: ->
@@ -103,43 +69,6 @@ Main =
 				appModel: @appModel
 			$el.removeClass 'extend-view'
 			return
-
-	onStateChange: ->
-		@state = History.getState()		
-		switch @state.data.type
-			when 'project'
-				# project = new Backbone.Model state.data.model
-				@project = new Backbone.Model @state.data.model
-				@appModel.bind 'transition-out-complete', () =>
-					@loadNext()
-					return
-				@animateGridItemsOut()
-
-				preloaderView = require('views/preloader')
-				view = new preloaderView()
-				$('#top').append view.el
-			else
-				# back to the index?
-				@appModel.bind 'transition-out-complete', () =>
-					@showIndex()
-					return
-				@animateGridItemsOut()
-		return
-
-	loadNext: ->
-		view = require("views/project")
-		new view
-			model: @project
-			el: $('#grid')
-
-		@animateGridItemsIn()
-		$('#top .preloader').trigger 'transition-out'
-		return
-
-	showIndex: ->
-		# $('#grid').remove()
-		$('#grid').load "/ #grid"
-		return
 
 	onTick: ->
 		@appModel.trigger 'tick'
