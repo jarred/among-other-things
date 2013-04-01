@@ -13,37 +13,17 @@
         this.options = options;
         _.bindAll(this);
         this.$el = $(this.el);
-        this.render();
-        this.$internal = this.$('.internal');
-        this.startTween();
       },
       render: function() {
         this.$el.html(this.template({}));
       },
-      template: _.template("<div class=\"internal\"></div>"),
-      startTween: function() {
-        TweenMax.to(this.$internal, .4, {
-          left: 0,
-          onComplete: this.reset,
-          ease: Linear.easeNone
-        });
-      },
+      template: _.template("<div class=\"lines\"></div>"),
+      startTween: function() {},
       reset: function() {
         if (!this.done) {
-          this.$internal.css({
-            left: '-300px'
-          });
-          this.startTween();
+
         } else {
-          this.$internal.css({
-            left: '-300px'
-          });
-          TweenMax.to(this.$internal, .4, {
-            left: 0,
-            ease: Linear.easeNone,
-            opacity: 0,
-            onComplete: this.transitionOutComplete
-          });
+
         }
       },
       transitionOut: function(e) {

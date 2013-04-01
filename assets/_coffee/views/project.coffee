@@ -14,14 +14,13 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 		render: ->
 			_.each @model.get('images'), (obj) =>
-				@$grid.append @template obj
+				view = require("views/project-image")
+				cell = new view
+					model: new Backbone.Model obj
+					attributes:
+						class: "cell #{obj.size}"
+				@$grid.append cell.el
 				return
 			return
-
-		template: _.template """
-		<div class="cell <%= size %>">
-			<div class="images"><img src="<%= src %>" class="<%= size %>" /></div>
-		</div>
-		"""
 
 	return ProjectView

@@ -21,6 +21,7 @@ Main =
 					], () =>
 						require [
 							"views/project"
+							"views/project-image"
 							"views/grid-item"
 							"views/layout-experiment"
 							"views/preloader"
@@ -42,11 +43,9 @@ Main =
 				@onStateChange()
 				return
 
-		# $('#grid').isotope
-		# 	masonry:
-		# 		columnWidth: 150
-
-		# @animateGridItemsIn()
+		$('#grid').isotope
+			masonry:
+				columnWidth: 150
 
 		@animatePreloaderOut()
 		return
@@ -55,8 +54,16 @@ Main =
 		@$pre = $('#top .preloader')
 		@$pre.trigger 'transition-out'
 		h = $(window).height() - 130
-		TweenMax.to $('#top'), .6, {bottom: h, ease: Quint.easeOut, delay: .7}
+		TweenMax.to $('#top'), .6, {bottom: h, ease: Quint.easeOut, delay: .7, onComplete: () =>
+			@hidePreloader()
+			return}
 		_.delay @animateGridItemsIn, 900
+		return
+
+	hidePreloader: ->
+		console.log 'hidePreloader'
+		@$pre.removeClass 'animating'
+		@$pre.addClass 'hide'
 		return
 
 	animateGridItemsIn: ->

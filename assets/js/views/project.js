@@ -18,10 +18,17 @@
       render: function() {
         var _this = this;
         _.each(this.model.get('images'), function(obj) {
-          _this.$grid.append(_this.template(obj));
+          var cell, view;
+          view = require("views/project-image");
+          cell = new view({
+            model: new Backbone.Model(obj),
+            attributes: {
+              "class": "cell " + obj.size
+            }
+          });
+          _this.$grid.append(cell.el);
         });
-      },
-      template: _.template("<div class=\"cell <%= size %>\">\n	<div class=\"images\"><img src=\"<%= src %>\" class=\"<%= size %>\" /></div>\n</div>")
+      }
     });
     return ProjectView;
   });

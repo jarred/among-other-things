@@ -11,9 +11,7 @@ define ["libs/backbone", "libs/underscore"], () ->
 		initialize: (@options) ->
 			_.bindAll @
 			@$el = $(@el)
-			@render()
-			@$internal = @$('.internal')
-			@startTween()
+			# @render()
 			return
 
 		render: ->
@@ -21,22 +19,22 @@ define ["libs/backbone", "libs/underscore"], () ->
 			return
 
 		template: _.template """
-		<div class="internal"></div>
+		<div class="lines"></div>
 		"""
 
 		startTween: ->
-			TweenMax.to @$internal, .4, {left: 0, onComplete: @reset, ease: Linear.easeNone}
+			# TweenMax.to @$internal, .4, {left: 0, onComplete: @reset, ease: Linear.easeNone}
 			return
 
 		reset: ->
 			if !@done
-				@$internal.css
-					left: '-300px'
-				@startTween()
+				# @$internal.css
+					# left: '-300px'
+				# @startTween()
 			else
-				@$internal.css
-					left: '-300px'
-				TweenMax.to @$internal, .4, {left: 0, ease: Linear.easeNone, opacity: 0, onComplete: @transitionOutComplete}
+				# @$internal.css
+					# left: '-300px'
+				# TweenMax.to @$internal, .4, {left: 0, ease: Linear.easeNone, opacity: 0, onComplete: @transitionOutComplete}
 			return
 
 		transitionOut: (e) ->

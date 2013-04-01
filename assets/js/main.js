@@ -14,7 +14,7 @@
       var _this = this;
       require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min", "libs/history"], function() {
         return require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.isotope.min", "libs/history.adapter.jquery"], function() {
-          return require(["views/project", "views/grid-item", "views/layout-experiment", "views/preloader"], function() {
+          return require(["views/project", "views/project-image", "views/grid-item", "views/layout-experiment", "views/preloader"], function() {
             _this.init();
           });
         });
@@ -35,16 +35,25 @@
       this.animatePreloaderOut();
     },
     animatePreloaderOut: function() {
-      var h;
+      var h,
+        _this = this;
       this.$pre = $('#top .preloader');
       this.$pre.trigger('transition-out');
       h = $(window).height() - 130;
       TweenMax.to($('#top'), .6, {
         bottom: h,
         ease: Quint.easeOut,
-        delay: .7
+        delay: .7,
+        onComplete: function() {
+          _this.hidePreloader();
+        }
       });
       _.delay(this.animateGridItemsIn, 900);
+    },
+    hidePreloader: function() {
+      console.log('hidePreloader');
+      this.$pre.removeClass('animating');
+      this.$pre.addClass('hide');
     },
     animateGridItemsIn: function() {
       var _this = this;

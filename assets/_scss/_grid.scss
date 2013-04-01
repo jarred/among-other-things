@@ -7,7 +7,7 @@
 }
 
 #grid{
-	margin-top: 130px;
+	margin-top: 140px;
 	#project &{
 		margin-top: 0px;
 	}
@@ -22,7 +22,7 @@
 		position: relative;
 		margin-left: $margin;
 		margin-bottom: $margin;
-		float: left;
+//		float: left;
 		.images{
 			background-color: #000;
 			overflow: hidden;

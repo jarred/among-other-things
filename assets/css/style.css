@@ -264,16 +264,90 @@ html {
   bottom: 0px;
 }
 /* line 9, ../_scss/_preloader.scss */
-.preloader .internal {
+.preloader .lines {
   position: absolute;
   left: -300px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background: url("/assets/img/preloader-bg.png") repeat top left;
+  background: url("/assets/img/preloader-bg.png") repeat 0px 0px;
+  background-attachment: fixed;
+}
+
+/* line 20, ../_scss/_preloader.scss */
+.preloader.animating .lines {
+  -moz-animation: slide 1s infinite linear;
+  -o-animation: slide 1s infinite linear;
+  -webkit-animation: slide 1s infinite linear;
+  animation: slide 1s infinite linear;
+}
+
+@-moz-keyframes slide {
+  /* line 28, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 32, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-webkit-keyframes slide {
+  /* line 28, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 32, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-o-keyframes slide {
+  /* line 28, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 32, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-ms-keyframes slide {
+  /* line 28, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 32, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@keyframes slide {
+  /* line 28, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 32, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
 }
 
 /* line 16, ../_scss/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 20, ../_scss/style.scss */
 #top {
   background-color: #222222;
   position: fixed;
@@ -286,23 +360,23 @@ html {
   margin: 0px;
   padding: 0px;
 }
-/* line 27, ../_scss/style.scss */
+/* line 31, ../_scss/style.scss */
 #project #top {
   position: relative;
   height: auto;
 }
-/* line 31, ../_scss/style.scss */
+/* line 35, ../_scss/style.scss */
 #top.site-preloading {
   bottom: 0px;
   height: auto;
 }
 
-/* line 37, ../_scss/style.scss */
+/* line 41, ../_scss/style.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 42, ../_scss/style.scss */
+/* line 46, ../_scss/style.scss */
 .content blockquote {
   padding: 0px;
   margin: 0px;
@@ -310,7 +384,7 @@ html {
   font-style: italic;
 }
 
-/* line 50, ../_scss/style.scss */
+/* line 54, ../_scss/style.scss */
 .isotope {
   overflow: visible !important;
 }
