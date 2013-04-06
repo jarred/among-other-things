@@ -14,40 +14,15 @@
       var _this = this;
       require(["libs/jquery", "libs/underscore", "libs/greensock/TweenMax.min", "libs/history"], function() {
         return require(["libs/backbone", "libs/greensock/jquery.gsap.min", "libs/jquery.nested.1.0.1"], function() {
-          return require(["views/project", "views/project-image", "views/grid-item", "views/layout-experiment", "views/index", "views/preloader"], function() {
+          return require(["views/index", "views/intro", "views/logo"], function() {
             _this.init();
           });
         });
       });
     },
     init: function() {
-      var _this = this;
       this.appModel = new Backbone.Model();
       this.extendViews();
-      this.tick = setInterval(function() {
-        _this.onTick();
-      }, 3000);
-      this.animatePreloaderOut();
-    },
-    animatePreloaderOut: function() {
-      var h,
-        _this = this;
-      this.$pre = $('#top .preloader');
-      this.$pre.trigger('transition-out');
-      h = $(window).height() - 130;
-      TweenMax.to($('#top'), .6, {
-        bottom: h,
-        ease: Quint.easeOut,
-        delay: .7,
-        onComplete: function() {
-          _this.hidePreloader();
-        }
-      });
-    },
-    hidePreloader: function() {
-      console.log('hidePreloader');
-      this.$pre.removeClass('animating');
-      this.$pre.addClass('hide');
     },
     extendViews: function() {
       var _this = this;
@@ -62,9 +37,6 @@
         });
         $el.removeClass('extend-view');
       });
-    },
-    onTick: function() {
-      this.appModel.trigger('tick');
     }
   };
 

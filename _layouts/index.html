@@ -14,25 +14,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     </head>
     <body class="extend-view" data-view="index">
-        <!--
-        <div id="top" class="site-preloading">
-            <div class="preloader animating extend-view" data-view="preloader"><div class="lines"></div></div>
-            <div class="content grid-container">
-                <div class="cell">
-                    <p>The portfolio of Jarred Bishop,<br />
-                        a designer among other things.</p>
-                </div>
-            </div>
-        </div>
-        -->
         <div id="data">
-            <div class="post {{ post.size }} extends-view" data-view="grid-item" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
+            {% for post in site.posts %}
+            <div class="project" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
                 <div class="content hide">{{ post.content }}</div>
             </div>
+            {% endfor %}
         </div>
         <div id="grid" class="grid-container">
-            <div class="box size12 blank"></div>
+            <!-- <div class="box size12 blank"></div> -->
             <div class="box size11 blank"></div>
+            <div class="box size21 intro extend-view" data-view="intro"></div>
             {% for post in site.posts %}            
             {% endfor %}
         </div>

@@ -12,228 +12,53 @@
 	}
 }
 
-.grid-container{
-	.box{
-		background-color: #000;
-		&.blank{
-			background-color: #EEE;
-		}
-		&.logo{
-			background-color: #FF3300;
-		}
-		&.bio{
-			background-color: #AAA;
-		}
-	}
-	.cell{
+#grid{
+	.intro{
+		background-color: transparent;
+		text-align: center;
+		@include big-type;
 		position: relative;
-		margin-left: $margin;
-		margin-bottom: $margin;
-		background-color: #000;
-		&.blank{
-			background-color: transparent;
-		}
-//		float: left;
-		.images{
-			background-color: #000;
-			overflow: hidden;
-			position: relative;
-			.internal{
-				position: absolute;
-			}
-			img{
-				display: block;
-			}
-		}
-		.content{
-			display: none;
-		}
-		.block{
-			position: relative;
-		}
-		.preloader{
-			background-color: $black;
-		}
-		.excerpt{
-			margin-top: 0px;
-			width: auto;
-			background-color: $black;
-			color: #FFF;
+		p{
 			position: absolute;
-			left: 0px;
-			bottom: 0px;
-			right: 0px;
-			display: none;
-			p{
-				padding: 20px 20px;
-				margin: 0px;
-				color: #FFF;
-			}
-			a{
-				display: inline-block;
-				padding: 3px 0px;
-				text-decoration: none;
-				color: #FFF;
-				em{
-					font-style: normal;
-					color: #AAA;
-					display: block;
-				}
-			}
+			left: 20px;
+			right: 20px;
+			top: 20px;
 		}
-		&:hover{
-			.excerpt{
-				display: block;
-			}
-		}
-		&.square-1col{
-			@include size_column_width(1);
-			.images,
-			.block,
-			img{
-				@include size_column_width(1);
-				@include size_column_height(1);
-			}
-		}
-		&.square-2col{
-			@include size_column_width(2);
-			.images,
-			.block,
-			img{
-				@include size_column_width(2);
-				@include size_column_height(2);
-			}
-		}
-		&.square-3col{
-			@include size_column_width(3);
-			.images,
-			.block,
-			img{
-				@include size_column_width(3);
-				@include size_column_height(3);
-			}
-		}
-		&.portrait-2col{
-			@include size_column_width(2);
-			.images,
-			.block,
-			img{
-				@include size_column_width(2);
-				@include size_column_height(3);
-			}
-		}
-		&.portrait-3col{
-			@include size_column_width(3);
-			.images,
-			.block,
-			img{
-				@include size_column_width(3);
-				@include size_column_height(4);
-			}
-		}
-		&.landscape-3col{
-			@include size_column_width(3);
-			.images,
-			.block,
-			img{
-				@include size_column_width(3);
-				@include size_column_height(2);
-			}
-		}
-		&.landscape-4col{
-			@include size_column_width(4);
-			.images,
-			.block,
-			img{
-				@include size_column_width(4);
-				@include size_column_height(3);
-			}
-		}
-		&.landscape-5col{
-			@include size_column_width(5);
-			.images,
-			.block,
-			img{
-				@include size_column_width(5);
-				@include size_column_height(4);
-			}
-		}
-		&.landscape-6col{
-			@include size_column_width(6);
-			.images,
-			.block,
-			img{
-				@include size_column_width(6);
-				@include size_column_height(4);
-			}
-		}
-		.isotope &{
-			float: none;
+		.loading{
+			color: #CCC;
 		}
 	}
-}
-
-@media screen and (max-width: 1025px) {
-	#grid{
-		.cell{
-			.excerpt{
-				display: block;
-				position: relative;
-				bottom: auto;
-				left: auto;
-				right: auto;
+	.logo{
+		text-align: center;
+		@include big-type;
+		position: relative;
+		background-color: transparent;
+		p{
+			position: absolute;
+			left: 20px;
+			right: 20px;
+			top: 20px;
+		}
+	}
+	.box{
+		overflow: hidden;
+		.preloader{
+			width: 100%;
+			height: 100%;
+		}
+		.image{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
-}
-
-@media screen and (max-width: 620px) {
-	#grid{
-		.cell{
-			&.landscape-4col{
-				@include size_column_width(3);
-				.images,
-				.block,
-				img{
-					@include size_column_width(3);
-					@include size_column_height(2);
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 480px) {
-	#grid{
-		.cell{
-			&.landscape-4col,
-			&.landscape-3col{
-				@include size_column_width(2);
-				.images,
-				.block,
-				img{
-					@include size_column_width(2);
-					@include size_column_height(1.4);
-				}
-			}
-			&.portrait-3col{
-				@include size_column_width(2);
-				.images,
-				.block,
-				img{
-					@include size_column_width(2);
-					@include size_column_height(2.6);
-				}
-			}
-			&.square-3col{
-				@include size_column_width(2);
-				.images,
-				.block,
-				img{
-					@include size_column_width(2);
-					@include size_column_height(2);
-				}
-			}
+	.blank{
+		.preloader{
+			display: none !important;
 		}
 	}
 }

@@ -2,11 +2,12 @@ $black: #222;
 $highlight: #FFF;
 $column_width: 80px;
 $margin: 20px;
+$sans: 'Helvetica Neue', Sans-Serif;
 
 
 html{
 	background-color: #FFF;
-	font: 400 13px/20px 'Geneva', 'Helvetica', Sans-Serif;
+	font: 400 13px/20px $sans;
 	color: $black;
 }
 
@@ -14,47 +15,18 @@ body{
 	padding: 20px;
 }
 
+@mixin big-type{
+	font: 600 26px/26px $sans;
+}
+
 @import "_grid";
 @import "_preloader";
+
 
 .hide{
 	display: none;
 }
 
-#top{
-	background-color: $black;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 200;
-	height: 130px;
-	color: #FFF;
-	margin: 0px;
-	padding: 0px;
-	#project &{
-		position: relative;
-		height: auto;
-	}
-	&.site-preloading{
-		bottom: 0px;
-		height: auto;
-	}
-}
-
 .clearfix{
 	clear: both;
-}
-
-.content{
-	blockquote{
-		padding: 0px;
-		margin: 0px;
-		margin-bottom: 1em;
-		font-style: italic;
-	}
-}
-
-.isotope{
-	overflow: visible !important;
 }
