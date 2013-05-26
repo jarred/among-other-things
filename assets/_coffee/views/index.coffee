@@ -3,7 +3,6 @@ define ["libs/backbone", "libs/underscore"], () ->
 	IndexView = Backbone.View.extend
 
 		sizes: [
-
 			"size22"
 			"size32"
 			"size32"
@@ -13,6 +12,8 @@ define ["libs/backbone", "libs/underscore"], () ->
 			"size43"
 			"logo"
 		]
+
+		projectsShown: 0
 		
 		initialize: (@options) ->
 			_.bindAll @
@@ -29,18 +30,18 @@ define ["libs/backbone", "libs/underscore"], () ->
 				resizeToFitOptions: 
 				    resizeAny: false
 
-			# @preloadProject(0)
+			@preloadProject(0)
 			return
 
 		cellTemplate: _.template """
-		<div class="box <%= size %>">
-			<div class="internal">
-				<div class="preloader animating">
-					<div class="lines"></div>
+			<div class="box image-box <%= size %>">
+				<div class="internal">
+					<div class="preloader animating">
+						<div class="lines"></div>
+					</div>
 				</div>
 			</div>
-		</div>
-		"""
+			"""
 
 		addCell: (size) ->
 			if size is 'bio'
@@ -80,12 +81,38 @@ define ["libs/backbone", "libs/underscore"], () ->
 
 		preloadProject: (n) ->
 			project = @model.get('projects')[n]
+			@imagesAdded = @imagesLoaded = 0
 			_.each project.images, (img) =>
-				console.log img.src
 				$el = @$(".#{img.size}:not(.has-image)")
-				$el.find('.internal').append "<div class=\"image\"><img src=\"#{img.src}\" /></div>"
+				i = new Image()
+				i.onload = @imageLoaded
+				i.src = img.src
+				$image = $ "<div class=\"image\"></div>"
+				$image.append i
+				$el.find('.internal').append $image
 				$el.addClass 'has-image'
+				@imagesAdded++
 				return
+			return
 
+		imageLoaded: ->
+			@imagesLoaded++
+			if @imagesLoaded >= @imagesAdded
+				if @projectsShown == 0
+					@transitionProjectIn()
+				else
+					_.delay @transitionProjectIn, 3000
+				@projectsShown++
+			return
 
+		transitionProjectIn: ->
+			_.each @$('.image-box'), (el, index) =>
+				$el = $(el)
+				return if $el.hasClass 'logo' or $el.hasClass 'intro'
+				internal = $el.find('.internal')
+				newY = Number(internal.css('top').replace("px", "")) - $el.height()
+				console.log newY
+				TweenMax.to(internal, .3, {top: newY, delay: .1 * index})
+				return
+			console.log 'transitionProjectIn'
 			return

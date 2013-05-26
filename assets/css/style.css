@@ -52,22 +52,30 @@ body {
   overflow: hidden;
 }
 /* line 45, ../_scss/_grid.scss */
+#grid .box .internal {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  min-height: 100%;
+}
+/* line 53, ../_scss/_grid.scss */
 #grid .box .preloader {
   width: 100%;
   height: 100%;
 }
-/* line 49, ../_scss/_grid.scss */
+/* line 57, ../_scss/_grid.scss */
 #grid .box .image {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-/* line 53, ../_scss/_grid.scss */
+/* line 61, ../_scss/_grid.scss */
 #grid .box .image img {
   width: 100%;
   height: 100%;
 }
-/* line 60, ../_scss/_grid.scss */
+/* line 68, ../_scss/_grid.scss */
 #grid .blank .preloader {
   display: none !important;
 }

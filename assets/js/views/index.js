@@ -5,6 +5,7 @@
     var IndexView;
     return IndexView = Backbone.View.extend({
       sizes: ["size22", "size32", "size32", "size23", "size34", "size34", "size43", "logo"],
+      projectsShown: 0,
       initialize: function(options) {
         this.options = options;
         _.bindAll(this);
@@ -21,8 +22,9 @@
             resizeAny: false
           }
         });
+        this.preloadProject(0);
       },
-      cellTemplate: _.template("<div class=\"box <%= size %>\">\n	<div class=\"internal\">\n		<div class=\"preloader animating\">\n			<div class=\"lines\"></div>\n		</div>\n	</div>\n</div>"),
+      cellTemplate: _.template("<div class=\"box image-box <%= size %>\">\n	<div class=\"internal\">\n		<div class=\"preloader animating\">\n			<div class=\"lines\"></div>\n		</div>\n	</div>\n</div>"),
       addCell: function(size) {
         var data;
         if (size === 'bio') {
@@ -72,13 +74,48 @@
         var project,
           _this = this;
         project = this.model.get('projects')[n];
+        this.imagesAdded = this.imagesLoaded = 0;
         _.each(project.images, function(img) {
-          var $el;
-          console.log(img.src);
+          var $el, $image, i;
           $el = _this.$("." + img.size + ":not(.has-image)");
-          $el.find('.internal').append("<div class=\"image\"><img src=\"" + img.src + "\" /></div>");
+          i = new Image();
+          i.onload = _this.imageLoaded;
+          i.src = img.src;
+          $image = $("<div class=\"image\"></div>");
+          $image.append(i);
+          $el.find('.internal').append($image);
           $el.addClass('has-image');
+          _this.imagesAdded++;
         });
+      },
+      imageLoaded: function() {
+        this.imagesLoaded++;
+        if (this.imagesLoaded >= this.imagesAdded) {
+          if (this.projectsShown === 0) {
+            this.transitionProjectIn();
+          } else {
+            _.delay(this.transitionProjectIn, 3000);
+          }
+          this.projectsShown++;
+        }
+      },
+      transitionProjectIn: function() {
+        var _this = this;
+        _.each(this.$('.image-box'), function(el, index) {
+          var $el, internal, newY;
+          $el = $(el);
+          if ($el.hasClass('logo' || $el.hasClass('intro'))) {
+            return;
+          }
+          internal = $el.find('.internal');
+          newY = Number(internal.css('top').replace("px", "")) - $el.height();
+          console.log(newY);
+          TweenMax.to(internal, .3, {
+            top: newY,
+            delay: .1 * index
+          });
+        });
+        console.log('transitionProjectIn');
       }
     });
   });
