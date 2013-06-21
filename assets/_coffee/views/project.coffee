@@ -1,24 +1,26 @@
-define ["libs/backbone", "libs/underscore"], () ->
+define ["backbone", "underscore"], () ->
 
 	ProjectView = Backbone.View.extend
 
-		initialize: ->
+		initialize: (@options) ->
 			_.bindAll @
 			@$el = $(@el)
-			@model = new Backbone.Model JSON.parse @$('.data').html()
+			if @options.model is undefined
+				@model = new Backbone.Model JSON.parse @$('.data').html()
+			@model.set 'images', _.shuffle @model.get('images')
+			@$grid = $('#grid')
 			@render()
 			return
 
 		render: ->
 			_.each @model.get('images'), (obj) =>
-				@$el.append @template obj
+				view = require("views/project-image")
+				cell = new view
+					model: new Backbone.Model obj
+					attributes:
+						class: "cell #{obj.size}"
+				@$grid.append cell.el
 				return
 			return
-
-		template: _.template """
-		<div class="image" style="width: <%= width %>px; height: <%= height %>px">
-			<img src="<%= src %>" style="width: <%= width %>px; height: <%= height %>px" />
-		</div>
-		"""
 
 	return ProjectView

@@ -1,33 +1,38 @@
 ---
 layout: project
-permalink: /kaleidomaniac/index.html
+title: kaleidomaniac
 excerpt: Kaleidomaniac.com
-width: 130
-height: 130
-published: false
+published: true
+size: landscape-3col
 ---
 
 <script type="application/json" class="data">
 {
-	"height": 130,
+	"size": "landscape-3col",
 	"images": [{
-		"src": "/assets/img/kaleidomaniac.com/1.jpg",
-		"width": 130,
-		"height": 130,
-		"orientation": "portrait",
-		"feature": true
+		"src": "/assets/img/kaleidomaniac.com/landscape-3col.1.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/2.jpg",
-		"width": 130,
-		"height": 130,
-		"orientation": "portrait",
-		"feature": true
+		"src": "/assets/img/kaleidomaniac.com/landscape-3col.2.jpg",
+		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/3.jpg",
-		"width": 130,
-		"height": 130,
-		"orientation": "portrait",
-		"feature": true
+		"src": "/assets/img/kaleidomaniac.com/landscape-3col.3.jpg",
+		"size": "landscape-3col"
+	},{
+		"src": "/assets/img/kaleidomaniac.com/portrait-2col.1.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/kaleidomaniac.com/portrait-2col.2.jpg",
+		"size": "portrait-2col"
+	},{
+		"src": "/assets/img/kaleidomaniac.com/square-3col.1.jpg",
+		"size": "square-3col"
+	},{
+		"src": "/assets/img/kaleidomaniac.com/square-3col.2.jpg",
+		"size": "square-3col"
+	},{
+		"src": "/assets/img/kaleidomaniac.com/square-3col.3.jpg",
+		"size": "square-3col"
 	}]
 }
 </script>

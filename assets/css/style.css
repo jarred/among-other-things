@@ -1,155 +1,170 @@
-/* line 4, ../_scss/style.scss */
+/* line 8, ../_scss/style.scss */
 html {
-  font: 400 13px/16px "Helvetica", Sans-Serif;
+  background-color: #FFF;
+  font: 400 13px/20px "Helvetica Neue", Sans-Serif;
   color: #222222;
 }
 
-/* line 9, ../_scss/style.scss */
-#intro {
-  position: relative;
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 280px;
-  display: none;
-  float: left;
-}
-/* line 16, ../_scss/style.scss */
-.isotope #intro {
-  float: none;
-  clear: both;
-}
-/* line 20, ../_scss/style.scss */
-#intro p {
-  margin: 0px;
+/* line 14, ../_scss/style.scss */
+body {
+  padding: 20px;
 }
 
-/* line 25, ../_scss/style.scss */
-.grid-item {
+/* line 10, ../_scss/_grid.scss */
+#project #grid {
+  margin-top: 0px;
+}
+
+/* line 16, ../_scss/_grid.scss */
+#grid .intro {
+  background-color: transparent;
+  text-align: center;
+  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
-  float: left;
-  margin-left: 20px;
-  margin-top: 20px;
 }
-/* line 30, ../_scss/style.scss */
-.isotope .grid-item {
-  float: none;
-  clear: both;
+/* line 21, ../_scss/_grid.scss */
+#grid .intro p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
 }
-/* line 34, ../_scss/style.scss */
-.grid-item .preloader {
-  background-color: #EEE;
+/* line 27, ../_scss/_grid.scss */
+#grid .intro .loading {
+  color: #CCC;
 }
-/* line 37, ../_scss/style.scss */
-.grid-item .images {
+/* line 31, ../_scss/_grid.scss */
+#grid .logo {
+  text-align: center;
+  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
+  background-color: transparent;
+}
+/* line 36, ../_scss/_grid.scss */
+#grid .logo p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+}
+/* line 43, ../_scss/_grid.scss */
+#grid .box {
   overflow: hidden;
 }
-/* line 39, ../_scss/style.scss */
-.grid-item .images .internal {
-  position: absolute;
-}
-/* line 43, ../_scss/style.scss */
-.grid-item .images img {
-  display: block;
-}
-/* line 47, ../_scss/style.scss */
-.grid-item .content {
-  display: none;
-}
-/* line 50, ../_scss/style.scss */
-.grid-item .excerpt {
-  margin-top: 10px;
-  width: auto;
-}
-/* line 54, ../_scss/style.scss */
-.grid-item .excerpt a {
-  display: inline-block;
-  padding: 3px 0px;
-  text-decoration: none;
-  color: #222222;
-}
-/* line 59, ../_scss/style.scss */
-.grid-item .excerpt a em {
-  font-style: normal;
-  color: #AAA;
-}
-/* line 67, ../_scss/style.scss */
-.grid-item:hover .images {
-  background-color: #222222;
-}
-/* line 69, ../_scss/style.scss */
-.grid-item:hover .images .internal {
-  display: none;
-}
-/* line 74, ../_scss/style.scss */
-.grid-item:hover .excerpt a {
-  background-color: #222222;
-  color: #222222;
-}
-/* line 77, ../_scss/style.scss */
-.grid-item:hover .excerpt a em {
-  color: #222222;
-}
-
-/* line 86, ../_scss/style.scss */
-#project .content {
-  width: 280px;
-  margin-left: 20px;
-  margin-top: 20px;
-  float: left;
-}
-/* line 91, ../_scss/style.scss */
-#project .content blockquote {
-  margin: 0px;
-  padding: 0px;
-  margin-bottom: 10px;
-  font-style: italic;
-}
-/* line 98, ../_scss/style.scss */
-#project .image {
-  float: left;
+/* line 45, ../_scss/_grid.scss */
+#grid .box .internal {
   position: relative;
-  margin-left: 20px;
-  margin-top: 20px;
-}
-
-/* line 106, ../_scss/style.scss */
-p.intro {
-  margin-top: 20px;
-  margin-bottom: 0px;
-  margin-left: 20px;
-  font: 500 35px/40px "Calibre";
-  letter-spacing: -1px;
-}
-
-/* line 115, ../_scss/style.scss */
-#grid {
-  margin: 20px 0px;
-}
-/* line 117, ../_scss/style.scss */
-#grid .cell {
-  position: relative;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-/* line 121, ../_scss/style.scss */
-#grid .cell .image {
-  position: absolute;
   left: 0px;
   top: 0px;
   right: 0px;
+  min-height: 100%;
+}
+/* line 53, ../_scss/_grid.scss */
+#grid .box .preloader {
+  width: 100%;
+  height: 100%;
+}
+/* line 57, ../_scss/_grid.scss */
+#grid .box .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 61, ../_scss/_grid.scss */
+#grid .box .image img {
+  width: 100%;
+  height: 100%;
+}
+/* line 68, ../_scss/_grid.scss */
+#grid .blank .preloader {
+  display: none !important;
+}
+
+/* line 2, ../_scss/_preloader.scss */
+.preloader .lines {
+  position: absolute;
+  left: -300px;
+  top: 0px;
+  right: 0px;
   bottom: 0px;
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: #222222 url("/assets/img/preloader-bg.png") repeat 0px 0px;
+  background-attachment: fixed;
 }
-/* line 130, ../_scss/style.scss */
-#grid .cell .image img {
-  max-width: 100%;
-  max-height: 100%;
-  display: inline-block;
+
+/* line 13, ../_scss/_preloader.scss */
+.preloader.animating .lines {
+  -moz-animation: slide 1s infinite linear;
+  -o-animation: slide 1s infinite linear;
+  -webkit-animation: slide 1s infinite linear;
+  animation: slide 1s infinite linear;
 }
-/* line 137, ../_scss/style.scss */
-.isotope #grid .cell {
-  float: none;
+
+@-moz-keyframes slide {
+  /* line 21, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 25, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-webkit-keyframes slide {
+  /* line 21, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 25, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-o-keyframes slide {
+  /* line 21, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 25, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@-ms-keyframes slide {
+  /* line 21, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 25, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+@keyframes slide {
+  /* line 21, ../_scss/_preloader.scss */
+  0% {
+    background-position: 0px 0px;
+  }
+
+  /* line 25, ../_scss/_preloader.scss */
+  100% {
+    background-position: 300px 0px;
+  }
+}
+
+/* line 26, ../_scss/style.scss */
+.hide {
+  display: none;
+}
+
+/* line 30, ../_scss/style.scss */
+.clearfix {
+  clear: both;
 }

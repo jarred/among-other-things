@@ -1,0 +1,72 @@
+@mixin size_column_width($cols){
+	width: (($column_width + $margin) * $cols) - $margin
+}
+
+@mixin size_column_height($cols){
+	height: (($column_width + $margin) * $cols) - $margin
+}
+
+#grid{
+	#project &{
+		margin-top: 0px;
+	}
+}
+
+#grid{
+	.intro{
+		background-color: transparent;
+		text-align: center;
+		@include big-type;
+		position: relative;
+		p{
+			position: absolute;
+			left: 20px;
+			right: 20px;
+			top: 20px;
+		}
+		.loading{
+			color: #CCC;
+		}
+	}
+	.logo{
+		text-align: center;
+		@include big-type;
+		position: relative;
+		background-color: transparent;
+		p{
+			position: absolute;
+			left: 20px;
+			right: 20px;
+			top: 20px;
+		}
+	}
+	.box{
+		overflow: hidden;
+		.internal{
+			position: relative;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			min-height: 100%;
+
+		}
+		.preloader{
+			width: 100%;
+			height: 100%;
+		}
+		.image{
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.blank{
+		.preloader{
+			display: none !important;
+		}
+	}
+}

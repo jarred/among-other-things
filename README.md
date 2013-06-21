@@ -1,4 +1,5 @@
 among-other-things
 ==================
 
-The portfolio of Jarred Bishop — a designer, among other things.
+coffee --compile --watch --output assets/js/app assets/_coffee
+

@@ -3,6 +3,7 @@
   var Main;
 
   requirejs.config({
+<<<<<<< HEAD
     baseUrl: '/assets/js'
   });
 
@@ -46,5 +47,54 @@
       require(["views/project", "views/grid-item", "views/layout-experiment"], Main.init);
     });
   });
+=======
+    baseUrl: '/assets/js/libs',
+    paths: {
+      app: '../app'
+    }
+  });
+
+  Main = {
+    go: function() {
+      this.loadLibs();
+    },
+    loadLibs: function() {
+      var _this = this;
+
+      require(["jquery", "underscore", "greensock/TweenMax.min"], function() {
+        return require(["backbone", "greensock/jquery.gsap.min", "jquery.nested.1.0.1"], function() {
+          return require(["app/views/index", "app/views/intro", "app/views/logo"], function() {
+            _this.init();
+          });
+        });
+      });
+    },
+    init: function() {
+      this.appModel = new Backbone.Model();
+      this.extendViews();
+    },
+    extendViews: function() {
+      var _this = this;
+
+      return _.each($('.extend-view'), function(el) {
+        var $el, view, viewName;
+
+        $el = $(el);
+        console.log(el);
+        viewName = "app/views/" + ($el.data('view'));
+        console.log('viewName', viewName);
+        view = require(viewName);
+        console.log(view);
+        new view({
+          el: el,
+          appModel: _this.appModel
+        });
+        $el.removeClass('extend-view');
+      });
+    }
+  };
+
+  Main.go();
+>>>>>>> gh-pages
 
 }).call(this);

@@ -1,142 +1,32 @@
 $black: #222;
 $highlight: #FFF;
+$column_width: 80px;
+$margin: 20px;
+$sans: 'Helvetica Neue', Sans-Serif;
+
 
 html{
-	font: 400 13px/16px 'Helvetica', Sans-Serif;
+	background-color: #FFF;
+	font: 400 13px/20px $sans;
 	color: $black;
 }
 
-#intro{
-	position: relative;
-	margin-left: 20px;
-	margin-top: 20px;
-	width: 280px;
+body{
+	padding: 20px;
+}
+
+@mixin big-type{
+	font: 600 26px/26px $sans;
+}
+
+@import "_grid";
+@import "_preloader";
+
+
+.hide{
 	display: none;
-	float: left;
-	.isotope &{
-		float: none;
-		clear: both;
-	}
-	p{
-		margin: 0px;
-	}
 }
 
-.grid-item{
-	position: relative;
-	float: left;
-	margin-left: 20px;
-	margin-top: 20px;
-	.isotope &{
-		float: none;
-		clear: both;
-	}
-	.preloader{
-		background-color: #EEE;
-	}
-	.images{
-		position: relative;
-		.internal{
-			position: absolute;
-		}
-		overflow: hidden;
-		img{
-			display: block;
-		}
-	}
-	.content{
-		display: none;
-	}
-	.excerpt{
-		margin-top: 10px;
-		width: auto;
-//		text-align: center;
-		a{
-			display: inline-block;
-			padding: 3px 0px;
-			text-decoration: none;
-			color: $black;
-			em{
-				font-style: normal;
-				color: #AAA;
-//				display: block;
-			}
-		}
-	}
-	&:hover{
-		.images{
-			background-color: $black;
-			.internal{
-				display: none;
-			}
-		}
-		.excerpt{
-			a{
-				background-color: $black;
-				color: $black;
-				em{
-					color: $black;
-				}
-			}
-		}
-	}
-}
-
-#project{
-	.content{
-		width: 280px;
-		margin-left: 20px;
-		margin-top: 20px;
-		float: left;
-		blockquote{
-			margin: 0px;
-			padding: 0px;
-			margin-bottom: 10px;
-			font-style: italic;
-		}
-	}
-	.image{
-		float: left;
-		position: relative;
-		margin-left: 20px;
-		margin-top: 20px;
-	}
-}
-
-p.intro{
-	margin-top: 20px;
-	margin-bottom: 0px;
-	margin-left: 20px;
-	font: 500 35px/40px 'Calibre';
-	letter-spacing: -1px;
-
-}
-
-#grid{
-	margin: 20px 0px;
-	.cell{
-		position: relative;
-		margin-left: 20px;
-		margin-bottom: 20px;
-		.image{
-			position: absolute;
-			left: 0px;
-			top: 0px;
-			right: 0px;
-			bottom: 0px;
-			background-size: contain;
-			background-position: top center;
-			background-repeat: no-repeat;
-			img{
-				max-width: 100%;
-				max-height: 100%;
-				display: inline-block;
-			}
-		}
-//		float: left;
-		.isotope &{
-			float: none
-
-		}
-	}
+.clearfix{
+	clear: both;
 }
