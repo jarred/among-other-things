@@ -20,6 +20,7 @@ Main =
 				require [
 					"backbone", 
 					"greensock/jquery.gsap.min"
+					"jquery.nested.1.0.1"
 					# "libs/history.adapter.jquery"
 					], () =>
 						require [
@@ -36,8 +37,6 @@ Main =
 		return
 
 	init: ->
-		console.log 'hi?'
-		return
 		@appModel = new Backbone.Model()
 		@extendViews()
 		return
@@ -45,8 +44,11 @@ Main =
 	extendViews: ->
 		_.each $('.extend-view'), (el) =>
 			$el = $(el)
+			console.log el
 			viewName = "app/views/#{$el.data('view')}"
+			console.log 'viewName', viewName
 			view = require(viewName)
+			console.log view
 			new view
 				el: el
 				appModel: @appModel

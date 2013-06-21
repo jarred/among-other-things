@@ -1,4 +1,4 @@
-define ["backbone", "underscore"], () ->
+define ["backbone", "underscore", "app/views/logo"], () ->
 
 	IndexView = Backbone.View.extend
 
@@ -30,7 +30,7 @@ define ["backbone", "underscore"], () ->
 				resizeToFitOptions: 
 				    resizeAny: false
 
-			@preloadProject(0)
+			# @preloadProject(0)
 			return
 
 		cellTemplate: _.template """
@@ -63,7 +63,7 @@ define ["backbone", "underscore"], () ->
 			return
 
 		addLogo: ->
-			name = require("views/logo")
+			name = require("app/views/logo")
 			view = new name
 				appModel: @model
 			$('#grid').append view.el
