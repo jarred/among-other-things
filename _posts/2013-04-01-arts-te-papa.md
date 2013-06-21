@@ -2,11 +2,12 @@
 layout: project
 title: Nga Toi Arts Te Papa
 excerpt: arts.tepapa.govt.nz
-published: true
+published: false
 ---
 
 <script type="application/json" class="data">
 {
+	"noun": "Designer",
 	"images": [{
 		"src": "/assets/img/arts-te-papa/landscape-4col.homepage.jpg",
 		"size": "landscape-4col"
@@ -14,14 +15,14 @@ published: true
 		"src": "/assets/img/arts-te-papa/landscape-4col.objects.jpg",
 		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/arts-te-papa/lanscape-3col.exhibition.jpg",
-		"size": "landscape-3col"
+		"src": "/assets/img/arts-te-papa/landscape-4col.exhibition.jpg",
+		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/arts-te-papa/portrait-3col.article.jpg",
-		"size": "portrait-3col"
+		"src": "/assets/img/arts-te-papa/portrait-2col.article.jpg",
+		"size": "portrait-2col"
 	},{
-		"src": "/assets/img/arts-te-papa/portrait-3col.homepage.jpg",
-		"size": "portrait-3col"
+		"src": "/assets/img/arts-te-papa/portrait-2col.homepage.jpg",
+		"size": "portrait-2col"
 	},{
 		"src": "/assets/img/arts-te-papa/square-2col.image-caption.jpg",
 		"size": "square-2col"

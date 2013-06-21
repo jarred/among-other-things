@@ -18,6 +18,10 @@
 		text-align: center;
 		@include big-type;
 		position: relative;
+		.phrase{
+			display: inline-block;
+			color: #F30;
+		}
 		p{
 			position: absolute;
 			left: 20px;
@@ -51,7 +55,7 @@
 // 		float: left;
 // 		margin-right: 20px;
 // 		margin-bottom: 20px;
-		.internal{
+		> .internal{
 			position: absolute;
 			left: 0px;
 			top: 0px;
@@ -143,4 +147,11 @@
 .square-1col{
 	width: 130px;
 	height: 130px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 130px;
+		height: 130px;
+	}	
 }

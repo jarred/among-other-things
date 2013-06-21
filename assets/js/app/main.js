@@ -6,7 +6,9 @@
     baseUrl: '/assets/js/libs',
     paths: {
       app: '../app',
-      indexView: '../app/views/index'
+      indexView: '../app/views/index',
+      logoView: '../app/views/logo',
+      introView: '../app/views/intro'
     },
     shim: {
       backbone: {
@@ -19,7 +21,7 @@
     }
   });
 
-  require(['jquery', 'underscore', 'backbone', 'indexView', 'greensock/TweenMax.min'], function($, _, Backbone, IndexView, TweenMax) {
+  require(['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView'], function($, _, Backbone, TweenMax, IndexView, LogoView) {
     var App;
 
     App = {

@@ -4,15 +4,25 @@
     var IntroView;
 
     return IntroView = Backbone.View.extend({
-      className: 'box size21 intro',
       initialize: function(options) {
         this.options = options;
         _.bindAll(this);
-        this.$el = $(this.el);
-        this.render();
+        this.on('animate-in', this.animateIn);
+        return this.$el.addClass('ready');
       },
-      render: function() {
-        this.$el.html("<p>The portfolio of Jarred Bishop <span class=\"mdash\">&mdash;</span><br /><span class=\"loading\">is loading...</span></p>");
+      animateIn: function(project) {
+        var _this = this;
+
+        return TweenMax.to(this.$('.phrase'), .3, {
+          opacity: 0,
+          onComplete: function() {
+            _this.$('.phrase').html(project.noun);
+            _this.$('.phrase').removeClass('loading');
+            return TweenMax.to(_this.$('.phrase'), .3, {
+              opacity: 1
+            });
+          }
+        });
       }
     });
   });

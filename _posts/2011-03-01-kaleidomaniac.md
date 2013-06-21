@@ -8,7 +8,7 @@ size: landscape-3col
 
 <script type="application/json" class="data">
 {
-	"size": "landscape-3col",
+	"noun": "Curator?",
 	"images": [{
 		"src": "/assets/img/kaleidomaniac.com/landscape-3col.1.jpg",
 		"size": "landscape-3col"

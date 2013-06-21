@@ -1,4 +1,4 @@
-define ["backbone", "underscore", "app/views/logo"], () ->
+define ["logoView", 'introView'], (LogoView, IntroView) ->
 
 	IndexView = Backbone.View.extend
 
@@ -22,6 +22,8 @@ define ["backbone", "underscore", "app/views/logo"], () ->
 							count: 0
 
 			@randomiseLayout()
+			@intro = new IntroView
+				el: @$('.intro')
 			@showProject 0
 			return
 
@@ -55,7 +57,7 @@ define ["backbone", "underscore", "app/views/logo"], () ->
 			@imageCount = 0
 			@imagesLoaded = 0
 			_.each @project.images, (image) =>
-				$box = $(".#{image.size}")
+				$box = $(".#{image.size}:first")
 				return if !$box.hasClass 'empty'
 				@imageCount++
 				img = new Image()
@@ -76,16 +78,17 @@ define ["backbone", "underscore", "app/views/logo"], () ->
 				@animateProjectIn()
 
 		animateProjectIn: ->
-			_.each $('.box'), (el, index) =>
+			@intro.trigger 'animate-in', @project
+			_.each $('.image-box'), (el, index) =>
 				$el = $(el)
 				h = $el.height()
 				tween =
 					top: 0 - h
 					ease: Quint.easeOut
-					delay: index * .2
-				if index + 1 >= $('.box').length
+					delay: index * .1
+				if index + 1 >= $('.image-box').length
 					tween.onComplete = @projectAnimatedIn
-				TweenMax.to $el.find('.internal'), .4, tween
+				TweenMax.to $el.find('.internal'), .3, tween
 
 		projectAnimatedIn: ->
 			_.each @$('.box'), (el) =>

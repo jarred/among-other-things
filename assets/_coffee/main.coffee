@@ -3,6 +3,8 @@ requirejs.config
 	paths:
 		app: '../app'
 		indexView: '../app/views/index'
+		logoView: '../app/views/logo'
+		introView: '../app/views/intro'
 
 	shim:
 		backbone:
@@ -13,7 +15,7 @@ requirejs.config
 
 # lets go...
 
-require ['jquery', 'underscore', 'backbone', 'indexView', 'greensock/TweenMax.min'], ($, _, Backbone, IndexView, TweenMax) =>
+require ['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView'], ($, _, Backbone, TweenMax, IndexView, LogoView) =>
 
 	App =
 		go: ->

@@ -14,7 +14,7 @@ Dream. Job.
 
 <script type="application/json" class="data">
 {
-	"size": "portrait-2col",
+	"noun": "Photographer",
 	"images": [{
 		"src": "/assets/img/black-estate/landscape-3col.IMG_8775.jpg",
 		"size": "landscape-3col"

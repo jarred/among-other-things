@@ -8,7 +8,7 @@ size: square-2col
 
 <script type="application/json" class="data">
 {
-	"size": "square-2col",
+	"noun": "Designer",
 	"images": [{
 		"src": "/assets/img/coffeesupremeshop.com/landscape-3col.methods.png",
 		"size": "landscape-3col"

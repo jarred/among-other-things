@@ -23,60 +23,65 @@ body {
   position: relative;
 }
 /* line 21, ../_scss/_grid.scss */
+#grid .intro .phrase {
+  display: inline-block;
+  color: #F30;
+}
+/* line 25, ../_scss/_grid.scss */
 #grid .intro p {
   position: absolute;
   left: 20px;
   right: 20px;
   top: 20px;
 }
-/* line 27, ../_scss/_grid.scss */
+/* line 31, ../_scss/_grid.scss */
 #grid .intro .loading {
   color: #CCC;
 }
-/* line 31, ../_scss/_grid.scss */
+/* line 35, ../_scss/_grid.scss */
 #grid .logo {
   background-color: #FFF;
   text-align: center;
   font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
 }
-/* line 36, ../_scss/_grid.scss */
+/* line 40, ../_scss/_grid.scss */
 #grid .logo p {
   margin-top: 20px;
 }
-/* line 41, ../_scss/_grid.scss */
+/* line 45, ../_scss/_grid.scss */
 #grid .intro,
 #grid .logo {
   z-index: 500;
 }
-/* line 44, ../_scss/_grid.scss */
+/* line 48, ../_scss/_grid.scss */
 #grid .image-box {
   z-index: 2;
   position: relative;
 }
-/* line 48, ../_scss/_grid.scss */
+/* line 52, ../_scss/_grid.scss */
 #grid .box {
   overflow: hidden;
   position: absolute;
 }
-/* line 54, ../_scss/_grid.scss */
-#grid .box .internal {
+/* line 58, ../_scss/_grid.scss */
+#grid .box > .internal {
   position: absolute;
   left: 0px;
   top: 0px;
 }
-/* line 60, ../_scss/_grid.scss */
+/* line 64, ../_scss/_grid.scss */
 #grid .blank {
   background-color: transparent;
   z-index: 1;
 }
 
-/* line 66, ../_scss/_grid.scss */
+/* line 70, ../_scss/_grid.scss */
 .landscape-4col {
   width: 580px;
   height: 430px;
 }
-/* line 72, ../_scss/_grid.scss */
+/* line 76, ../_scss/_grid.scss */
 .landscape-4col img,
 .landscape-4col .image,
 .landscape-4col .blank,
@@ -85,12 +90,12 @@ body {
   height: 430px;
 }
 
-/* line 77, ../_scss/_grid.scss */
+/* line 81, ../_scss/_grid.scss */
 .landscape-3col {
   width: 430px;
   height: 280px;
 }
-/* line 83, ../_scss/_grid.scss */
+/* line 87, ../_scss/_grid.scss */
 .landscape-3col img,
 .landscape-3col .image,
 .landscape-3col .blank,
@@ -99,12 +104,12 @@ body {
   height: 280px;
 }
 
-/* line 88, ../_scss/_grid.scss */
+/* line 92, ../_scss/_grid.scss */
 .landscape-2col {
   width: 280px;
   height: 130px;
 }
-/* line 94, ../_scss/_grid.scss */
+/* line 98, ../_scss/_grid.scss */
 .landscape-2col img,
 .landscape-2col .image,
 .landscape-2col .blank,
@@ -113,12 +118,12 @@ body {
   height: 130px;
 }
 
-/* line 99, ../_scss/_grid.scss */
+/* line 103, ../_scss/_grid.scss */
 .portrait-3col {
   width: 430px;
   height: 580px;
 }
-/* line 105, ../_scss/_grid.scss */
+/* line 109, ../_scss/_grid.scss */
 .portrait-3col img,
 .portrait-3col .image,
 .portrait-3col .blank,
@@ -127,12 +132,12 @@ body {
   height: 580px;
 }
 
-/* line 110, ../_scss/_grid.scss */
+/* line 114, ../_scss/_grid.scss */
 .portrait-2col {
   width: 280px;
   height: 430px;
 }
-/* line 116, ../_scss/_grid.scss */
+/* line 120, ../_scss/_grid.scss */
 .portrait-2col img,
 .portrait-2col .image,
 .portrait-2col .blank,
@@ -141,12 +146,12 @@ body {
   height: 430px;
 }
 
-/* line 121, ../_scss/_grid.scss */
+/* line 125, ../_scss/_grid.scss */
 .square-3col {
   width: 430px;
   height: 430px;
 }
-/* line 127, ../_scss/_grid.scss */
+/* line 131, ../_scss/_grid.scss */
 .square-3col img,
 .square-3col .image,
 .square-3col .blank,
@@ -155,12 +160,12 @@ body {
   height: 430px;
 }
 
-/* line 132, ../_scss/_grid.scss */
+/* line 136, ../_scss/_grid.scss */
 .square-2col {
   width: 280px;
   height: 280px;
 }
-/* line 138, ../_scss/_grid.scss */
+/* line 142, ../_scss/_grid.scss */
 .square-2col img,
 .square-2col .image,
 .square-2col .blank,
@@ -169,8 +174,16 @@ body {
   height: 280px;
 }
 
-/* line 143, ../_scss/_grid.scss */
+/* line 147, ../_scss/_grid.scss */
 .square-1col {
+  width: 130px;
+  height: 130px;
+}
+/* line 153, ../_scss/_grid.scss */
+.square-1col img,
+.square-1col .image,
+.square-1col .blank,
+.square-1col .preloader {
   width: 130px;
   height: 130px;
 }

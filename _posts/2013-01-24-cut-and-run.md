@@ -7,7 +7,7 @@ size: landscape-3col
 
 <script type="application/json" class="data">
 {
-	"size": "landscape-3col",
+	"noun": "Creative Director",
 	"images": [{
 		"src": "/assets/img/cut-and-run/landscape-3col.alt-logo.png",
 		"size": "landscape-3col"
