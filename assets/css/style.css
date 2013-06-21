@@ -1,11 +1,11 @@
-/* line 7, ../_scss/style.scss */
+/* line 8, ../_scss/style.scss */
 html {
   background-color: #FFF;
-  font: 400 13px/20px "Geneva", "Helvetica", Sans-Serif;
+  font: 400 13px/20px "Helvetica Neue", Sans-Serif;
   color: #222222;
 }
 
-/* line 13, ../_scss/style.scss */
+/* line 14, ../_scss/style.scss */
 body {
   padding: 20px;
 }
@@ -16,278 +16,82 @@ body {
 }
 
 /* line 16, ../_scss/_grid.scss */
-.grid-container .box {
-  background-color: #000;
-}
-/* line 18, ../_scss/_grid.scss */
-.grid-container .box.blank {
-  background-color: #EEE;
+#grid .intro {
+  background-color: transparent;
+  text-align: center;
+  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
+  position: relative;
 }
 /* line 21, ../_scss/_grid.scss */
-.grid-container .box.logo {
-  background-color: #FF3300;
+#grid .intro p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
 }
-/* line 24, ../_scss/_grid.scss */
-.grid-container .box.bio {
-  background-color: #AAA;
+/* line 27, ../_scss/_grid.scss */
+#grid .intro .loading {
+  color: #CCC;
 }
-/* line 28, ../_scss/_grid.scss */
-.grid-container .cell {
+/* line 31, ../_scss/_grid.scss */
+#grid .logo {
+  text-align: center;
+  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  background-color: #000;
-}
-/* line 33, ../_scss/_grid.scss */
-.grid-container .cell.blank {
   background-color: transparent;
 }
-/* line 37, ../_scss/_grid.scss */
-.grid-container .cell .images {
-  background-color: #000;
+/* line 36, ../_scss/_grid.scss */
+#grid .logo p {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+}
+/* line 43, ../_scss/_grid.scss */
+#grid .box {
   overflow: hidden;
+}
+/* line 45, ../_scss/_grid.scss */
+#grid .box .internal {
   position: relative;
-}
-/* line 41, ../_scss/_grid.scss */
-.grid-container .cell .images .internal {
-  position: absolute;
-}
-/* line 44, ../_scss/_grid.scss */
-.grid-container .cell .images img {
-  display: block;
-}
-/* line 48, ../_scss/_grid.scss */
-.grid-container .cell .content {
-  display: none;
-}
-/* line 51, ../_scss/_grid.scss */
-.grid-container .cell .block {
-  position: relative;
-}
-/* line 54, ../_scss/_grid.scss */
-.grid-container .cell .preloader {
-  background-color: #222222;
-}
-/* line 57, ../_scss/_grid.scss */
-.grid-container .cell .excerpt {
-  margin-top: 0px;
-  width: auto;
-  background-color: #222222;
-  color: #FFF;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  display: none;
-}
-/* line 67, ../_scss/_grid.scss */
-.grid-container .cell .excerpt p {
-  padding: 20px 20px;
-  margin: 0px;
-  color: #FFF;
-}
-/* line 72, ../_scss/_grid.scss */
-.grid-container .cell .excerpt a {
-  display: inline-block;
-  padding: 3px 0px;
-  text-decoration: none;
-  color: #FFF;
-}
-/* line 77, ../_scss/_grid.scss */
-.grid-container .cell .excerpt a em {
-  font-style: normal;
-  color: #AAA;
-  display: block;
-}
-/* line 85, ../_scss/_grid.scss */
-.grid-container .cell:hover .excerpt {
-  display: block;
-}
-/* line 89, ../_scss/_grid.scss */
-.grid-container .cell.square-1col {
-  width: 80px;
-}
-/* line 93, ../_scss/_grid.scss */
-.grid-container .cell.square-1col .images,
-.grid-container .cell.square-1col .block,
-.grid-container .cell.square-1col img {
-  width: 80px;
-  height: 80px;
-}
-/* line 98, ../_scss/_grid.scss */
-.grid-container .cell.square-2col {
-  width: 180px;
-}
-/* line 102, ../_scss/_grid.scss */
-.grid-container .cell.square-2col .images,
-.grid-container .cell.square-2col .block,
-.grid-container .cell.square-2col img {
-  width: 180px;
-  height: 180px;
-}
-/* line 107, ../_scss/_grid.scss */
-.grid-container .cell.square-3col {
-  width: 280px;
-}
-/* line 111, ../_scss/_grid.scss */
-.grid-container .cell.square-3col .images,
-.grid-container .cell.square-3col .block,
-.grid-container .cell.square-3col img {
-  width: 280px;
-  height: 280px;
-}
-/* line 116, ../_scss/_grid.scss */
-.grid-container .cell.portrait-2col {
-  width: 180px;
-}
-/* line 120, ../_scss/_grid.scss */
-.grid-container .cell.portrait-2col .images,
-.grid-container .cell.portrait-2col .block,
-.grid-container .cell.portrait-2col img {
-  width: 180px;
-  height: 280px;
-}
-/* line 125, ../_scss/_grid.scss */
-.grid-container .cell.portrait-3col {
-  width: 280px;
-}
-/* line 129, ../_scss/_grid.scss */
-.grid-container .cell.portrait-3col .images,
-.grid-container .cell.portrait-3col .block,
-.grid-container .cell.portrait-3col img {
-  width: 280px;
-  height: 380px;
-}
-/* line 134, ../_scss/_grid.scss */
-.grid-container .cell.landscape-3col {
-  width: 280px;
-}
-/* line 138, ../_scss/_grid.scss */
-.grid-container .cell.landscape-3col .images,
-.grid-container .cell.landscape-3col .block,
-.grid-container .cell.landscape-3col img {
-  width: 280px;
-  height: 180px;
-}
-/* line 143, ../_scss/_grid.scss */
-.grid-container .cell.landscape-4col {
-  width: 380px;
-}
-/* line 147, ../_scss/_grid.scss */
-.grid-container .cell.landscape-4col .images,
-.grid-container .cell.landscape-4col .block,
-.grid-container .cell.landscape-4col img {
-  width: 380px;
-  height: 280px;
-}
-/* line 152, ../_scss/_grid.scss */
-.grid-container .cell.landscape-5col {
-  width: 480px;
-}
-/* line 156, ../_scss/_grid.scss */
-.grid-container .cell.landscape-5col .images,
-.grid-container .cell.landscape-5col .block,
-.grid-container .cell.landscape-5col img {
-  width: 480px;
-  height: 380px;
-}
-/* line 161, ../_scss/_grid.scss */
-.grid-container .cell.landscape-6col {
-  width: 580px;
-}
-/* line 165, ../_scss/_grid.scss */
-.grid-container .cell.landscape-6col .images,
-.grid-container .cell.landscape-6col .block,
-.grid-container .cell.landscape-6col img {
-  width: 580px;
-  height: 380px;
-}
-/* line 170, ../_scss/_grid.scss */
-.isotope .grid-container .cell {
-  float: none;
-}
-
-@media screen and (max-width: 1025px) {
-  /* line 179, ../_scss/_grid.scss */
-  #grid .cell .excerpt {
-    display: block;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-  }
-}
-@media screen and (max-width: 620px) {
-  /* line 193, ../_scss/_grid.scss */
-  #grid .cell.landscape-4col {
-    width: 280px;
-  }
-  /* line 197, ../_scss/_grid.scss */
-  #grid .cell.landscape-4col .images,
-  #grid .cell.landscape-4col .block,
-  #grid .cell.landscape-4col img {
-    width: 280px;
-    height: 180px;
-  }
-}
-@media screen and (max-width: 480px) {
-  /* line 210, ../_scss/_grid.scss */
-  #grid .cell.landscape-4col, #grid .cell.landscape-3col {
-    width: 180px;
-  }
-  /* line 214, ../_scss/_grid.scss */
-  #grid .cell.landscape-4col .images,
-  #grid .cell.landscape-4col .block,
-  #grid .cell.landscape-4col img, #grid .cell.landscape-3col .images,
-  #grid .cell.landscape-3col .block,
-  #grid .cell.landscape-3col img {
-    width: 180px;
-    height: 120px;
-  }
-  /* line 219, ../_scss/_grid.scss */
-  #grid .cell.portrait-3col {
-    width: 180px;
-  }
-  /* line 223, ../_scss/_grid.scss */
-  #grid .cell.portrait-3col .images,
-  #grid .cell.portrait-3col .block,
-  #grid .cell.portrait-3col img {
-    width: 180px;
-    height: 240px;
-  }
-  /* line 228, ../_scss/_grid.scss */
-  #grid .cell.square-3col {
-    width: 180px;
-  }
-  /* line 232, ../_scss/_grid.scss */
-  #grid .cell.square-3col .images,
-  #grid .cell.square-3col .block,
-  #grid .cell.square-3col img {
-    width: 180px;
-    height: 180px;
-  }
-}
-/* line 1, ../_scss/_preloader.scss */
-.preloader {
-  position: absolute;
-  overflow: hidden;
   left: 0px;
   top: 0px;
   right: 0px;
-  bottom: 0px;
+  min-height: 100%;
 }
-/* line 9, ../_scss/_preloader.scss */
+/* line 53, ../_scss/_grid.scss */
+#grid .box .preloader {
+  width: 100%;
+  height: 100%;
+}
+/* line 57, ../_scss/_grid.scss */
+#grid .box .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* line 61, ../_scss/_grid.scss */
+#grid .box .image img {
+  width: 100%;
+  height: 100%;
+}
+/* line 68, ../_scss/_grid.scss */
+#grid .blank .preloader {
+  display: none !important;
+}
+
+/* line 2, ../_scss/_preloader.scss */
 .preloader .lines {
   position: absolute;
   left: -300px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background: url("/assets/img/preloader-bg.png") repeat 0px 0px;
+  background: #222222 url("/assets/img/preloader-bg.png") repeat 0px 0px;
   background-attachment: fixed;
 }
 
-/* line 20, ../_scss/_preloader.scss */
+/* line 13, ../_scss/_preloader.scss */
 .preloader.animating .lines {
   -moz-animation: slide 1s infinite linear;
   -o-animation: slide 1s infinite linear;
@@ -296,108 +100,71 @@ body {
 }
 
 @-moz-keyframes slide {
-  /* line 28, ../_scss/_preloader.scss */
+  /* line 21, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 32, ../_scss/_preloader.scss */
+  /* line 25, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-webkit-keyframes slide {
-  /* line 28, ../_scss/_preloader.scss */
+  /* line 21, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 32, ../_scss/_preloader.scss */
+  /* line 25, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-o-keyframes slide {
-  /* line 28, ../_scss/_preloader.scss */
+  /* line 21, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 32, ../_scss/_preloader.scss */
+  /* line 25, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-ms-keyframes slide {
-  /* line 28, ../_scss/_preloader.scss */
+  /* line 21, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 32, ../_scss/_preloader.scss */
+  /* line 25, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @keyframes slide {
-  /* line 28, ../_scss/_preloader.scss */
+  /* line 21, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 32, ../_scss/_preloader.scss */
+  /* line 25, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
-/* line 20, ../_scss/style.scss */
+/* line 26, ../_scss/style.scss */
 .hide {
   display: none;
 }
 
-/* line 24, ../_scss/style.scss */
-#top {
-  background-color: #222222;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  z-index: 200;
-  height: 130px;
-  color: #FFF;
-  margin: 0px;
-  padding: 0px;
-}
-/* line 35, ../_scss/style.scss */
-#project #top {
-  position: relative;
-  height: auto;
-}
-/* line 39, ../_scss/style.scss */
-#top.site-preloading {
-  bottom: 0px;
-  height: auto;
-}
-
-/* line 45, ../_scss/style.scss */
+/* line 30, ../_scss/style.scss */
 .clearfix {
   clear: both;
-}
-
-/* line 50, ../_scss/style.scss */
-.content blockquote {
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 1em;
-  font-style: italic;
-}
-
-/* line 58, ../_scss/style.scss */
-.isotope {
-  overflow: visible !important;
 }
