@@ -1,4 +1,4 @@
-define ["libs/backbone", "libs/underscore"], () ->
+define ["backbone", "underscore"], () ->
 
 	PreloaderView = Backbone.View.extend
 

@@ -1,4 +1,4 @@
-define ["libs/backbone", "libs/underscore"], () ->
+define ["backbone", "underscore"], () ->
 
 	LayoutView = Backbone.View.extend
 

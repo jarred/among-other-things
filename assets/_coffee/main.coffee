@@ -1,5 +1,9 @@
 requirejs.config
-	baseUrl: '/assets/js'
+	baseUrl: '/assets/js/libs'
+	paths:
+		app: '../app'
+
+
 
 Main =
 	go: ->
@@ -8,31 +12,31 @@ Main =
 
 	loadLibs: ->
 		require [
-			"libs/jquery"
-			"libs/underscore"
-			"libs/greensock/TweenMax.min"
-			"libs/history"
+			"jquery"
+			"underscore"
+			"greensock/TweenMax.min"
+			# "history"
 			], () =>
 				require [
-					"libs/backbone", 
-					"libs/greensock/jquery.gsap.min"
-					# "libs/jquery.isotope.min"
-					"libs/jquery.nested.1.0.1"
+					"backbone", 
+					"greensock/jquery.gsap.min"
 					# "libs/history.adapter.jquery"
 					], () =>
 						require [
-							"views/project"
-							"views/project-image"
-							"views/grid-item"
-							"views/layout-experiment"
-							"views/index"
-							"views/preloader"
+							"app/views/project"
+							"app/views/project-image"
+							"app/views/grid-item"
+							"app/views/layout-experiment"
+							"app/views/index"
+							"app/views/preloader"
 							], =>
 								@init()
 								return
 		return
 
 	init: ->
+		console.log 'hi?'
+		return
 		@appModel = new Backbone.Model()
 		@extendViews()
 		@tick = setInterval () =>
@@ -62,7 +66,7 @@ Main =
 	extendViews: ->
 		_.each $('.extend-view'), (el) =>
 			$el = $(el)
-			viewName = "views/#{$el.data('view')}"
+			viewName = "app/views/#{$el.data('view')}"
 			view = require(viewName)
 			new view
 				el: el

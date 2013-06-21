@@ -1,4 +1,4 @@
-define ["libs/backbone", "libs/underscore"], () ->
+define ["backbone", "underscore"], () ->
 
 	IndexView = Backbone.View.extend
 
@@ -27,13 +27,13 @@ define ["libs/backbone", "libs/underscore"], () ->
 			@sizes = _.shuffle @sizes
 			_.each @sizes, @addCell
 
-			$("#grid").nested
-				animate: false
-				minWidth: 130
-				gutter: 20
-				selector: '.box'
-				resizeToFitOptions: 
-				    resizeAny: true
+			# $("#grid").nested
+			# 	animate: false
+			# 	minWidth: 130
+			# 	gutter: 20
+			# 	selector: '.box'
+			# 	resizeToFitOptions: 
+			# 	    resizeAny: true
 			return
 
 		template: _.template """
