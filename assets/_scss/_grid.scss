@@ -14,7 +14,7 @@
 
 #grid{
 	.intro{
-		background-color: transparent;
+		background-color: #FFF;
 		text-align: center;
 		@include big-type;
 		position: relative;
@@ -29,44 +29,118 @@
 		}
 	}
 	.logo{
+		background-color: #FFF;
 		text-align: center;
 		@include big-type;
 		position: relative;
-		background-color: transparent;
 		p{
-			position: absolute;
-			left: 20px;
-			right: 20px;
-			top: 20px;
+			margin-top: 20px;
 		}
+	}
+	.intro,
+	.logo{
+		z-index: 500;
+	}
+	.image-box{
+		z-index: 2;
+		position: relative;
 	}
 	.box{
 		overflow: hidden;
+		position: absolute;
+// 		float: left;
+// 		margin-right: 20px;
+// 		margin-bottom: 20px;
 		.internal{
-			position: relative;
+			position: absolute;
 			left: 0px;
 			top: 0px;
-			right: 0px;
-			min-height: 100%;
-
-		}
-		.preloader{
-			width: 100%;
-			height: 100%;
-		}
-		.image{
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			img{
-				width: 100%;
-				height: 100%;
-			}
 		}
 	}
 	.blank{
-		.preloader{
-			display: none !important;
-		}
+		background-color: transparent;
+		z-index: 1;
 	}
+}
+
+.landscape-4col{
+	width: 580px;
+	height: 430px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 580px;
+		height: 430px;
+	}
+}
+.landscape-3col{
+	width: 430px;
+	height: 280px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 430px;
+		height: 280px;
+	}
+}
+.landscape-2col{
+	width: 280px;
+	height: 130px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 280px;
+		height: 130px;
+	}
+}
+.portrait-3col{
+	width: 430px;
+	height: 580px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 430px;
+		height: 580px;
+	}	
+}
+.portrait-2col{
+	width: 280px;
+	height: 430px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 280px;
+		height: 430px;
+	}	
+}
+.square-3col{
+	width: 430px;
+	height: 430px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 430px;
+		height: 430px;
+	}	
+}
+.square-2col{
+	width: 280px;
+	height: 280px;
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 280px;
+		height: 280px;
+	}	
+}
+.square-1col{
+	width: 130px;
+	height: 130px;
 }

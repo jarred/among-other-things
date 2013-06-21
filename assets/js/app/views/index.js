@@ -4,59 +4,29 @@
     var IndexView;
 
     return IndexView = Backbone.View.extend({
-      sizes: ["size22", "size32", "size32", "size23", "size34", "size34", "size43", "logo"],
       projectsShown: 0,
       initialize: function(options) {
+        var sizeCount,
+          _this = this;
+
         this.options = options;
         _.bindAll(this);
-        this.$el = $(this.el);
-        this.sizes = _.shuffle(this.sizes);
-        _.each(this.sizes, this.addCell);
         this.model = this.getData();
-        $("#grid").nested({
-          animate: false,
-          minWidth: 130,
-          gutter: 20,
-          selector: '.box',
-          resizeToFitOptions: {
-            resizeAny: false
-          }
+        console.log(this.model.toJSON());
+        sizeCount = {};
+        _.each(this.model.get('projects'), function(project) {
+          return _.each(project.images, function(image) {
+            if (sizeCount[image.size] != null) {
+              return sizeCount[image.size].count++;
+            } else {
+              return sizeCount[image.size] = {
+                count: 0
+              };
+            }
+          });
         });
-      },
-      cellTemplate: _.template("<div class=\"box image-box <%= size %>\">\n	<div class=\"internal\">\n		<div class=\"preloader animating\">\n			<div class=\"lines\"></div>\n		</div>\n	</div>\n</div>"),
-      addCell: function(size) {
-        var data;
-
-        if (size === 'bio') {
-          this.addBio();
-          return;
-        }
-        if (size === 'logo') {
-          this.addLogo();
-          return;
-        }
-        data = {
-          size: size
-        };
-        $('#grid').append(this.cellTemplate(data));
-      },
-      addBio: function() {
-        var name, view;
-
-        name = require("views/intro");
-        view = new name({
-          appModel: this.model
-        });
-        $('#grid').append(view.el);
-      },
-      addLogo: function() {
-        var name, view;
-
-        name = require("app/views/logo");
-        view = new name({
-          appModel: this.model
-        });
-        $('#grid').append(view.el);
+        this.randomiseLayout();
+        this.showProject(0);
       },
       getData: function() {
         var model,
@@ -70,60 +40,106 @@
 
           $el = $(el);
           projectData = JSON.parse($el.find('.data').html());
-          model.get('projects').push(projectData);
+          return model.get('projects').push(projectData);
         });
+        model.set('projects', _.shuffle(model.get('projects')));
         return model;
       },
-      preloadProject: function(n) {
-        var project,
+      randomiseLayout: function() {
+        var screenH, screenW,
           _this = this;
 
-        project = this.model.get('projects')[n];
-        this.imagesAdded = this.imagesLoaded = 0;
-        _.each(project.images, function(img) {
-          var $el, $image, i;
+        screenW = $(window).width();
+        screenH = $(window).height();
+        return _.each($('.box'), function(el) {
+          var $el, x, y;
 
-          $el = _this.$("." + img.size + ":not(.has-image)");
-          i = new Image();
-          i.onload = _this.imageLoaded;
-          i.src = img.src;
-          $image = $("<div class=\"image\"></div>");
-          $image.append(i);
-          $el.find('.internal').append($image);
-          $el.addClass('has-image');
-          _this.imagesAdded++;
+          $el = $(el);
+          x = Math.round(Math.random() * (screenW - $el.width()));
+          y = Math.round(Math.random() * (screenH - $el.height()));
+          return $el.css({
+            left: "" + x + "px",
+            top: "" + y + "px"
+          });
+        });
+      },
+      showProject: function(num) {
+        var _this = this;
+
+        this.currentProject = num;
+        this.project = this.model.get('projects')[num];
+        this.project.images = _.shuffle(this.project.images);
+        this.$('.image-box').addClass('empty');
+        this.imageCount = 0;
+        this.imagesLoaded = 0;
+        _.each(this.project.images, function(image) {
+          var $box, $container, img;
+
+          $box = $("." + image.size);
+          if (!$box.hasClass('empty')) {
+            return;
+          }
+          _this.imageCount++;
+          img = new Image();
+          img.src = image.src;
+          img.onload = _this.imageLoaded;
+          $container = $("<div class=\"image slide\"></div>");
+          $container.append(img);
+          $box.find('.internal').append($container);
+          return $box.removeClass('empty');
+        });
+        return _.each(this.$('.box.empty'), function(el) {
+          var $el;
+
+          $el = $(el);
+          return $el.find('.internal').append("<div class=\"blank slide\"></div>");
         });
       },
       imageLoaded: function() {
         this.imagesLoaded++;
-        if (this.imagesLoaded >= this.imagesAdded) {
-          if (this.projectsShown === 0) {
-            this.transitionProjectIn();
-          } else {
-            _.delay(this.transitionProjectIn, 3000);
-          }
-          this.projectsShown++;
+        if (this.imagesLoaded >= this.imageCount) {
+          return this.animateProjectIn();
         }
       },
-      transitionProjectIn: function() {
+      animateProjectIn: function() {
         var _this = this;
 
-        _.each(this.$('.image-box'), function(el, index) {
-          var $el, internal, newY;
+        return _.each($('.box'), function(el, index) {
+          var $el, h, tween;
 
           $el = $(el);
-          if ($el.hasClass('logo' || $el.hasClass('intro'))) {
-            return;
+          h = $el.height();
+          tween = {
+            top: 0 - h,
+            ease: Quint.easeOut,
+            delay: index * .2
+          };
+          if (index + 1 >= $('.box').length) {
+            tween.onComplete = _this.projectAnimatedIn;
           }
-          internal = $el.find('.internal');
-          newY = Number(internal.css('top').replace("px", "")) - $el.height();
-          console.log(newY);
-          TweenMax.to(internal, .3, {
-            top: newY,
-            delay: .1 * index
+          return TweenMax.to($el.find('.internal'), .4, tween);
+        });
+      },
+      projectAnimatedIn: function() {
+        var _this = this;
+
+        _.each(this.$('.box'), function(el) {
+          var $el;
+
+          $el = $(el);
+          $el.find('.slide:first').remove();
+          return $el.find('.internal').css({
+            top: '0px'
           });
         });
-        console.log('transitionProjectIn');
+        return _.delay(this.nextProject, 4000);
+      },
+      nextProject: function() {
+        if (this.currentProject < this.model.get('projects').length - 1) {
+          return this.showProject(this.currentProject + 1);
+        } else {
+          return this.showProject(0);
+        }
       }
     });
   });

@@ -17,7 +17,7 @@ body {
 
 /* line 16, ../_scss/_grid.scss */
 #grid .intro {
-  background-color: transparent;
+  background-color: #FFF;
   text-align: center;
   font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
@@ -35,52 +35,151 @@ body {
 }
 /* line 31, ../_scss/_grid.scss */
 #grid .logo {
+  background-color: #FFF;
   text-align: center;
   font: 600 26px/26px "Helvetica Neue", Sans-Serif;
   position: relative;
-  background-color: transparent;
 }
 /* line 36, ../_scss/_grid.scss */
 #grid .logo p {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 20px;
+  margin-top: 20px;
 }
-/* line 43, ../_scss/_grid.scss */
+/* line 41, ../_scss/_grid.scss */
+#grid .intro,
+#grid .logo {
+  z-index: 500;
+}
+/* line 44, ../_scss/_grid.scss */
+#grid .image-box {
+  z-index: 2;
+  position: relative;
+}
+/* line 48, ../_scss/_grid.scss */
 #grid .box {
   overflow: hidden;
+  position: absolute;
 }
-/* line 45, ../_scss/_grid.scss */
+/* line 54, ../_scss/_grid.scss */
 #grid .box .internal {
-  position: relative;
+  position: absolute;
   left: 0px;
   top: 0px;
-  right: 0px;
-  min-height: 100%;
 }
-/* line 53, ../_scss/_grid.scss */
-#grid .box .preloader {
-  width: 100%;
-  height: 100%;
-}
-/* line 57, ../_scss/_grid.scss */
-#grid .box .image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-/* line 61, ../_scss/_grid.scss */
-#grid .box .image img {
-  width: 100%;
-  height: 100%;
-}
-/* line 68, ../_scss/_grid.scss */
-#grid .blank .preloader {
-  display: none !important;
+/* line 60, ../_scss/_grid.scss */
+#grid .blank {
+  background-color: transparent;
+  z-index: 1;
 }
 
-/* line 2, ../_scss/_preloader.scss */
+/* line 66, ../_scss/_grid.scss */
+.landscape-4col {
+  width: 580px;
+  height: 430px;
+}
+/* line 72, ../_scss/_grid.scss */
+.landscape-4col img,
+.landscape-4col .image,
+.landscape-4col .blank,
+.landscape-4col .preloader {
+  width: 580px;
+  height: 430px;
+}
+
+/* line 77, ../_scss/_grid.scss */
+.landscape-3col {
+  width: 430px;
+  height: 280px;
+}
+/* line 83, ../_scss/_grid.scss */
+.landscape-3col img,
+.landscape-3col .image,
+.landscape-3col .blank,
+.landscape-3col .preloader {
+  width: 430px;
+  height: 280px;
+}
+
+/* line 88, ../_scss/_grid.scss */
+.landscape-2col {
+  width: 280px;
+  height: 130px;
+}
+/* line 94, ../_scss/_grid.scss */
+.landscape-2col img,
+.landscape-2col .image,
+.landscape-2col .blank,
+.landscape-2col .preloader {
+  width: 280px;
+  height: 130px;
+}
+
+/* line 99, ../_scss/_grid.scss */
+.portrait-3col {
+  width: 430px;
+  height: 580px;
+}
+/* line 105, ../_scss/_grid.scss */
+.portrait-3col img,
+.portrait-3col .image,
+.portrait-3col .blank,
+.portrait-3col .preloader {
+  width: 430px;
+  height: 580px;
+}
+
+/* line 110, ../_scss/_grid.scss */
+.portrait-2col {
+  width: 280px;
+  height: 430px;
+}
+/* line 116, ../_scss/_grid.scss */
+.portrait-2col img,
+.portrait-2col .image,
+.portrait-2col .blank,
+.portrait-2col .preloader {
+  width: 280px;
+  height: 430px;
+}
+
+/* line 121, ../_scss/_grid.scss */
+.square-3col {
+  width: 430px;
+  height: 430px;
+}
+/* line 127, ../_scss/_grid.scss */
+.square-3col img,
+.square-3col .image,
+.square-3col .blank,
+.square-3col .preloader {
+  width: 430px;
+  height: 430px;
+}
+
+/* line 132, ../_scss/_grid.scss */
+.square-2col {
+  width: 280px;
+  height: 280px;
+}
+/* line 138, ../_scss/_grid.scss */
+.square-2col img,
+.square-2col .image,
+.square-2col .blank,
+.square-2col .preloader {
+  width: 280px;
+  height: 280px;
+}
+
+/* line 143, ../_scss/_grid.scss */
+.square-1col {
+  width: 130px;
+  height: 130px;
+}
+
+/* line 1, ../_scss/_preloader.scss */
+.preloader {
+  position: relative;
+}
+/* line 3, ../_scss/_preloader.scss */
 .preloader .lines {
   position: absolute;
   left: -300px;
@@ -91,7 +190,7 @@ body {
   background-attachment: fixed;
 }
 
-/* line 13, ../_scss/_preloader.scss */
+/* line 14, ../_scss/_preloader.scss */
 .preloader.animating .lines {
   -moz-animation: slide 1s infinite linear;
   -o-animation: slide 1s infinite linear;
@@ -100,60 +199,60 @@ body {
 }
 
 @-moz-keyframes slide {
-  /* line 21, ../_scss/_preloader.scss */
+  /* line 22, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 25, ../_scss/_preloader.scss */
+  /* line 26, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-webkit-keyframes slide {
-  /* line 21, ../_scss/_preloader.scss */
+  /* line 22, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 25, ../_scss/_preloader.scss */
+  /* line 26, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-o-keyframes slide {
-  /* line 21, ../_scss/_preloader.scss */
+  /* line 22, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 25, ../_scss/_preloader.scss */
+  /* line 26, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-ms-keyframes slide {
-  /* line 21, ../_scss/_preloader.scss */
+  /* line 22, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 25, ../_scss/_preloader.scss */
+  /* line 26, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @keyframes slide {
-  /* line 21, ../_scss/_preloader.scss */
+  /* line 22, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 25, ../_scss/_preloader.scss */
+  /* line 26, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
