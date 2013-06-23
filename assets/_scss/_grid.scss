@@ -51,10 +51,10 @@
 	}
 	.box{
 		overflow: hidden;
-		position: absolute;
-// 		float: left;
-// 		margin-right: 20px;
-// 		margin-bottom: 20px;
+// 		position: absolute;
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 20px;
 		> .internal{
 			position: absolute;
 			left: 0px;
@@ -62,7 +62,7 @@
 		}
 	}
 	.blank{
-		background-color: transparent;
+		background-color: #EEE;
 		z-index: 1;
 	}
 }

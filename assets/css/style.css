@@ -62,7 +62,9 @@ body {
 /* line 52, ../_scss/_grid.scss */
 #grid .box {
   overflow: hidden;
-  position: absolute;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 /* line 58, ../_scss/_grid.scss */
 #grid .box > .internal {
@@ -72,7 +74,7 @@ body {
 }
 /* line 64, ../_scss/_grid.scss */
 #grid .blank {
-  background-color: transparent;
+  background-color: #EEE;
   z-index: 1;
 }
 

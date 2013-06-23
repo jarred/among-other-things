@@ -16,68 +16,26 @@ Dream. Job.
 {
 	"noun": "Photographer",
 	"images": [{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_8775.jpg",
+		"src": "/assets/img/black-estate/landscape-3col.jpg",
 		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_8930.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_8953.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9019.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9177.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9241.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9309.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9385.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-3col.IMG_9550.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/landscape-4col.IMG_8813.jpg",
+		"src": "/assets/img/black-estate/landscape-4col.jpg",
 		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/black-estate/landscape-4col.IMG_9155.jpg",
-		"size": "landscape-4col"
-	},{
-		"src": "/assets/img/black-estate/landscape-4col.IMG_9533.jpg",
-		"size": "landscape-4col"
-	},{
-		"src": "/assets/img/black-estate/lanscape-3col.IMG_8735.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/black-estate/lanscape-4col.IMG_8734.jpg",
-		"size": "landscape-4col"
-	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_8824.jpg",
+		"src": "/assets/img/black-estate/portrait-2col.jpg",
 		"size": "portrait-2col"
 	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_8982.jpg",
-		"size": "portrait-2col"
+		"src": "/assets/img/black-estate/portrait-3col.jpg",
+		"size": "portrait-3col"
 	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_9344.jpg",
-		"size": "portrait-2col"
+		"src": "/assets/img/black-estate/square-1col.jpg",
+		"size": "square-1col"
 	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_9604.jpg",
-		"size": "portrait-2col"
+		"src": "/assets/img/black-estate/square-2col.jpg",
+		"size": "square-2col"
 	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_9737.jpg",
-		"size": "portrait-2col"
-	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_9762.jpg",
-		"size": "portrait-2col"
-	},{
-		"src": "/assets/img/black-estate/portrait-2col.IMG_9766.jpg",
-		"size": "portrait-2col"
+		"src": "/assets/img/black-estate/square-3col.jpg",
+		"size": "square-3col"
 	}]
 }
 </script>

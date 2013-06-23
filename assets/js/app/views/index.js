@@ -25,7 +25,11 @@
             }
           });
         });
-        this.randomiseLayout();
+        this.$('.box').shuffle();
+        $('#grid').isotope({
+          layoutMode: 'masonry',
+          columnWidth: 150
+        });
         this.intro = new IntroView({
           el: this.$('.intro')
         });
@@ -78,7 +82,7 @@
         _.each(this.project.images, function(image) {
           var $box, $container, img;
 
-          $box = $("." + image.size + ":first");
+          $box = $("." + image.size);
           if (!$box.hasClass('empty')) {
             return;
           }

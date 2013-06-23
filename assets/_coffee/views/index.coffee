@@ -21,7 +21,11 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 						sizeCount[image.size] =
 							count: 0
 
-			@randomiseLayout()
+			# @randomiseLayout()
+			@$('.box').shuffle();
+			$('#grid').isotope
+				layoutMode : 'masonry'
+				columnWidth: 150
 			@intro = new IntroView
 				el: @$('.intro')
 			@showProject 0
@@ -57,7 +61,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@imageCount = 0
 			@imagesLoaded = 0
 			_.each @project.images, (image) =>
-				$box = $(".#{image.size}:first")
+				$box = $(".#{image.size}")
 				return if !$box.hasClass 'empty'
 				@imageCount++
 				img = new Image()
