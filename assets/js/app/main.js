@@ -17,17 +17,11 @@
       },
       indexView: {
         deps: ['backbone']
-      },
-      'jquery.shuffle': {
-        deps: ['jquery']
-      },
-      'jquery.isotope.min': {
-        deps: ['jquery']
       }
     }
   });
 
-  require(['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView', 'jquery.shuffle', 'jquery.isotope.min'], function($, _, Backbone, TweenMax, IndexView, LogoView) {
+  require(['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView'], function($, _, Backbone, TweenMax, IndexView, LogoView) {
     var App;
 
     App = {

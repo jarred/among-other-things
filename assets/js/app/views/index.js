@@ -25,11 +25,6 @@
             }
           });
         });
-        this.$('.box').shuffle();
-        $('#grid').isotope({
-          layoutMode: 'masonry',
-          columnWidth: 150
-        });
         this.intro = new IntroView({
           el: this.$('.intro')
         });

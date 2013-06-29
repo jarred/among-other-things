@@ -1,11 +1,3 @@
-@mixin size_column_width($cols){
-	width: (($column_width + $margin) * $cols) - $margin
-}
-
-@mixin size_column_height($cols){
-	height: (($column_width + $margin) * $cols) - $margin
-}
-
 #grid{
 	#project &{
 		margin-top: 0px;
@@ -13,48 +5,15 @@
 }
 
 #grid{
-	.intro{
-		background-color: #FFF;
-		text-align: center;
-		@include big-type;
-		position: relative;
-		.phrase{
-			display: inline-block;
-			color: #F30;
-		}
-		p{
-			position: absolute;
-			left: 20px;
-			right: 20px;
-			top: 20px;
-		}
-		.loading{
-			color: #CCC;
-		}
-	}
-	.logo{
-		background-color: #FFF;
-		text-align: center;
-		@include big-type;
-		position: relative;
-		p{
-			margin-top: 20px;
-		}
-	}
-	.intro,
-	.logo{
-		z-index: 500;
-	}
-	.image-box{
+	position: relative;
+	left: 10px;
+	.box{
 		z-index: 2;
 		position: relative;
 	}
 	.box{
 		overflow: hidden;
-// 		position: absolute;
-		float: left;
-		margin-right: 20px;
-		margin-bottom: 20px;
+		position: absolute;
 		> .internal{
 			position: absolute;
 			left: 0px;
@@ -70,6 +29,8 @@
 .landscape-4col{
 	width: 580px;
 	height: 430px;
+	left: 10px;
+	top: 900px;
 	img,
 	.image,
 	.blank,
@@ -81,6 +42,8 @@
 .landscape-3col{
 	width: 430px;
 	height: 280px;
+	left: 10px;
+	top: 0px;
 	img,
 	.image,
 	.blank,
@@ -103,6 +66,8 @@
 .portrait-3col{
 	width: 430px;
 	height: 580px;
+	left: 10px;
+	top: 300px;
 	img,
 	.image,
 	.blank,
@@ -114,6 +79,8 @@
 .portrait-2col{
 	width: 280px;
 	height: 430px;
+	left: 760px;
+	top: 0px;
 	img,
 	.image,
 	.blank,
@@ -125,6 +92,8 @@
 .square-3col{
 	width: 430px;
 	height: 430px;
+	left: 460px;
+	top: 450px;
 	img,
 	.image,
 	.blank,
@@ -136,6 +105,8 @@
 .square-2col{
 	width: 280px;
 	height: 280px;
+	top: 0px;
+	left: 460px;
 	img,
 	.image,
 	.blank,
@@ -147,6 +118,8 @@
 .square-1col{
 	width: 130px;
 	height: 130px;
+	left: 910px;
+	top: 450px;
 	img,
 	.image,
 	.blank,

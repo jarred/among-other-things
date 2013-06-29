@@ -12,7 +12,7 @@ html{
 }
 
 body{
-	padding: 20px;
+	padding: 0px;
 }
 
 @mixin big-type{
@@ -21,6 +21,7 @@ body{
 
 @import "_grid";
 @import "_preloader";
+@import "_header";
 
 
 .hide{

@@ -12,14 +12,9 @@ requirejs.config
 			exports: 'Backbone'
 		indexView:
 			deps: ['backbone']
-		'jquery.shuffle':
-			deps: ['jquery']
-		'jquery.isotope.min':
-			deps: ['jquery']
-
 # lets go...
 
-require ['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView', 'jquery.shuffle', 'jquery.isotope.min'], ($, _, Backbone, TweenMax, IndexView, LogoView) =>
+require ['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView'], ($, _, Backbone, TweenMax, IndexView, LogoView) =>
 
 	App =
 		go: ->

@@ -7,83 +7,49 @@ html {
 
 /* line 14, ../_scss/style.scss */
 body {
-  padding: 20px;
+  padding: 0px;
 }
 
-/* line 10, ../_scss/_grid.scss */
+/* line 2, ../_scss/_grid.scss */
 #project #grid {
   margin-top: 0px;
 }
 
-/* line 16, ../_scss/_grid.scss */
-#grid .intro {
-  background-color: #FFF;
-  text-align: center;
-  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
+/* line 7, ../_scss/_grid.scss */
+#grid {
   position: relative;
+  left: 10px;
 }
-/* line 21, ../_scss/_grid.scss */
-#grid .intro .phrase {
-  display: inline-block;
-  color: #F30;
-}
-/* line 25, ../_scss/_grid.scss */
-#grid .intro p {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 20px;
-}
-/* line 31, ../_scss/_grid.scss */
-#grid .intro .loading {
-  color: #CCC;
-}
-/* line 35, ../_scss/_grid.scss */
-#grid .logo {
-  background-color: #FFF;
-  text-align: center;
-  font: 600 26px/26px "Helvetica Neue", Sans-Serif;
-  position: relative;
-}
-/* line 40, ../_scss/_grid.scss */
-#grid .logo p {
-  margin-top: 20px;
-}
-/* line 45, ../_scss/_grid.scss */
-#grid .intro,
-#grid .logo {
-  z-index: 500;
-}
-/* line 48, ../_scss/_grid.scss */
-#grid .image-box {
+/* line 10, ../_scss/_grid.scss */
+#grid .box {
   z-index: 2;
   position: relative;
 }
-/* line 52, ../_scss/_grid.scss */
+/* line 14, ../_scss/_grid.scss */
 #grid .box {
   overflow: hidden;
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  position: absolute;
 }
-/* line 58, ../_scss/_grid.scss */
+/* line 17, ../_scss/_grid.scss */
 #grid .box > .internal {
   position: absolute;
   left: 0px;
   top: 0px;
 }
-/* line 64, ../_scss/_grid.scss */
+/* line 23, ../_scss/_grid.scss */
 #grid .blank {
   background-color: #EEE;
   z-index: 1;
 }
 
-/* line 70, ../_scss/_grid.scss */
+/* line 29, ../_scss/_grid.scss */
 .landscape-4col {
   width: 580px;
   height: 430px;
+  left: 10px;
+  top: 900px;
 }
-/* line 76, ../_scss/_grid.scss */
+/* line 37, ../_scss/_grid.scss */
 .landscape-4col img,
 .landscape-4col .image,
 .landscape-4col .blank,
@@ -92,12 +58,14 @@ body {
   height: 430px;
 }
 
-/* line 81, ../_scss/_grid.scss */
+/* line 42, ../_scss/_grid.scss */
 .landscape-3col {
   width: 430px;
   height: 280px;
+  left: 10px;
+  top: 0px;
 }
-/* line 87, ../_scss/_grid.scss */
+/* line 50, ../_scss/_grid.scss */
 .landscape-3col img,
 .landscape-3col .image,
 .landscape-3col .blank,
@@ -106,12 +74,12 @@ body {
   height: 280px;
 }
 
-/* line 92, ../_scss/_grid.scss */
+/* line 55, ../_scss/_grid.scss */
 .landscape-2col {
   width: 280px;
   height: 130px;
 }
-/* line 98, ../_scss/_grid.scss */
+/* line 61, ../_scss/_grid.scss */
 .landscape-2col img,
 .landscape-2col .image,
 .landscape-2col .blank,
@@ -120,12 +88,14 @@ body {
   height: 130px;
 }
 
-/* line 103, ../_scss/_grid.scss */
+/* line 66, ../_scss/_grid.scss */
 .portrait-3col {
   width: 430px;
   height: 580px;
+  left: 10px;
+  top: 300px;
 }
-/* line 109, ../_scss/_grid.scss */
+/* line 74, ../_scss/_grid.scss */
 .portrait-3col img,
 .portrait-3col .image,
 .portrait-3col .blank,
@@ -134,12 +104,14 @@ body {
   height: 580px;
 }
 
-/* line 114, ../_scss/_grid.scss */
+/* line 79, ../_scss/_grid.scss */
 .portrait-2col {
   width: 280px;
   height: 430px;
+  left: 760px;
+  top: 0px;
 }
-/* line 120, ../_scss/_grid.scss */
+/* line 87, ../_scss/_grid.scss */
 .portrait-2col img,
 .portrait-2col .image,
 .portrait-2col .blank,
@@ -148,12 +120,14 @@ body {
   height: 430px;
 }
 
-/* line 125, ../_scss/_grid.scss */
+/* line 92, ../_scss/_grid.scss */
 .square-3col {
   width: 430px;
   height: 430px;
+  left: 460px;
+  top: 450px;
 }
-/* line 131, ../_scss/_grid.scss */
+/* line 100, ../_scss/_grid.scss */
 .square-3col img,
 .square-3col .image,
 .square-3col .blank,
@@ -162,12 +136,14 @@ body {
   height: 430px;
 }
 
-/* line 136, ../_scss/_grid.scss */
+/* line 105, ../_scss/_grid.scss */
 .square-2col {
   width: 280px;
   height: 280px;
+  top: 0px;
+  left: 460px;
 }
-/* line 142, ../_scss/_grid.scss */
+/* line 113, ../_scss/_grid.scss */
 .square-2col img,
 .square-2col .image,
 .square-2col .blank,
@@ -176,12 +152,14 @@ body {
   height: 280px;
 }
 
-/* line 147, ../_scss/_grid.scss */
+/* line 118, ../_scss/_grid.scss */
 .square-1col {
   width: 130px;
   height: 130px;
+  left: 910px;
+  top: 450px;
 }
-/* line 153, ../_scss/_grid.scss */
+/* line 126, ../_scss/_grid.scss */
 .square-1col img,
 .square-1col .image,
 .square-1col .blank,
@@ -273,12 +251,52 @@ body {
   }
 }
 
-/* line 26, ../_scss/style.scss */
+/* line 1, ../_scss/_header.scss */
+#header {
+  position: relative;
+  font: 600 21px/20px "Helvetica Neue", Sans-Serif;
+  margin: 20px;
+}
+/* line 5, ../_scss/_header.scss */
+#header .logo {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+}
+/* line 10, ../_scss/_header.scss */
+#header .intro {
+  color: #777;
+}
+/* line 12, ../_scss/_header.scss */
+#header .intro .name {
+  color: #000;
+}
+/* line 15, ../_scss/_header.scss */
+#header .intro .phrase {
+  color: #FF3300;
+}
+/* line 18, ../_scss/_header.scss */
+#header .intro .loading {
+  color: #DDD;
+}
+/* line 22, ../_scss/_header.scss */
+#header ul {
+  position: absolute;
+  left: 450px;
+  top: 0px;
+  font: 400 12px/20px "Helvetica Neue", Sans-Serif;
+}
+/* line 27, ../_scss/_header.scss */
+#header ul a {
+  color: #AAA;
+}
+
+/* line 27, ../_scss/style.scss */
 .hide {
   display: none;
 }
 
-/* line 30, ../_scss/style.scss */
+/* line 31, ../_scss/style.scss */
 .clearfix {
   clear: both;
 }

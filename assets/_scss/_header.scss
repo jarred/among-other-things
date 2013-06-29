@@ -1,0 +1,31 @@
+#header{
+	position: relative;
+	font: 600 21px/20px $sans;
+	margin: 20px;
+	.logo{
+		position: absolute;
+		top: 0px;
+		left: 300px;
+	}
+	.intro{
+		color: #777;
+		.name{
+			color: #000;
+		}
+		.phrase{
+			color: #FF3300;
+		}
+		.loading{
+			color: #DDD;
+		}
+	}
+	ul{
+		position: absolute;
+		left: 450px;
+		top: 0px;
+		font: 400 12px/20px $sans;
+		a{
+			color: #AAA;
+		}
+	}
+}

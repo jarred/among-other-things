@@ -22,10 +22,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 							count: 0
 
 			# @randomiseLayout()
-			@$('.box').shuffle();
-			$('#grid').isotope
-				layoutMode : 'masonry'
-				columnWidth: 150
+			# @$('.box').shuffle();
 			@intro = new IntroView
 				el: @$('.intro')
 			@showProject 0
