@@ -1,3 +1,18 @@
+@mixin breakpoint($point) {
+	@if $point == "bp1" {
+	  @media only screen and (max-width: 1070px) { @content; }
+	};
+	@if $point == "bp2" {
+	  @media only screen and (max-width: 920px) { @content; }
+	};
+	@if $point == "bp3" {
+	  @media only screen and (max-width: 768px) { @content; }
+	};
+	@if $point == "bp4" {
+	  @media only screen and (max-width: 768px) { @content; }
+	};
+}
+
 #grid{
 	#project &{
 		margin-top: 0px;
@@ -19,6 +34,13 @@
 			left: 0px;
 			top: 0px;
 		}
+		@include breakpoint("bp4"){
+			position: relative;
+			left: auto !important;
+			top: auto !important;
+			margin-bottom: 20px;
+			margin-left: 10px;
+		}
 	}
 	.blank{
 		background-color: #EEE;
@@ -34,12 +56,14 @@
 		h2{
 			position: absolute;
 			bottom: 0px;
+			right: 0px;
 			left: 0px;
+			text-align: left;
 // 			font: 600 21px/20px $sans;
 // 			font: 700 20px/24px $big;
-				font: 400 14px/17px $small;
-				color: #0000FF;
-				border-bottom: 1px solid #0000FF;
+			font: 400 14px/17px $small;
+			color: #AAA;
+// 			border-bottom: 1px solid #0000FF;
 		}
 		.content{
 			position: relative;
@@ -48,6 +72,17 @@
 			em{
 				font-style: italic;
 			}
+		}
+		@include breakpoint("bp3"){
+			left: 160px;
+			top: 0px;
+		}
+		@include breakpoint("bp4"){
+			position: relative;
+			left: auto !important;
+			top: auto !important;
+			margin-bottom: 20px;
+			margin-left: 10px;
 		}
 	}
 }
@@ -64,6 +99,34 @@
 		width: 580px;
 		height: 430px;
 	}
+	@include breakpoint("bp2"){
+		left: 10px;
+		top: 1350px;
+	}
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 2250px;
+		width: 430px;
+		height: 318px;
+		img,
+		.image,
+		.blank,
+		.preloader{
+			width: 430px;
+			height: 318px;
+		}
+	}
+	@include breakpoint("bp4"){
+		width: 280px;
+		height: 207px;
+		img,
+		.image,
+		.blank,
+		.preloader{
+			width: 280px;
+			height: 207px;
+		}
+	}
 }
 .landscape-3col{
 	width: 430px;
@@ -76,6 +139,21 @@
 	.preloader{
 		width: 430px;
 		height: 280px;
+	}
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 150px;
+	}
+	@include breakpoint("bp4"){
+		width: 280px;
+		height: 182px;
+		img,
+		.image,
+		.blank,
+		.preloader{
+			width: 280px;
+			height: 182px;
+		}
 	}
 }
 .landscape-2col{
@@ -101,6 +179,21 @@
 		width: 430px;
 		height: 580px;
 	}	
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 450px;
+	}
+	@include breakpoint("bp4"){
+		width: 280px;
+		height: 378px;
+		img,
+		.image,
+		.blank,
+		.preloader{
+			width: 280px;
+			height: 378px;
+		}
+	}
 }
 .portrait-2col{
 	width: 280px;
@@ -114,6 +207,18 @@
 		width: 280px;
 		height: 430px;
 	}	
+	@include breakpoint("bp1"){
+		left: 610px;
+		top: 900px;
+	}
+	@include breakpoint("bp2"){
+		left: 460px;
+		top: 450px;
+	}
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 1800px;
+	}
 }
 .square-3col{
 	width: 430px;
@@ -126,6 +231,25 @@
 	.preloader{
 		width: 430px;
 		height: 430px;
+	}	
+	@include breakpoint("bp2"){
+		left: 10px;
+		top: 900px;
+	}
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 1350px;
+	}
+	@include breakpoint("bp4"){
+		width: 280px;
+		height: 280px;
+	}
+	img,
+	.image,
+	.blank,
+	.preloader{
+		width: 280px;
+		height: 280px;
 	}	
 }
 .square-2col{
@@ -140,6 +264,10 @@
 		width: 280px;
 		height: 280px;
 	}	
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 1050px;
+	}
 }
 .square-1col{
 	width: 130px;
@@ -153,4 +281,19 @@
 		width: 130px;
 		height: 130px;
 	}	
+	@include breakpoint("bp1"){
+		left: 760px;
+		top: 150px;
+	}
+	@include breakpoint("bp2"){
+		left: 460px;
+		top: 1200px;
+	}
+	@include breakpoint("bp3"){
+		left: 10px;
+		top: 0px;
+	}
+	@include breakpoint("bp4"){
+		position: relative;
+	}
 }

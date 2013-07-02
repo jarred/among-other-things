@@ -1,7 +1,7 @@
 /* line 10, ../_scss/style.scss */
 html {
   background-color: #FFF;
-  font: 400 13px/20px "Apercu", "futura-pt", Sans-Serif;
+  font: 400 13px/20px "Helvetica Neue", Sans-Serif;
   color: #222222;
 }
 
@@ -10,38 +10,48 @@ body {
   padding: 0px;
 }
 
-/* line 2, ../_scss/_grid.scss */
+/* line 17, ../_scss/_grid.scss */
 #project #grid {
   margin-top: 0px;
 }
 
-/* line 7, ../_scss/_grid.scss */
+/* line 22, ../_scss/_grid.scss */
 #grid {
   position: relative;
   left: 10px;
 }
-/* line 10, ../_scss/_grid.scss */
+/* line 25, ../_scss/_grid.scss */
 #grid .box {
   z-index: 2;
   position: relative;
 }
-/* line 14, ../_scss/_grid.scss */
+/* line 29, ../_scss/_grid.scss */
 #grid .box {
   overflow: hidden;
   position: absolute;
 }
-/* line 17, ../_scss/_grid.scss */
+/* line 32, ../_scss/_grid.scss */
 #grid .box > .internal {
   position: absolute;
   left: 0px;
   top: 0px;
 }
-/* line 23, ../_scss/_grid.scss */
+@media only screen and (max-width: 768px) {
+  /* line 29, ../_scss/_grid.scss */
+  #grid .box {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+}
+/* line 45, ../_scss/_grid.scss */
 #grid .blank {
   background-color: #EEE;
   z-index: 1;
 }
-/* line 27, ../_scss/_grid.scss */
+/* line 49, ../_scss/_grid.scss */
 #grid .info {
   position: absolute;
   width: 280px;
@@ -50,34 +60,52 @@ body {
   top: 300px;
   overflow: visible;
 }
-/* line 34, ../_scss/_grid.scss */
+/* line 56, ../_scss/_grid.scss */
 #grid .info h2 {
   position: absolute;
   bottom: 0px;
+  right: 0px;
   left: 0px;
-  font: 400 14px/17px "Apercu", "futura-pt", Sans-Serif;
-  color: #0000FF;
-  border-bottom: 1px solid #0000FF;
+  text-align: left;
+  font: 400 14px/17px "Helvetica Neue", Sans-Serif;
+  color: #AAA;
 }
-/* line 44, ../_scss/_grid.scss */
+/* line 68, ../_scss/_grid.scss */
 #grid .info .content {
   position: relative;
   top: -4px;
-  font: 400 14px/17px "Apercu", "futura-pt", Sans-Serif;
+  font: 400 14px/17px "Helvetica Neue", Sans-Serif;
 }
-/* line 48, ../_scss/_grid.scss */
+/* line 72, ../_scss/_grid.scss */
 #grid .info .content em {
   font-style: italic;
 }
+@media only screen and (max-width: 768px) {
+  /* line 49, ../_scss/_grid.scss */
+  #grid .info {
+    left: 160px;
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 49, ../_scss/_grid.scss */
+  #grid .info {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+}
 
-/* line 55, ../_scss/_grid.scss */
+/* line 90, ../_scss/_grid.scss */
 .landscape-4col {
   width: 580px;
   height: 430px;
   left: 10px;
   top: 900px;
 }
-/* line 63, ../_scss/_grid.scss */
+/* line 98, ../_scss/_grid.scss */
 .landscape-4col img,
 .landscape-4col .image,
 .landscape-4col .blank,
@@ -85,15 +113,54 @@ body {
   width: 580px;
   height: 430px;
 }
+@media only screen and (max-width: 920px) {
+  /* line 90, ../_scss/_grid.scss */
+  .landscape-4col {
+    left: 10px;
+    top: 1350px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 90, ../_scss/_grid.scss */
+  .landscape-4col {
+    left: 10px;
+    top: 2250px;
+    width: 430px;
+    height: 318px;
+  }
+  /* line 114, ../_scss/_grid.scss */
+  .landscape-4col img,
+  .landscape-4col .image,
+  .landscape-4col .blank,
+  .landscape-4col .preloader {
+    width: 430px;
+    height: 318px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 90, ../_scss/_grid.scss */
+  .landscape-4col {
+    width: 280px;
+    height: 207px;
+  }
+  /* line 125, ../_scss/_grid.scss */
+  .landscape-4col img,
+  .landscape-4col .image,
+  .landscape-4col .blank,
+  .landscape-4col .preloader {
+    width: 280px;
+    height: 207px;
+  }
+}
 
-/* line 68, ../_scss/_grid.scss */
+/* line 131, ../_scss/_grid.scss */
 .landscape-3col {
   width: 430px;
   height: 280px;
   left: 10px;
   top: 0px;
 }
-/* line 76, ../_scss/_grid.scss */
+/* line 139, ../_scss/_grid.scss */
 .landscape-3col img,
 .landscape-3col .image,
 .landscape-3col .blank,
@@ -101,13 +168,35 @@ body {
   width: 430px;
   height: 280px;
 }
+@media only screen and (max-width: 768px) {
+  /* line 131, ../_scss/_grid.scss */
+  .landscape-3col {
+    left: 10px;
+    top: 150px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 131, ../_scss/_grid.scss */
+  .landscape-3col {
+    width: 280px;
+    height: 182px;
+  }
+  /* line 153, ../_scss/_grid.scss */
+  .landscape-3col img,
+  .landscape-3col .image,
+  .landscape-3col .blank,
+  .landscape-3col .preloader {
+    width: 280px;
+    height: 182px;
+  }
+}
 
-/* line 81, ../_scss/_grid.scss */
+/* line 159, ../_scss/_grid.scss */
 .landscape-2col {
   width: 280px;
   height: 130px;
 }
-/* line 87, ../_scss/_grid.scss */
+/* line 165, ../_scss/_grid.scss */
 .landscape-2col img,
 .landscape-2col .image,
 .landscape-2col .blank,
@@ -116,14 +205,14 @@ body {
   height: 130px;
 }
 
-/* line 92, ../_scss/_grid.scss */
+/* line 170, ../_scss/_grid.scss */
 .portrait-3col {
   width: 430px;
   height: 580px;
   left: 10px;
   top: 300px;
 }
-/* line 100, ../_scss/_grid.scss */
+/* line 178, ../_scss/_grid.scss */
 .portrait-3col img,
 .portrait-3col .image,
 .portrait-3col .blank,
@@ -131,15 +220,37 @@ body {
   width: 430px;
   height: 580px;
 }
+@media only screen and (max-width: 768px) {
+  /* line 170, ../_scss/_grid.scss */
+  .portrait-3col {
+    left: 10px;
+    top: 450px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 170, ../_scss/_grid.scss */
+  .portrait-3col {
+    width: 280px;
+    height: 378px;
+  }
+  /* line 192, ../_scss/_grid.scss */
+  .portrait-3col img,
+  .portrait-3col .image,
+  .portrait-3col .blank,
+  .portrait-3col .preloader {
+    width: 280px;
+    height: 378px;
+  }
+}
 
-/* line 105, ../_scss/_grid.scss */
+/* line 198, ../_scss/_grid.scss */
 .portrait-2col {
   width: 280px;
   height: 430px;
   left: 760px;
   top: 0px;
 }
-/* line 113, ../_scss/_grid.scss */
+/* line 206, ../_scss/_grid.scss */
 .portrait-2col img,
 .portrait-2col .image,
 .portrait-2col .blank,
@@ -147,15 +258,36 @@ body {
   width: 280px;
   height: 430px;
 }
+@media only screen and (max-width: 1070px) {
+  /* line 198, ../_scss/_grid.scss */
+  .portrait-2col {
+    left: 610px;
+    top: 900px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  /* line 198, ../_scss/_grid.scss */
+  .portrait-2col {
+    left: 460px;
+    top: 450px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 198, ../_scss/_grid.scss */
+  .portrait-2col {
+    left: 10px;
+    top: 1800px;
+  }
+}
 
-/* line 118, ../_scss/_grid.scss */
+/* line 223, ../_scss/_grid.scss */
 .square-3col {
   width: 430px;
   height: 430px;
   left: 460px;
   top: 450px;
 }
-/* line 126, ../_scss/_grid.scss */
+/* line 231, ../_scss/_grid.scss */
 .square-3col img,
 .square-3col .image,
 .square-3col .blank,
@@ -163,15 +295,44 @@ body {
   width: 430px;
   height: 430px;
 }
+@media only screen and (max-width: 920px) {
+  /* line 223, ../_scss/_grid.scss */
+  .square-3col {
+    left: 10px;
+    top: 900px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 223, ../_scss/_grid.scss */
+  .square-3col {
+    left: 10px;
+    top: 1350px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 223, ../_scss/_grid.scss */
+  .square-3col {
+    width: 280px;
+    height: 280px;
+  }
+}
+/* line 250, ../_scss/_grid.scss */
+.square-3col img,
+.square-3col .image,
+.square-3col .blank,
+.square-3col .preloader {
+  width: 280px;
+  height: 280px;
+}
 
-/* line 131, ../_scss/_grid.scss */
+/* line 255, ../_scss/_grid.scss */
 .square-2col {
   width: 280px;
   height: 280px;
   top: 0px;
   left: 460px;
 }
-/* line 139, ../_scss/_grid.scss */
+/* line 263, ../_scss/_grid.scss */
 .square-2col img,
 .square-2col .image,
 .square-2col .blank,
@@ -179,21 +340,55 @@ body {
   width: 280px;
   height: 280px;
 }
+@media only screen and (max-width: 768px) {
+  /* line 255, ../_scss/_grid.scss */
+  .square-2col {
+    left: 10px;
+    top: 1050px;
+  }
+}
 
-/* line 144, ../_scss/_grid.scss */
+/* line 272, ../_scss/_grid.scss */
 .square-1col {
   width: 130px;
   height: 130px;
   left: 910px;
   top: 450px;
 }
-/* line 152, ../_scss/_grid.scss */
+/* line 280, ../_scss/_grid.scss */
 .square-1col img,
 .square-1col .image,
 .square-1col .blank,
 .square-1col .preloader {
   width: 130px;
   height: 130px;
+}
+@media only screen and (max-width: 1070px) {
+  /* line 272, ../_scss/_grid.scss */
+  .square-1col {
+    left: 760px;
+    top: 150px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  /* line 272, ../_scss/_grid.scss */
+  .square-1col {
+    left: 460px;
+    top: 1200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 272, ../_scss/_grid.scss */
+  .square-1col {
+    left: 10px;
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 272, ../_scss/_grid.scss */
+  .square-1col {
+    position: relative;
+  }
 }
 
 /* line 1, ../_scss/_preloader.scss */
@@ -282,7 +477,7 @@ body {
 /* line 1, ../_scss/_header.scss */
 #header {
   position: relative;
-  font: 400 14px/17px "Apercu", "futura-pt", Sans-Serif;
+  font: 400 14px/17px "Helvetica Neue", Sans-Serif;
   margin: 20px;
 }
 /* line 7, ../_scss/_header.scss */
@@ -312,6 +507,21 @@ body {
 #header ul a {
   color: #BBB;
   text-decoration: none;
+}
+@media only screen and (max-width: 920px) {
+  /* line 28, ../_scss/_header.scss */
+  #header ul {
+    left: 450px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 28, ../_scss/_header.scss */
+  #header ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-top: 20px;
+  }
 }
 
 /* line 29, ../_scss/style.scss */

@@ -33,5 +33,14 @@
 			color: #BBB;
 			text-decoration: none;
 		}
+		@include breakpoint("bp2") {
+			left: 450px;
+		}
+		@include breakpoint("bp3") {
+			position: relative;
+			left: auto;
+			top: auto;
+			margin-top: 20px;
+		}
 	}
 }
