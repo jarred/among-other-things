@@ -315,14 +315,14 @@ body {
     width: 280px;
     height: 280px;
   }
-}
-/* line 250, ../_scss/_grid.scss */
-.square-3col img,
-.square-3col .image,
-.square-3col .blank,
-.square-3col .preloader {
-  width: 280px;
-  height: 280px;
+  /* line 249, ../_scss/_grid.scss */
+  .square-3col img,
+  .square-3col .image,
+  .square-3col .blank,
+  .square-3col .preloader {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 /* line 255, ../_scss/_grid.scss */

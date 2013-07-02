@@ -243,14 +243,14 @@
 	@include breakpoint("bp4"){
 		width: 280px;
 		height: 280px;
+		img,
+		.image,
+		.blank,
+		.preloader{
+			width: 280px;
+			height: 280px;
+		}	
 	}
-	img,
-	.image,
-	.blank,
-	.preloader{
-		width: 280px;
-		height: 280px;
-	}	
 }
 .square-2col{
 	width: 280px;
