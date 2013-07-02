@@ -1,31 +1,37 @@
 #header{
 	position: relative;
-	font: 600 21px/20px $sans;
+// 	font: 400 18px/20px $small;
+	font: 400 14px/17px $small;
 	margin: 20px;
 	.logo{
-		position: absolute;
-		top: 0px;
-		left: 300px;
+		u{
+			border-bottom: 1px solid #DDD;
+			text-decoration: none;
+		}
 	}
 	.intro{
-		color: #777;
 		.name{
-			color: #000;
+			
 		}
 		.phrase{
-			color: #FF3300;
+			color: #0000FF;
 		}
-		.loading{
-			color: #DDD;
+		&.loading{
+			.phrase{
+				color: #DDD;
+			}
+			.a{
+				display: none;
+			}
 		}
 	}
 	ul{
 		position: absolute;
-		left: 450px;
+		left: 750px;
 		top: 0px;
-		font: 400 12px/20px $sans;
 		a{
-			color: #AAA;
+			color: #BBB;
+			text-decoration: none;
 		}
 	}
 }

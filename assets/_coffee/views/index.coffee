@@ -14,15 +14,12 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 
 			_.each @model.get('projects'), (project) =>
 				_.each project.images, (image) =>
-					# console.log 'image.size', image.size
 					if sizeCount[image.size]?
 						sizeCount[image.size].count++
 					else
 						sizeCount[image.size] =
 							count: 0
 
-			# @randomiseLayout()
-			# @$('.box').shuffle();
 			@intro = new IntroView
 				el: @$('.intro')
 			@showProject 0
@@ -36,7 +33,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				projectData = JSON.parse $el.find('.data').html()
 				model.get('projects').push projectData
 				
-			model.set 'projects', _.shuffle(model.get('projects'))
+			# model.set 'projects', _.shuffle(model.get('projects'))
 			return model
 
 		randomiseLayout: ->
@@ -53,6 +50,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 		showProject: (num) ->
 			@currentProject = num
 			@project = @model.get('projects')[num]
+			console.log @project
 			@project.images = _.shuffle @project.images
 			@$('.image-box').addClass 'empty'
 			@imageCount = 0
@@ -72,6 +70,12 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			_.each @$('.box.empty'), (el) =>
 				$el = $(el)
 				$el.find('.internal').append "<div class=\"blank slide\"></div>"
+
+			title = @$(".project[data-index=#{num}] .title").text()
+			content = @$(".project[data-index=#{num}] .excerpt").html()
+			@$('.info h2').text title
+			@$('.info .content').html content
+			console.log content
 
 		imageLoaded: ->
 			@imagesLoaded++
@@ -97,7 +101,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				$el.find('.slide:first').remove()
 				$el.find('.internal').css
 					top: '0px'
-			_.delay @nextProject, 4000
+			_.delay @nextProject, 7000
 
 		nextProject: ->
 			if @currentProject < @model.get('projects').length - 1

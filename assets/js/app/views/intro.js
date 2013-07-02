@@ -17,7 +17,7 @@
           opacity: 0,
           onComplete: function() {
             _this.$('.phrase').html(project.noun);
-            _this.$('.phrase').removeClass('loading');
+            _this.$el.removeClass('loading');
             return TweenMax.to(_this.$('.phrase'), .3, {
               opacity: 1
             });

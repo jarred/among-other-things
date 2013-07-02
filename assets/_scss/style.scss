@@ -2,12 +2,14 @@ $black: #222;
 $highlight: #FFF;
 $column_width: 80px;
 $margin: 20px;
-$sans: 'Helvetica Neue', Sans-Serif;
+$big: "ff-tisa-web-pro", "Georgia" , "Times New Roman", Serif;
+$small: "Apercu", "futura-pt", Sans-Serif;
+$sans: $big;
 
 
 html{
 	background-color: #FFF;
-	font: 400 13px/20px $sans;
+	font: 400 13px/20px $small;
 	color: $black;
 }
 

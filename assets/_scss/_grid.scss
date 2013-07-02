@@ -24,6 +24,32 @@
 		background-color: #EEE;
 		z-index: 1;
 	}
+	.info{
+		position: absolute;
+		width: 280px;
+		height: 130px;
+		left: 460px;
+		top: 300px;
+		overflow: visible;
+		h2{
+			position: absolute;
+			bottom: 0px;
+			left: 0px;
+// 			font: 600 21px/20px $sans;
+// 			font: 700 20px/24px $big;
+				font: 400 14px/17px $small;
+				color: #0000FF;
+				border-bottom: 1px solid #0000FF;
+		}
+		.content{
+			position: relative;
+			top: -4px;
+			font: 400 14px/17px $small;
+			em{
+				font-style: italic;
+			}
+		}
+	}
 }
 
 .landscape-4col{

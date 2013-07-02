@@ -14,6 +14,6 @@ define ["backbone", "underscore"], () ->
 				opacity: 0
 				onComplete: () =>
 					@$('.phrase').html project.noun
-					@$('.phrase').removeClass 'loading'
+					@$el.removeClass 'loading'
 					TweenMax.to @$('.phrase'), .3, 
 						opacity: 1 

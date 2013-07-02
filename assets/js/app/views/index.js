@@ -44,7 +44,6 @@
           projectData = JSON.parse($el.find('.data').html());
           return model.get('projects').push(projectData);
         });
-        model.set('projects', _.shuffle(model.get('projects')));
         return model;
       },
       randomiseLayout: function() {
@@ -66,10 +65,12 @@
         });
       },
       showProject: function(num) {
-        var _this = this;
+        var content, title,
+          _this = this;
 
         this.currentProject = num;
         this.project = this.model.get('projects')[num];
+        console.log(this.project);
         this.project.images = _.shuffle(this.project.images);
         this.$('.image-box').addClass('empty');
         this.imageCount = 0;
@@ -90,12 +91,17 @@
           $box.find('.internal').append($container);
           return $box.removeClass('empty');
         });
-        return _.each(this.$('.box.empty'), function(el) {
+        _.each(this.$('.box.empty'), function(el) {
           var $el;
 
           $el = $(el);
           return $el.find('.internal').append("<div class=\"blank slide\"></div>");
         });
+        title = this.$(".project[data-index=" + num + "] .title").text();
+        content = this.$(".project[data-index=" + num + "] .excerpt").html();
+        this.$('.info h2').text(title);
+        this.$('.info .content').html(content);
+        return console.log(content);
       },
       imageLoaded: function() {
         this.imagesLoaded++;
@@ -135,7 +141,7 @@
             top: '0px'
           });
         });
-        return _.delay(this.nextProject, 4000);
+        return _.delay(this.nextProject, 7000);
       },
       nextProject: function() {
         if (this.currentProject < this.model.get('projects').length - 1) {

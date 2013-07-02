@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Coffee Supreme Online Store
-excerpt: Coffee Supreme <em>Online Store</em>
+title: coffeesupremeshop.com
+excerpt: I helped Coffee Supreme shift their online store to Shopify, and designed and built a theme that housed a tool to help you discover the best coffee for you.
 published: true
 size: square-2col
 ---

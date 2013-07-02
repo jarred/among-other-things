@@ -1,7 +1,7 @@
 ---
 layout: project
-title: kaleidomaniac
-excerpt: Kaleidomaniac.com
+title: kaleidomaniac.com
+excerpt: Failed image-blog experiment. 
 published: true
 size: landscape-3col
 ---
