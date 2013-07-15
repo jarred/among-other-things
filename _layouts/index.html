@@ -81,7 +81,7 @@
         </div>
         <div id="data">
             {% for post in site.posts %}
-            <div class="project" data-index="{{ forloop.index0 }}" data-url="{{ post.url }}">
+            <div class="project" data-index="{{ forloop.index0 }}" data-url="{{ post.project_url }}">
                 <h2 class="title hide">{{ post.title }}</h2>
                 <div class="excerpt hide">
                     {{ post.excerpt }}

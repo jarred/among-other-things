@@ -109,11 +109,16 @@
         }
       },
       animateProjectInfoIn: function() {
-        var content, title;
+        var content, title, url;
 
+        url = this.$(".project[data-index=" + this.currentProject + "]").data('url');
         title = this.$(".project[data-index=" + this.currentProject + "] .title").text();
         content = this.$(".project[data-index=" + this.currentProject + "] .excerpt").html();
-        this.$('.info h2').text(title);
+        if (url === "none") {
+          this.$('.info h2').text(title);
+        } else {
+          this.$('.info h2').html("<a href=\"" + url + "\">" + title + "</a>");
+        }
         this.$('.info .content').html(content);
         return TweenMax.to(this.$('.info'), .3, {
           delay: .3,

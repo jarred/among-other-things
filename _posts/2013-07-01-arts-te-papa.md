@@ -1,6 +1,7 @@
 ---
 layout: project
 title: #####
+project_url: none
 excerpt: I'm not supposed to talk about this project, so here are some discarded design assets.
 published: false
 ---

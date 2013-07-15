@@ -1,17 +1,10 @@
 ---
 layout: project
 title: Black Estate Photography
-url: none
+project_url: none
 excerpt: <em>&#8220;Tim and I were wondering if you were interested in a photography assignment in Waipara ... It'll be hard to mess up.&#8221;</em> <br /><br />Very Interested.
 size: portrait-2col
 ---
-
-> Hey Jarred,  
-> Tim and I were wondering if you're interested in a photography assignment in Waipara. They're up for doing good work, it's a beautiful location and they're just putting the finishing touches on a RTA designed 'barn'. It'll be hard to mess up.  
-> Cheers,  
-> Matt
-
-Dream. Job.
 
 <script type="application/json" class="data">
 {

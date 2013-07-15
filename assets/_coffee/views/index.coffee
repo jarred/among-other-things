@@ -83,9 +83,13 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				@animateProjectIn()
 
 		animateProjectInfoIn: ->
+			url = @$(".project[data-index=#{@currentProject}]").data('url')
 			title = @$(".project[data-index=#{@currentProject}] .title").text()
 			content = @$(".project[data-index=#{@currentProject}] .excerpt").html()
-			@$('.info h2').text title
+			if url is "none"
+				@$('.info h2').text title
+			else
+				@$('.info h2').html "<a href=\"#{url}\">#{title}</a>"
 			@$('.info .content').html content
 
 			TweenMax.to @$('.info'), .3, 
