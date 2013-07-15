@@ -1,13 +1,18 @@
-/* line 10, ../_scss/style.scss */
+/* line 9, ../_scss/style.scss */
 html {
   background-color: #FFF;
   font: 400 13px/20px "Helvetica Neue", Sans-Serif;
   color: #222222;
 }
 
-/* line 16, ../_scss/style.scss */
+/* line 15, ../_scss/style.scss */
 body {
   padding: 0px;
+}
+
+/* line 19, ../_scss/style.scss */
+html {
+  overflow-x: hidden;
 }
 
 /* line 17, ../_scss/_grid.scss */
@@ -524,12 +529,12 @@ body {
   }
 }
 
-/* line 29, ../_scss/style.scss */
+/* line 32, ../_scss/style.scss */
 .hide {
   display: none;
 }
 
-/* line 33, ../_scss/style.scss */
+/* line 36, ../_scss/style.scss */
 .clearfix {
   clear: both;
 }

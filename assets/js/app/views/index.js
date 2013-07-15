@@ -65,8 +65,7 @@
         });
       },
       showProject: function(num) {
-        var content, title,
-          _this = this;
+        var _this = this;
 
         this.currentProject = num;
         this.project = this.model.get('projects')[num];
@@ -75,6 +74,11 @@
         this.$('.image-box').addClass('empty');
         this.imageCount = 0;
         this.imagesLoaded = 0;
+        TweenMax.to(this.$('.info'), .3, {
+          opacity: 0,
+          ease: Quint.easeIn,
+          onComplete: this.animateProjectInfoIn
+        });
         _.each(this.project.images, function(image) {
           var $box, $container, img;
 
@@ -91,23 +95,31 @@
           $box.find('.internal').append($container);
           return $box.removeClass('empty');
         });
-        _.each(this.$('.box.empty'), function(el) {
+        return _.each(this.$('.box.empty'), function(el) {
           var $el;
 
           $el = $(el);
           return $el.find('.internal').append("<div class=\"blank slide\"></div>");
         });
-        title = this.$(".project[data-index=" + num + "] .title").text();
-        content = this.$(".project[data-index=" + num + "] .excerpt").html();
-        this.$('.info h2').text(title);
-        this.$('.info .content').html(content);
-        return console.log(content);
       },
       imageLoaded: function() {
         this.imagesLoaded++;
         if (this.imagesLoaded >= this.imageCount) {
           return this.animateProjectIn();
         }
+      },
+      animateProjectInfoIn: function() {
+        var content, title;
+
+        title = this.$(".project[data-index=" + this.currentProject + "] .title").text();
+        content = this.$(".project[data-index=" + this.currentProject + "] .excerpt").html();
+        this.$('.info h2').text(title);
+        this.$('.info .content').html(content);
+        return TweenMax.to(this.$('.info'), .3, {
+          delay: .3,
+          ease: Quint.easeOut,
+          opacity: 1
+        });
       },
       animateProjectIn: function() {
         var _this = this;

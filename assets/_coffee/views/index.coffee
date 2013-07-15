@@ -55,6 +55,12 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@$('.image-box').addClass 'empty'
 			@imageCount = 0
 			@imagesLoaded = 0
+			
+			TweenMax.to @$('.info'), .3, 
+				opacity: 0
+				ease: Quint.easeIn
+				onComplete: @animateProjectInfoIn
+
 			_.each @project.images, (image) =>
 				$box = $(".#{image.size}")
 				return if !$box.hasClass 'empty'
@@ -71,16 +77,21 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				$el = $(el)
 				$el.find('.internal').append "<div class=\"blank slide\"></div>"
 
-			title = @$(".project[data-index=#{num}] .title").text()
-			content = @$(".project[data-index=#{num}] .excerpt").html()
-			@$('.info h2').text title
-			@$('.info .content').html content
-			console.log content
-
 		imageLoaded: ->
 			@imagesLoaded++
 			if @imagesLoaded >= @imageCount
 				@animateProjectIn()
+
+		animateProjectInfoIn: ->
+			title = @$(".project[data-index=#{@currentProject}] .title").text()
+			content = @$(".project[data-index=#{@currentProject}] .excerpt").html()
+			@$('.info h2').text title
+			@$('.info .content').html content
+
+			TweenMax.to @$('.info'), .3, 
+				delay: .3
+				ease: Quint.easeOut
+				opacity: 1
 
 		animateProjectIn: ->
 			@intro.trigger 'animate-in', @project
