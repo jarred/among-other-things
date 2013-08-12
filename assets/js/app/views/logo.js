@@ -4,15 +4,9 @@
     var LogoView;
 
     return LogoView = Backbone.View.extend({
-      className: 'box size11 logo',
       initialize: function(options) {
         this.options = options;
-        _.bindAll(this);
-        this.$el = $(this.el);
-        this.render();
-      },
-      render: function() {
-        this.$el.html("<p>(among*<br />^other~<br />#things)</p>");
+        return _.bindAll(this);
       }
     });
   });

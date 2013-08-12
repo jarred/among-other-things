@@ -2,15 +2,18 @@ define ["backbone", "underscore"], () ->
 
 	IntroView = Backbone.View.extend
 
-		className: 'box size21 intro'
-
 		initialize: (@options) ->
 			_.bindAll @
-			@$el = $(@el)
-			@render()
-			return
+			@on 'animate-in', @animateIn
+			@$el.addClass 'ready'
 
-		render: ->
-			@$el.html "<p>The portfolio of Jarred Bishop <span class=\"mdash\">&mdash;</span><br /><span class=\"loading\">is loading...</span></p>"
-			return
-
+		animateIn: (project) ->
+			# console.log 'logo.animateIn', project.noun
+			# @$('.phrase').html project.noun
+			TweenMax.to @$('.phrase'), .3, 
+				opacity: 0
+				onComplete: () =>
+					@$('.phrase').html project.noun
+					@$el.removeClass 'loading'
+					TweenMax.to @$('.phrase'), .3, 
+						opacity: 1 

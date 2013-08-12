@@ -2,12 +2,14 @@
 layout: project
 title: Cut&Run
 excerpt: Cut&Run <em>Branding and Product Design</em>
+project_url: none
 size: landscape-3col
+published: false
 ---
 
 <script type="application/json" class="data">
 {
-	"size": "landscape-3col",
+	"noun": "Creative Director",
 	"images": [{
 		"src": "/assets/img/cut-and-run/landscape-3col.alt-logo.png",
 		"size": "landscape-3col"

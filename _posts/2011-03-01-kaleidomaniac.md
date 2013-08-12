@@ -1,37 +1,35 @@
 ---
 layout: project
-title: kaleidomaniac
-excerpt: Kaleidomaniac.com
+title: kaleidomaniac.com
+project_url: http://kaleidomaniac.com
+excerpt: Experimental image-blog.
 published: true
 size: landscape-3col
 ---
 
 <script type="application/json" class="data">
 {
-	"size": "landscape-3col",
+	"noun": "Design Director",
 	"images": [{
-		"src": "/assets/img/kaleidomaniac.com/landscape-3col.1.jpg",
+		"src": "/assets/img/kaleidomaniac.com/landscape-3col.jpg",
 		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/landscape-3col.2.jpg",
-		"size": "landscape-3col"
+		"src": "/assets/img/kaleidomaniac.com/landscape-4col.jpg",
+		"size": "landscape-4col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/landscape-3col.3.jpg",
-		"size": "landscape-3col"
-	},{
-		"src": "/assets/img/kaleidomaniac.com/portrait-2col.1.jpg",
+		"src": "/assets/img/kaleidomaniac.com/portrait-2col.jpg",
 		"size": "portrait-2col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/portrait-2col.2.jpg",
-		"size": "portrait-2col"
+		"src": "/assets/img/kaleidomaniac.com/portrait-3col.jpg",
+		"size": "portrait-3col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/square-3col.1.jpg",
-		"size": "square-3col"
+		"src": "/assets/img/kaleidomaniac.com/square-1col.png",
+		"size": "square-1col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/square-3col.2.jpg",
-		"size": "square-3col"
+		"src": "/assets/img/kaleidomaniac.com/square-2col.jpg",
+		"size": "square-2col"
 	},{
-		"src": "/assets/img/kaleidomaniac.com/square-3col.3.jpg",
+		"src": "/assets/img/kaleidomaniac.com/square-3col.jpg",
 		"size": "square-3col"
 	}]
 }

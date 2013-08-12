@@ -2,57 +2,23 @@ requirejs.config
 	baseUrl: '/assets/js/libs'
 	paths:
 		app: '../app'
+		indexView: '../app/views/index'
+		logoView: '../app/views/logo'
+		introView: '../app/views/intro'
 
+	shim:
+		backbone:
+			deps: ['jquery', 'underscore']
+			exports: 'Backbone'
+		indexView:
+			deps: ['backbone']
+# lets go...
 
+require ['jquery', 'underscore', 'backbone', 'greensock/TweenMax.min', 'indexView', 'logoView'], ($, _, Backbone, TweenMax, IndexView, LogoView) =>
 
-Main =
-	go: ->
-		@loadLibs()
-		return
+	App =
+		go: ->
+			index = new IndexView
+				el: $('body')
 
-	loadLibs: ->
-		require [
-			"jquery"
-			"underscore"
-			"greensock/TweenMax.min"
-			# "history"
-			], () =>
-				require [
-					"backbone", 
-					"greensock/jquery.gsap.min"
-					"jquery.nested.1.0.1"
-					# "libs/history.adapter.jquery"
-					], () =>
-						require [
-							# "views/project"
-							# "views/project-image"
-							# "views/grid-item"
-							# "views/layout-experiment"
-							"app/views/index"
-							"app/views/intro"
-							"app/views/logo"
-							], =>
-								@init()
-								return
-		return
-
-	init: ->
-		@appModel = new Backbone.Model()
-		@extendViews()
-		return
-
-	extendViews: ->
-		_.each $('.extend-view'), (el) =>
-			$el = $(el)
-			console.log el
-			viewName = "app/views/#{$el.data('view')}"
-			console.log 'viewName', viewName
-			view = require(viewName)
-			console.log view
-			new view
-				el: el
-				appModel: @appModel
-			$el.removeClass 'extend-view'
-			return
-
-Main.go()
+	App.go()

@@ -1,0 +1,46 @@
+#header{
+	position: relative;
+// 	font: 400 18px/20px $small;
+	font: 400 14px/17px $small;
+	margin: 20px;
+	.logo{
+		u{
+			border-bottom: 1px solid #DDD;
+			text-decoration: none;
+		}
+	}
+	.intro{
+		.name{
+			
+		}
+		.phrase{
+			color: #0000FF;
+		}
+		&.loading{
+			.phrase{
+				color: #DDD;
+			}
+			.a{
+				display: none;
+			}
+		}
+	}
+	ul{
+		position: absolute;
+		left: 750px;
+		top: 0px;
+		a{
+			color: #BBB;
+			text-decoration: none;
+		}
+		@include breakpoint("bp2") {
+			left: 450px;
+		}
+		@include breakpoint("bp3") {
+			position: relative;
+			left: auto;
+			top: auto;
+			margin-top: 20px;
+		}
+	}
+}

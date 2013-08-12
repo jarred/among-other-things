@@ -2,17 +2,22 @@ $black: #222;
 $highlight: #FFF;
 $column_width: 80px;
 $margin: 20px;
-$sans: 'Helvetica Neue', Sans-Serif;
-
+$big: "ff-tisa-web-pro", "Georgia" , "Times New Roman", Serif;
+$small: "Helvetica Neue", Sans-Serif;
+$sans: $big;
 
 html{
 	background-color: #FFF;
-	font: 400 13px/20px $sans;
+	font: 400 13px/20px $small;
 	color: $black;
 }
 
 body{
-	padding: 20px;
+	padding: 0px;
+}
+
+html{
+	overflow-x: hidden;
 }
 
 @mixin big-type{
@@ -21,6 +26,7 @@ body{
 
 @import "_grid";
 @import "_preloader";
+@import "_header";
 
 
 .hide{

@@ -1,49 +1,35 @@
 ---
 layout: project
-title: Coffee Supreme Online Store
-excerpt: Coffee Supreme <em>Online Store</em>
+title: coffeesupremeshop.com
+project_url: http://www.coffeesupremeshop.com
+excerpt: I helped Coffee Supreme shift their online store to Shopify, and designed and built a theme that housed a tool to help you discover the best coffee for you.
 published: true
 size: square-2col
 ---
 
 <script type="application/json" class="data">
 {
-	"size": "square-2col",
+	"noun": "Designer",
 	"images": [{
-		"src": "/assets/img/coffeesupremeshop.com/landscape-3col.methods.png",
+		"src": "/assets/img/coffeesupremeshop.com/landscape-3col.jpg",
 		"size": "landscape-3col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/portrait-2col.buying-coffee.png",
+		"src": "/assets/img/coffeesupremeshop.com/landscape-4col.jpg",
+		"size": "landscape-4col"
+	},{
+		"src": "/assets/img/coffeesupremeshop.com/portrait-2col.jpg",
 		"size": "portrait-2col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/portrait-2col.grid-item.png",
-		"size": "portrait-2col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/portrait-3col.quick-view.jpg",
+		"src": "/assets/img/coffeesupremeshop.com/portrait-3col.jpg",
 		"size": "portrait-3col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/portrait-3col.related.jpg",
-		"size": "portrait-3col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-1col.cart.png",
+		"src": "/assets/img/coffeesupremeshop.com/square-1col.jpg",
 		"size": "square-1col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-2col.brew-method.png",
+		"src": "/assets/img/coffeesupremeshop.com/square-2col.jpg",
 		"size": "square-2col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-2col.dropdown.png",
-		"size": "square-2col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-2col.flavours.png",
-		"size": "square-2col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-2col.methods.png",
-		"size": "square-2col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-3col.images.jpg",
-		"size": "square-3col"
-	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-3col.rare-and-interesting.jpg",
+		"src": "/assets/img/coffeesupremeshop.com/square-3col.jpg",
 		"size": "square-3col"
 	}]
 }
