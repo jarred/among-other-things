@@ -14,7 +14,7 @@
 			
 		}
 		.phrase{
-			color: #0000FF;
+			font-weight: bold;
 		}
 		&.loading{
 			.phrase{
@@ -32,6 +32,9 @@
 		a{
 			color: #BBB;
 			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 		@include breakpoint("bp2") {
 			left: 450px;

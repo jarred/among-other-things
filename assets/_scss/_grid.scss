@@ -1,4 +1,7 @@
 @mixin breakpoint($point) {
+	@if $point == "bp0" {
+		@media only screen and (min-width: 1370px){ @content; }
+	}
 	@if $point == "bp1" {
 	  @media only screen and (max-width: 1070px) { @content; }
 	};
@@ -20,6 +23,18 @@
 }
 
 #grid{
+	@include breakpoint("bp0"){
+		height: 900px;
+	}
+	@include breakpoint("bp1"){
+		height: 1350px;
+	}
+	@include breakpoint("bp2"){
+		height: 1800px;
+	}
+	@include breakpoint("bp3"){
+		height: 2178px;
+	}
 	position: relative;
 	left: 10px;
 	.box{
@@ -64,13 +79,26 @@
 			font: 400 14px/17px $small;
 			color: #AAA;
 // 			border-bottom: 1px solid #0000FF;
+			a{
+				text-decoration: none;
+				color: #AAA;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
 		}
 		.content{
 			position: relative;
-			top: -4px;
+			top: -2px;
+			left: 0px;
+			margin-right: 20px;
 			font: 400 14px/17px $small;
 			em{
 				font-style: italic;
+			}
+			a{
+				color: $black;
+				text-decoration: underline;
 			}
 		}
 		@include breakpoint("bp3"){
@@ -126,6 +154,10 @@
 			width: 280px;
 			height: 207px;
 		}
+	}
+	@include breakpoint("bp0"){
+		left: 760px;
+		top: 0px;		
 	}
 }
 .landscape-3col{
@@ -219,6 +251,10 @@
 		left: 10px;
 		top: 1800px;
 	}
+	@include breakpoint("bp0"){
+		left: 910px;
+		top: 450px;
+	}
 }
 .square-3col{
 	width: 430px;
@@ -295,5 +331,9 @@
 	}
 	@include breakpoint("bp4"){
 		position: relative;
+	}
+	@include breakpoint("bp0"){
+		left: 1210px;
+		top: 450px;
 	}
 }
