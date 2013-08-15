@@ -56,11 +56,6 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@imageCount = 0
 			@imagesLoaded = 0
 			
-			TweenMax.to @$('.info'), .3, 
-				opacity: 0
-				ease: Quint.easeIn
-				onComplete: @animateProjectInfoIn
-
 			_.each @project.images, (image) =>
 				$box = $(".#{image.size}")
 				return if !$box.hasClass 'empty'
@@ -81,6 +76,13 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@imagesLoaded++
 			if @imagesLoaded >= @imageCount
 				@animateProjectIn()
+				@animateProjectInfoOut()
+
+		animateProjectInfoOut: ->
+			TweenMax.to @$('.info'), .3, 
+				opacity: 0
+				ease: Quint.easeIn
+				onComplete: @animateProjectInfoIn
 
 		animateProjectInfoIn: ->
 			url = @$(".project[data-index=#{@currentProject}]").data('url')
@@ -93,9 +95,9 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@$('.info .content').html content
 
 			TweenMax.to @$('.info'), .3, 
-				delay: .5
 				ease: Quint.easeOut
 				opacity: 1
+				delay: .2
 
 		animateProjectIn: ->
 			@intro.trigger 'animate-in', @project
@@ -105,7 +107,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				tween =
 					top: 0 - h
 					ease: Quint.easeOut
-					delay: index * .1
+					delay: .3 + index * .1
 				if index + 1 >= $('.image-box').length
 					tween.onComplete = @projectAnimatedIn
 				TweenMax.to $el.find('.internal'), .3, tween

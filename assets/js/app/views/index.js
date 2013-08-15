@@ -74,11 +74,6 @@
         this.$('.image-box').addClass('empty');
         this.imageCount = 0;
         this.imagesLoaded = 0;
-        TweenMax.to(this.$('.info'), .3, {
-          opacity: 0,
-          ease: Quint.easeIn,
-          onComplete: this.animateProjectInfoIn
-        });
         _.each(this.project.images, function(image) {
           var $box, $container, img;
 
@@ -105,8 +100,16 @@
       imageLoaded: function() {
         this.imagesLoaded++;
         if (this.imagesLoaded >= this.imageCount) {
-          return this.animateProjectIn();
+          this.animateProjectIn();
+          return this.animateProjectInfoOut();
         }
+      },
+      animateProjectInfoOut: function() {
+        return TweenMax.to(this.$('.info'), .3, {
+          opacity: 0,
+          ease: Quint.easeIn,
+          onComplete: this.animateProjectInfoIn
+        });
       },
       animateProjectInfoIn: function() {
         var content, title, url;
@@ -121,9 +124,9 @@
         }
         this.$('.info .content').html(content);
         return TweenMax.to(this.$('.info'), .3, {
-          delay: .5,
           ease: Quint.easeOut,
-          opacity: 1
+          opacity: 1,
+          delay: .2
         });
       },
       animateProjectIn: function() {
@@ -138,7 +141,7 @@
           tween = {
             top: 0 - h,
             ease: Quint.easeOut,
-            delay: index * .1
+            delay: .3 + index * .1
           };
           if (index + 1 >= $('.image-box').length) {
             tween.onComplete = _this.projectAnimatedIn;
