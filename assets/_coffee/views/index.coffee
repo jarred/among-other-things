@@ -7,9 +7,6 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 		initialize: (@options) ->
 			_.bindAll @
 			@model = @getData()
-
-			console.log @model.toJSON()
-
 			sizeCount = {}
 
 			_.each @model.get('projects'), (project) =>
@@ -50,7 +47,6 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 		showProject: (num) ->
 			@currentProject = num
 			@project = @model.get('projects')[num]
-			console.log @project
 			@project.images = _.shuffle @project.images
 			@$('.image-box').addClass 'empty'
 			@imageCount = 0

@@ -12,7 +12,6 @@
         this.options = options;
         _.bindAll(this);
         this.model = this.getData();
-        console.log(this.model.toJSON());
         sizeCount = {};
         _.each(this.model.get('projects'), function(project) {
           return _.each(project.images, function(image) {
@@ -69,7 +68,6 @@
 
         this.currentProject = num;
         this.project = this.model.get('projects')[num];
-        console.log(this.project);
         this.project.images = _.shuffle(this.project.images);
         this.$('.image-box').addClass('empty');
         this.imageCount = 0;
