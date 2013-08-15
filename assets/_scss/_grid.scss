@@ -12,7 +12,7 @@
 	  @media only screen and (max-width: 768px) { @content; }
 	};
 	@if $point == "bp4" {
-	  @media only screen and (max-width: 768px) { @content; }
+	  @media only screen and (max-width: 767px) { @content; }
 	};
 }
 

@@ -65,7 +65,7 @@ html {
   left: 0px;
   top: 0px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 44, ../_scss/_grid.scss */
   #grid .box {
     position: relative;
@@ -132,7 +132,7 @@ html {
     top: 0px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 64, ../_scss/_grid.scss */
   #grid .info {
     position: relative;
@@ -182,7 +182,7 @@ html {
     height: 318px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 118, ../_scss/_grid.scss */
   .landscape-4col {
     width: 280px;
@@ -227,7 +227,7 @@ html {
     top: 150px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 163, ../_scss/_grid.scss */
   .landscape-3col {
     width: 280px;
@@ -279,7 +279,7 @@ html {
     top: 450px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 202, ../_scss/_grid.scss */
   .portrait-3col {
     width: 280px;
@@ -368,7 +368,7 @@ html {
     top: 1350px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 259, ../_scss/_grid.scss */
   .square-3col {
     width: 280px;
@@ -443,7 +443,7 @@ html {
     top: 0px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* line 308, ../_scss/_grid.scss */
   .square-1col {
     position: relative;

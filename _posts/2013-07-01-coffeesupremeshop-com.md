@@ -9,7 +9,7 @@ size: square-2col
 
 <script type="application/json" class="data">
 {
-	"noun": "Designer",
+	"noun": "Web Designer",
 	"images": [{
 		"src": "/assets/img/coffeesupremeshop.com/landscape-3col.jpg",
 		"size": "landscape-3col"
