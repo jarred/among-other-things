@@ -2,7 +2,7 @@
 layout: project
 title: kaleidomaniac.com
 project_url: http://kaleidomaniac.com
-excerpt: Experimental image-blog.
+excerpt: Experimental image-tumblr. 
 published: true
 size: landscape-3col
 ---

@@ -16,7 +16,7 @@
         <div id="header">
             <div class="intro loading">
                 <p>Portfolio of <span class="name">Jarred Bishop</span> <span class="mdash">&mdash;</span><br />
-                    <span class="a">a </span><span class="phrase">[ IS LOADING ]</span>. <span class="logo"><u>Amon</u>g<u> other thin</u>g<u>s</u>&copy;<u>&trade;</u></span>
+                    <span class="a">a </span><span class="phrase">[ IS LOADING ]</span> <span class="logo">(<u>amon</u>g<u> other thin</u>g<u>s&trade;</u>)</span>
                 </p>
             </div>
             <ul>
@@ -24,17 +24,15 @@
             </ul>
         </div>
         <div id="grid" class="grid-container">
-            <div class="box image-box square-1col">
+
+            <div class="box image-box landscape-3col">
                 <div class="internal">
                     <div class="preloader animating slide">
                         <div class="lines"></div>
                     </div>
                 </div>
             </div>
-            <div class="box info">
-                <h2></h2>
-                <div class="content"></div>
-            </div>
+
             <div class="box image-box square-2col">
                 <div class="internal">
                     <div class="preloader animating slide">
@@ -42,21 +40,16 @@
                     </div>
                 </div>
             </div>
-            <div class="box image-box portrait-2col">
+
+            <div class="box image-box portrait-3col">
                 <div class="internal">
                     <div class="preloader animating slide">
                         <div class="lines"></div>
                     </div>
                 </div>
             </div>
+
             <div class="box image-box square-3col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="box image-box landscape-3col">
                 <div class="internal">
                     <div class="preloader animating slide">
                         <div class="lines"></div>
@@ -71,13 +64,28 @@
                     </div>
                 </div>
             </div>
-            <div class="box image-box portrait-3col">
+
+            <div class="box image-box portrait-2col">
                 <div class="internal">
                     <div class="preloader animating slide">
                         <div class="lines"></div>
                     </div>
                 </div>
             </div>
+
+            <div class="box image-box square-1col">
+                <div class="internal">
+                    <div class="preloader animating slide">
+                        <div class="lines"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box info">
+                <h2></h2>
+                <div class="content"></div>
+            </div>
+
         </div>
         <div id="data">
             {% for post in site.posts %}

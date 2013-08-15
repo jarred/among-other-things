@@ -121,7 +121,7 @@
         }
         this.$('.info .content').html(content);
         return TweenMax.to(this.$('.info'), .3, {
-          delay: .3,
+          delay: .5,
           ease: Quint.easeOut,
           opacity: 1
         });

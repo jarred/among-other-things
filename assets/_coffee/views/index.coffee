@@ -93,7 +93,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			@$('.info .content').html content
 
 			TweenMax.to @$('.info'), .3, 
-				delay: .3
+				delay: .5
 				ease: Quint.easeOut
 				opacity: 1
 
