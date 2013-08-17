@@ -19,7 +19,11 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 
 			@intro = new IntroView
 				el: @$('.intro')
-			@showProject 0
+
+			_.delay () =>
+				$('#site-preloader').remove()
+				@showProject 0
+			, 2000
 			return
 
 		getData: ->
@@ -114,7 +118,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 				$el.find('.slide:first').remove()
 				$el.find('.internal').css
 					top: '0px'
-			_.delay @nextProject, 7000
+			_.delay @nextProject, 8000
 
 		nextProject: ->
 			if @currentProject < @model.get('projects').length - 1

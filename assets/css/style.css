@@ -458,21 +458,39 @@ html {
 }
 
 /* line 1, ../_scss/_preloader.scss */
+#site-preloader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 444;
+}
+/* line 8, ../_scss/_preloader.scss */
+#site-preloader .message {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #666;
+  font: 400 14px/17px "Helvetica Neue", Sans-Serif;
+}
+
+/* line 17, ../_scss/_preloader.scss */
 .preloader {
   position: relative;
 }
-/* line 3, ../_scss/_preloader.scss */
+/* line 19, ../_scss/_preloader.scss */
 .preloader .lines {
   position: absolute;
   left: -300px;
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background: #222222 url("/assets/img/preloader-bg.png") repeat 0px 0px;
+  background: #191919 url("/assets/img/preloader-bg.png") repeat 0px 0px;
   background-attachment: fixed;
 }
 
-/* line 14, ../_scss/_preloader.scss */
+/* line 30, ../_scss/_preloader.scss */
 .preloader.animating .lines {
   -moz-animation: slide 1s infinite linear;
   -o-animation: slide 1s infinite linear;
@@ -481,60 +499,60 @@ html {
 }
 
 @-moz-keyframes slide {
-  /* line 22, ../_scss/_preloader.scss */
+  /* line 38, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 26, ../_scss/_preloader.scss */
+  /* line 42, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-webkit-keyframes slide {
-  /* line 22, ../_scss/_preloader.scss */
+  /* line 38, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 26, ../_scss/_preloader.scss */
+  /* line 42, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-o-keyframes slide {
-  /* line 22, ../_scss/_preloader.scss */
+  /* line 38, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 26, ../_scss/_preloader.scss */
+  /* line 42, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @-ms-keyframes slide {
-  /* line 22, ../_scss/_preloader.scss */
+  /* line 38, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 26, ../_scss/_preloader.scss */
+  /* line 42, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }
 }
 
 @keyframes slide {
-  /* line 22, ../_scss/_preloader.scss */
+  /* line 38, ../_scss/_preloader.scss */
   0% {
     background-position: 0px 0px;
   }
 
-  /* line 26, ../_scss/_preloader.scss */
+  /* line 42, ../_scss/_preloader.scss */
   100% {
     background-position: 300px 0px;
   }

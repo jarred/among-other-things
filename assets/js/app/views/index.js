@@ -27,7 +27,10 @@
         this.intro = new IntroView({
           el: this.$('.intro')
         });
-        this.showProject(0);
+        _.delay(function() {
+          $('#site-preloader').remove();
+          return _this.showProject(0);
+        }, 2000);
       },
       getData: function() {
         var model,
@@ -159,7 +162,7 @@
             top: '0px'
           });
         });
-        return _.delay(this.nextProject, 7000);
+        return _.delay(this.nextProject, 8000);
       },
       nextProject: function() {
         if (this.currentProject < this.model.get('projects').length - 1) {
