@@ -11,7 +11,7 @@ body {
 }
 
 /* line 19, ../_scss/style.scss */
-html {
+html, body {
   overflow-x: hidden;
 }
 
