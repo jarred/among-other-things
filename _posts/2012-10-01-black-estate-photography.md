@@ -3,7 +3,6 @@ layout: project
 title: Black Estate Photography
 project_url: none
 excerpt: <em>&#8220;Tim and I were wondering if you were interested in a photography assignment in Waipara ... It'll be hard to mess up.&#8221;</em> <br /><br />Very Interested.
-size: portrait-2col
 ---
 
 <script type="application/json" class="data">

@@ -2,9 +2,8 @@
 layout: project
 title: kaleidomaniac.com
 project_url: http://kaleidomaniac.com
-excerpt: Experimental image-tumblr. 
+excerpt: Experimental image-tumblr. <br />[TODO] Write some art-wank to go here.
 published: true
-size: landscape-3col
 ---
 
 <script type="application/json" class="data">

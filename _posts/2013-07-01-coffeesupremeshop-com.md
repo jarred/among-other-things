@@ -2,9 +2,8 @@
 layout: project
 title: coffeesupremeshop.com
 project_url: http://www.coffeesupremeshop.com
-excerpt: I helped Coffee Supreme shift their online store to Shopify. Their new website has a tool to help you discover the best coffee for you.
+excerpt: I created a shopify store for Coffee Supreme. It even has a tool to help you select the perfect coffee.
 published: true
-size: square-2col
 ---
 
 <script type="application/json" class="data">

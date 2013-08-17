@@ -12,7 +12,6 @@
         this.options = options;
         _.bindAll(this);
         this.model = this.getData();
-        console.log(this.model.toJSON());
         sizeCount = {};
         _.each(this.model.get('projects'), function(project) {
           return _.each(project.images, function(image) {
@@ -28,7 +27,10 @@
         this.intro = new IntroView({
           el: this.$('.intro')
         });
-        this.showProject(0);
+        _.delay(function() {
+          $('#site-preloader').remove();
+          return _this.showProject(0);
+        }, 2000);
       },
       getData: function() {
         var model,
@@ -69,16 +71,10 @@
 
         this.currentProject = num;
         this.project = this.model.get('projects')[num];
-        console.log(this.project);
         this.project.images = _.shuffle(this.project.images);
         this.$('.image-box').addClass('empty');
         this.imageCount = 0;
         this.imagesLoaded = 0;
-        TweenMax.to(this.$('.info'), .3, {
-          opacity: 0,
-          ease: Quint.easeIn,
-          onComplete: this.animateProjectInfoIn
-        });
         _.each(this.project.images, function(image) {
           var $box, $container, img;
 
@@ -105,8 +101,16 @@
       imageLoaded: function() {
         this.imagesLoaded++;
         if (this.imagesLoaded >= this.imageCount) {
-          return this.animateProjectIn();
+          this.animateProjectIn();
+          return this.animateProjectInfoOut();
         }
+      },
+      animateProjectInfoOut: function() {
+        return TweenMax.to(this.$('.info'), .3, {
+          opacity: 0,
+          ease: Quint.easeIn,
+          onComplete: this.animateProjectInfoIn
+        });
       },
       animateProjectInfoIn: function() {
         var content, title, url;
@@ -121,9 +125,9 @@
         }
         this.$('.info .content').html(content);
         return TweenMax.to(this.$('.info'), .3, {
-          delay: .5,
           ease: Quint.easeOut,
-          opacity: 1
+          opacity: 1,
+          delay: .2
         });
       },
       animateProjectIn: function() {
@@ -138,7 +142,7 @@
           tween = {
             top: 0 - h,
             ease: Quint.easeOut,
-            delay: index * .1
+            delay: .3 + index * .1
           };
           if (index + 1 >= $('.image-box').length) {
             tween.onComplete = _this.projectAnimatedIn;
@@ -158,7 +162,7 @@
             top: '0px'
           });
         });
-        return _.delay(this.nextProject, 7000);
+        return _.delay(this.nextProject, 8000);
       },
       nextProject: function() {
         if (this.currentProject < this.model.get('projects').length - 1) {
