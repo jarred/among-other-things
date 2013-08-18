@@ -22,13 +22,13 @@ published: true
 		"src": "/assets/img/coffeesupremeshop.com/portrait-3col.jpg",
 		"size": "portrait-3col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-1col.jpg",
+		"src": "/assets/img/coffeesupremeshop.com/square-1col.gif",
 		"size": "square-1col"
 	},{
 		"src": "/assets/img/coffeesupremeshop.com/square-2col.jpg",
 		"size": "square-2col"
 	},{
-		"src": "/assets/img/coffeesupremeshop.com/square-3col.jpg",
+		"src": "/assets/img/coffeesupremeshop.com/square-3col.gif",
 		"size": "square-3col"
 	}]
 }
