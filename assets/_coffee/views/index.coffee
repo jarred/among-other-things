@@ -23,7 +23,7 @@ define ["logoView", 'introView'], (LogoView, IntroView) ->
 			_.delay () =>
 				$('#site-preloader').remove()
 				@showProject 0
-			, 2000
+			, 1300
 			return
 
 		getData: ->

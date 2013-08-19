@@ -30,7 +30,7 @@
         _.delay(function() {
           $('#site-preloader').remove();
           return _this.showProject(0);
-        }, 2000);
+        }, 1300);
       },
       getData: function() {
         var model,

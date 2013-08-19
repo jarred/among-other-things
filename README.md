@@ -1,5 +1,6 @@
-among-other-things
-==================
+# among-other-things
 
-coffee --compile --watch --output assets/js/app assets/_coffee
+compile coffee (development) `coffee --compile --watch --output assets/js/app assets/_coffee`
+
+minify js (production) ``
 

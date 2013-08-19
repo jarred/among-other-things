@@ -8,7 +8,7 @@ published: true
 
 <script type="application/json" class="data">
 {
-	"noun": "Design Director",
+	"noun": "Mad Scientist",
 	"images": [{
 		"src": "/assets/img/kaleidomaniac.com/landscape-3col.jpg",
 		"size": "landscape-3col"
