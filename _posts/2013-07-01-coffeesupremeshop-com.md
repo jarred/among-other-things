@@ -2,7 +2,7 @@
 layout: project
 title: coffeesupremeshop.com
 project_url: http://www.coffeesupremeshop.com
-excerpt: I designed and build this online store for Coffee Supreme. Features include a <a href="http://www.coffeesupremeshop.com/collections/coffee" target="_blank">tool</a> to help you select the perfect coffee and a (first of its kind) coffee subscription program.
+excerpt: I designed and built this online store for Coffee Supreme. Features include a <a href="http://www.coffeesupremeshop.com/collections/coffee" target="_blank">tool</a> to help you select the perfect coffee and a (first of its kind) coffee subscription program.
 published: true
 ---
 
