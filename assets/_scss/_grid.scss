@@ -77,13 +77,13 @@
 // 			font: 600 21px/20px $sans;
 // 			font: 700 20px/24px $big;
 			font: 400 14px/17px $small;
-			color: #AAA;
+			color: #BBB;
 // 			border-bottom: 1px solid #0000FF;
 			a{
-				text-decoration: none;
-				color: #AAA;
+				text-decoration: underline;
+				color: #0000FF;
 				&:hover{
-					text-decoration: underline;
+					text-decoration: none;
 				}
 			}
 		}
