@@ -1,5 +1,0 @@
-ADD:
-
-- src-img
-- rewrite
-- preloader message

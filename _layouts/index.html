@@ -3,126 +3,23 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Among Other Things</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="/assets/css/cssreset-min.css">
-        <link rel="stylesheet" href="/assets/css/style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta property="og:title" content="Among other things" />
-        <meta property="og:url" content="http://amongotherthings.co" />
-        <meta property="og:description" content="Portfolio of Jarred Bishop. A designer (among other things)." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="http://amongotherthings.co/assets/img/social.png" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="400" />
-        <meta property="og:image:height" content="271" />
-    </head>
-    <body>
-        <div id="site-preloader" class="preloader animating">
-            <div class="lines"></div>
-            <p class="message">This will always be a work in progress.</p>
-        </div>
-        <div id="header">
-            <div class="intro loading">
-                <p>Portfolio of <span class="name">Jarred Bishop</span> <span class="mdash">&mdash;</span><br />
-                    <span class="a">a </span><span class="phrase">[ IS LOADING ]</span> <span class="logo">(<u>amon</u>g<u> other thin</u>g<u>s</u>).</span>
-                </p>
-            </div>
-            <ul>
-                <li><a href="http://jarred.co.nz">Profile &amp; Contact</a></li>
-            </ul>
-        </div>
-        <div id="grid" class="grid-container">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Among Other Things</title>
+    <meta name="description" content="Among Other Things">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            <div class="box info">
-                <h2></h2>
-                <div class="content"></div>
-            </div>
+    ga('create', 'UA-43263865-1', 'amongotherthings.co');
+    ga('send', 'pageview');
 
-            <div class="box image-box landscape-3col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box square-2col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box portrait-3col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box square-3col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box landscape-4col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box portrait-2col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="box image-box square-1col">
-                <div class="internal">
-                    <div class="preloader animating slide">
-                        <div class="lines"></div>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-        <div id="data">
-            {% for post in site.posts %}
-            <div class="project" data-index="{{ forloop.index0 }}" data-url="{{ post.project_url }}">
-                <h2 class="title hide">{{ post.title }}</h2>
-                <div class="excerpt hide">
-                    {{ post.excerpt }}
-                </div>
-                <div class="content hide">
-                    {{ post.content }}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <script data-main="/assets/js/app/main" src="/assets/js/libs/require.min.2.1.4.js"></script>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-43263865-1', 'amongotherthings.co');
-          ga('send', 'pageview');
-
-        </script>
-    </body>
+    </script>
+  </body>
 </html>

@@ -1,1 +1,3 @@
 permalink: /project/:title
+markdown: kramdown
+exclude: [CNAME, among-other-things.*, README.md]
