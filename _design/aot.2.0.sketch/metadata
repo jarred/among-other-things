@@ -11,12 +11,13 @@
 	<key>fonts</key>
 	<array>
 		<string>HelveticaNeue-Bold</string>
+		<string>CircularStd-Bold</string>
 		<string>HelveticaNeue</string>
 		<string>Replica-Bold</string>
 		<string>NeuzeitSLT-BookHeavy</string>
 	</array>
 	<key>length</key>
-	<integer>374025</integer>
+	<integer>374131</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
