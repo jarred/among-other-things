@@ -15,9 +15,12 @@
 		<string>HelveticaNeue</string>
 		<string>Replica-Bold</string>
 		<string>NeuzeitSLT-BookHeavy</string>
+		<string>TeluguMN-Bold</string>
+		<string>Georgia</string>
+		<string>Monaco</string>
 	</array>
 	<key>length</key>
-	<integer>374131</integer>
+	<integer>388739</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
