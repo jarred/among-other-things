@@ -1,3 +1,3 @@
 permalink: /project/:title
 markdown: kramdown
-exclude: [CNAME, among-other-things.*, README.md, package.json, node_modules]
+exclude: [CNAME, among-other-things.*, README.md, package.json, node_modules, gulpfile.js]
