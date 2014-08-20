@@ -412,8 +412,13 @@
 	},
 	"file_history":
 	[
-		"/Users/jarred/projects/among-other-things/assets/_coffee/main.coffee",
+		"/Users/jarred/projects/among-other-things/_config.yml",
 		"/Users/jarred/projects/among-other-things/_layouts/index.html",
+		"/Users/jarred/projects/among-other-things/index.md",
+		"/Users/jarred/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jarred/projects/among-other-things/README.md",
+		"/Users/jarred/projects/among-other-things/among-other-things.sublime-project",
+		"/Users/jarred/projects/among-other-things/assets/_coffee/main.coffee",
 		"/Users/jarred/projects/among-other-things/assets/_coffee/views/index.coffee",
 		"/Users/jarred/projects/among-other-things/assets/_scss/_grid.scss",
 		"/Users/jarred/projects/among-other-things/assets/_scss/_preloader.scss",
@@ -424,9 +429,7 @@
 		"/Users/jarred/projects/among-other-things/_posts/2013-01-24-cut-and-run.md",
 		"/Users/jarred/projects/among-other-things/_posts/2012-10-01-black-estate-photography.md",
 		"/Users/jarred/projects/among-other-things/_posts/2012-09-11-futurespec.md",
-		"/Users/jarred/projects/among-other-things/among-other-things.sublime-project",
 		"/Users/jarred/projects/among-other-things/assets/js/main.js",
-		"/Users/jarred/projects/among-other-things/README.md",
 		"/Users/jarred/projects/among-other-things/assets/_coffee/views/grid-item.coffee",
 		"/Users/jarred/projects/among-other-things/assets/_coffee/views/layout-experiment.coffee",
 		"/Users/jarred/projects/among-other-things/assets/_coffee/views/preloader.coffee",
@@ -536,10 +539,7 @@
 		"/Users/jarred/projects/look-at-us-now/tmp/cache/sass/46d7a22f36546bf55d7e2bc1747a0d1aa74a265c/_type.scssc",
 		"/Users/jarred/projects/look-at-us-now/app/assets/stylesheets/layout/_layout.css.scss",
 		"/Users/jarred/projects/look-at-us-now/app/assets/stylesheets/typography/_fontello.scss",
-		"/Users/jarred/projects/look-at-us-now/app/assets/fonts/fontello/css/fontello.css",
-		"/Users/jarred/Downloads/Ableton Live 9 Suite 9.0.1 Mac os x (64 bit-io) [ChingLiu]/io.nfo",
-		"/Users/jarred/projects/spencerlevine.co.nz/_layouts/index.html",
-		"/Users/jarred/projects/spencerlevine.co.nz/_layouts/project.html"
+		"/Users/jarred/projects/look-at-us-now/app/assets/fonts/fontello/css/fontello.css"
 	],
 	"find":
 	{
@@ -741,6 +741,22 @@
 		"selected_items":
 		[
 			[
+				"index.html",
+				"_layouts/index.html"
+			],
+			[
+				"index",
+				"index.md"
+			],
+			[
+				"conf",
+				"_config.yml"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
 				"main.cof",
 				"assets/_coffee/main.coffee"
 			],
@@ -773,20 +789,12 @@
 				"assets/_coffee/views/index.coffee"
 			],
 			[
-				"index.html",
-				"_layouts/index.html"
-			],
-			[
 				"main.coff",
 				"assets/_coffee/main.coffee"
 			],
 			[
 				"main.js",
 				"assets/js/main.js"
-			],
-			[
-				"read",
-				"README.md"
 			],
 			[
 				"template.html",
@@ -1149,10 +1157,6 @@
 				"app/views/layouts/application.html.erb"
 			],
 			[
-				"index",
-				"app/views/home/index.html.erb"
-			],
-			[
 				"ontello",
 				"app/assets/fonts/fontello/css/fontello.css"
 			],
@@ -1247,10 +1251,6 @@
 			[
 				"aloe",
 				"_posts/2013-04-01-aloe.md"
-			],
-			[
-				"eep",
-				"_posts/2013-04-01-Eep-Cover.md"
 			]
 		],
 		"width": 0.0

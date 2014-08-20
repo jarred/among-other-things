@@ -16,11 +16,13 @@
 		<string>Replica-Bold</string>
 		<string>NeuzeitSLT-BookHeavy</string>
 		<string>TeluguMN-Bold</string>
+		<string>TeluguMN</string>
 		<string>Georgia</string>
 		<string>Monaco</string>
+		<string>NeuzeitSLT-Book</string>
 	</array>
 	<key>length</key>
-	<integer>388739</integer>
+	<integer>3181400</integer>
 	<key>version</key>
 	<integer>37</integer>
 </dict>
