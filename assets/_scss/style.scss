@@ -1,8 +1,5 @@
+@import "_variables";
 @import "vendor/_normalize";
-
-.intro-block{
-  width: 25%;
-  height: 0px;
-  padding-top: 25%;
-  background-color: #000;
-}
+@import "type/_sizes";
+@import "ui/_site-preloader";
+@import "ui/_intro";

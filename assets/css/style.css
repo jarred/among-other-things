@@ -161,8 +161,35 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.intro-block {
-  width: 25%;
-  height: 0px;
-  padding-top: 25%;
-  background-color: #000; }
+.big_type {
+  font-size: 40px;
+  letter-spacing: 0px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 1px; }
+
+.big_type a {
+  text-decoration: none;
+  color: #F30; }
+
+.site_preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: #222;
+  color: #666;
+  z-index: 1000; }
+
+.site_preloader-message {
+  margin: 60px; }
+
+.site_preloader .logo {
+  color: #FFF; }
+
+.intro {
+  margin: 60px; }
+
+.intro-role--previously {
+  opacity: 0.2; }
