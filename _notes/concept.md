@@ -7,3 +7,9 @@ Embrace the medium.
 2 font sizes (or 3?)
 
 Transitions like: http://elitemodel.fr/en/mainboard/women ?
+
+## References:
+
+- http://www.allaboutdavid.fr/
+
+
